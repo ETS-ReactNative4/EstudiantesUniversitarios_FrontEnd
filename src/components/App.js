@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../resources/logo.svg';
 import '../styles/App.css';
 import '../resources/simbolo1.jpg';
+import '../resources/simbolo2.jpg';
 import '../resources/imag1.jpg';
 import '../resources/imag2.jpg';
 import '../resources/imag3.jpg';
@@ -163,23 +164,23 @@ class App extends Component {
                   <img src={require('../resources/simbolo1.jpg')} class="img-circle person" alt="Random Name" width="255" height="255" />
                 </a>
                 <div id="demo" class="collapse">
-                  <p>Guitarist and Lead Vocalist</p>
-                  <p>Loves long walks on the beach</p>
-                  <p>Member since 1988</p>
+                  <p>Integración de Estudiantes Indigenas Universitarios.</p>
+                  <p>Promover la recuperación, protección y conservación de la identidad cultural.</p>
+                  <p>luchar por los derechos, beneficios y oportunidades de progreso que como jóvenes indígenas poseemos.</p>
                 </div>
               </div>
 
               <div class="col-sm-4">
                 <p class="text-center"><strong>VISIÓN</strong></p><br />
                 <a href="#demo2" data-toggle="collapse">
-                  <img src={require('../resources/simbolo1.jpg')} class="img-circle person" alt="Random Name" width="255" height="255" />
+                  <img src={require('../resources/simbolo2.jpg')} class="img-circle person" alt="Random Name" width="255" height="255" />
                 </a>
                 <div id="demo2" class="collapse">
-                  <p>Guitarist and Lead Vocalist</p>
-                  <p>Loves long walks on the beach</p>
-                  <p>Member since 1988</p>
+                  <p>Consolidarse como Cabildo 1 menor de estudiantes indígenas universitarios del Resguardo Indigena de Pastas Aldana.</p>
+                  <p>Contribuir continuamente al fortalecimiento de la identidad cultural, el saber propio, los usos y costumbres.</p>
+                  <p>La protección y conservación del territorio.</p>
                 </div>
-        Bootstrap Theme Made By      </div>
+              </div>
 
               <div class="col-sm-4">
                 <p class="text-center"><strong>Name</strong></p><br />
@@ -187,9 +188,7 @@ class App extends Component {
                   <img src={require('../resources/simbolo1.jpg')} class="img-circle person" alt="Random Name" width="255" height="255" />
                 </a>
                 <div id="demo3" class="collapse">
-                  <p>Guitarist and Lead Vocalist</p>
-                  <p>Loves long walks on the beach</p>
-                  <p>Member since 1988</p>
+                  <p>prueba</p>
                 </div>
               </div>
             </div>
@@ -198,15 +197,15 @@ class App extends Component {
 
         {/*creando contenedor contacto*/}
         <div id="contact" class="container">
-          <h3 class="text-center">Contact</h3>
-          <p class="text-center"><em>We love our fans!</em></p>
+          <h3 class="text-center">Contactos</h3>
+          <p class="text-center"><em>Accesorias!</em></p>
 
           <div class="row">
             <div class="col-md-4">
-              <p>Fan? Drop a note.</p>
-              <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
-              <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
-              <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+              <p>Deja una nota.</p>
+              <p><span class="glyphicon glyphicon-map-marker"></span>ALDANA, NARIÑO</p>
+              <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 123456789</p>
+              <p><span class="glyphicon glyphicon-envelope"></span>Email: unipastasaldana@gmail.com</p>
             </div>
 
             <div class="col-md-8">
@@ -231,24 +230,24 @@ class App extends Component {
 
         {/*agregando pestañas */}
         <div class="container">
-        <h3 class="text-center">From The Blog</h3>
+        <h3 class="text-center">Integrantes principales de la Organización Estudiantil</h3>
         <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" hmodules ref="#home">Mike</a></li>
-          <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
-          <li><a data-toggle="tab" href="#menu2">Peter</a></li>
+          <li class="active"><a data-toggle="tab" hmodules ref="#home">Autoridad Tradicional</a></li>
+          <li><a data-toggle="tab" href="#menu1">Representante 1</a></li>
+          <li><a data-toggle="tab" href="#menu2">Representante 2</a></li>
         </ul>
 
         <div class="tab-content">
           <div id="home" class="tab-pane fade in active">
-            <h2>Mike Ross, Manager</h2>
+            <h2>Hernando Cuasmayan, Gobernador Resguardo de Pastas Aldana</h2>
             <p>Man, we ve been on the road for some time now. Looking forward to lorem ipsum.</p>
           </div>
           <div id="menu1" class="tab-pane fade">
-            <h2>Chandler Bing, Guitarist</h2>
+            <h2>Andrea Erira, Estudiante de Contaduria Publica - Universidad de Nariño</h2>
             <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
           </div>
           <div id="menu2" class="tab-pane fade">
-            <h2>Peter Griffin, Bass player</h2>
+            <h2>Samanta Acosta, EStudiante de Ingenieria Agroindustrial -Universidad de Nariño</h2>
             <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
           </div>
         </div>
