@@ -1,9 +1,9 @@
 CARACTERISTICAS DESARROLLADAS
 - arbol de componentes
 - mockups
-- repositorio primer commit inicial y estructura de flujo git
+- repositorio frontEnd primer commit inicial y estructura de flujo git
 - definicion de rutas a las vistas login y register
-- creacion de landing page, login, registro 
+- creacion de landing page, login, registro
 
 nombres:
 - Jhon Jairo Mueses
