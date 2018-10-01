@@ -179,7 +179,7 @@ class App extends Component {
                   <p>Loves long walks on the beach</p>
                   <p>Member since 1988</p>
                 </div>
-              </div>
+        Bootstrap Theme Made By      </div>
 
               <div class="col-sm-4">
                 <p class="text-center"><strong>Name</strong></p><br />
@@ -266,6 +266,20 @@ class App extends Component {
           }
           </script>
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABJrMhk1R9qT5MPxPnbdi7Lb43EoW1TNo&callback=myMap"></script>*/}
+
+          {/*Agregando pie de pagina*/}
+          <footer class="text-center">
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+              <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br /><br />
+            <p>INGENIERIA DE SOFTWARE 2 GRUPO HEAVE GEAR</p>
+            <p><em>David Herrera</em></p>
+            <p><em>Jhon Jairo Mueses</em></p>
+            <p><em>Gonzalo Eduardo Baez</em></p>
+            <p><em>Camilo Mosquera</em></p>
+
+          </footer>
+
 
       </div>
     );
