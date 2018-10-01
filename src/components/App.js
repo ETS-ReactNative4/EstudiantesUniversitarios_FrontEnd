@@ -15,6 +15,43 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/*creando barra de menu*/}
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Organización Estudiantes Universitarios</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#band">BAND</a></li>
+                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#iniciar sesión"><Link to='/login'>Iniciar Sesión</Link></a></li>
+                <li><a href="#registrarse"><Link to='/resgister'>Registrarse</Link></a></li>
+
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu"><Link to='/login'>Inciar Sesión</Link>
+                    <li><a href="#">Merchandise</a></li>
+                    <li><a href="#">Extras</a></li>
+                    <li><a href="#">Media</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
 
         <header className="App-header">
         <Link to='/login'>Inciar Sesión</Link>
@@ -28,55 +65,59 @@ class App extends Component {
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            <li data-target="#myCarousel" data-slide-to="6"></li>
           </ol>
 
           <div class="carousel-inner" role="listbox">
             <div class="item active">
             <img src={require('../resources/imag1.jpg')} alt="New York" />
               <div class="carousel-caption">
-                <h3>New York</h3>
+                <h3>Resguardo de Pastas Aldana</h3>
                 <p>The atmosphere in New York is lorem ipsum.</p>
               </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag2.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Chicago</h3>
+                  <h3>Resguardo de Pastas Aldana</h3>
                   <p>Thank you, Chicago - A night we wont forget.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag3.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Chicago</h3>
+                  <h3>Resguardo de Pastas Aldana</h3>
                   <p>Thank you, Chicago - A night we wont forget.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag4.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Chicago</h3>
+                  <h3>Resguardo de Pastas Aldana</h3>
                   <p>Thank you, Chicago - A night we wont forget.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag5.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Chicago</h3>
+                  <h3>Resguardo de Pastas Aldana</h3>
                   <p>Thank you, Chicago - A night we wont forget.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag6.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Chicago</h3>
+                  <h3>Resguardo de Pastas Aldana</h3>
                   <p>Thank you, Chicago - A night we wont forget.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag7.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Chicago</h3>
+                  <h3>Resguardo de Pastas Aldana</h3>
                   <p>Thank you, Chicago - A night we wont forget.</p>
                 </div>
             </div>
@@ -178,7 +219,7 @@ class App extends Component {
         <div class="container">
         <h3 class="text-center">From The Blog</h3>
         <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#home">Mike</a></li>
+          <li class="active"><a data-toggle="tab" hmodules ref="#home">Mike</a></li>
           <li><a data-toggle="tab" href="#menu1">Chandler</a></li>
           <li><a data-toggle="tab" href="#menu2">Peter</a></li>
         </ul>
@@ -198,6 +239,19 @@ class App extends Component {
           </div>
         </div>
         </div>
+
+        {/*colocando Google Maps
+        <div id="googleMap"></div>
+          <script>
+          render: myMap() {
+            var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+            var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            var marker = new google.maps.Marker({position:myCenter});
+            marker.setMap(map);
+          }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABJrMhk1R9qT5MPxPnbdi7Lb43EoW1TNo&callback=myMap"></script>*/}
 
       </div>
     );
