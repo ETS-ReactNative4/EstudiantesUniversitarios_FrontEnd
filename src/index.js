@@ -11,8 +11,8 @@ ReactDOM.render(
   <BrowserRouter>
         <div>
             <Route  path='/' component={App} />
-            <Route  path='/login' exact component={Login} />
-            <Route  path='/register' exact component={Register} />
+            <Route  exact path='/login' exact component={Login} />
+            <Route  exact path='/register' exact component={Register} />
 
         </div>
     </BrowserRouter>
