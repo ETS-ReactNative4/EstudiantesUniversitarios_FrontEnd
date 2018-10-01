@@ -1,0 +1,80 @@
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #73dbc4;
+    color: white;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #60efb8;
+    border-radius: 20px;
+}
+
+input[type=submitCancel] {
+    width: 100%;
+    background-color: #ffb6b9;
+    color: white;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+input[type=submitCancel]:hover {
+    background-color: #f34949;
+    border-radius: 20px;
+}
+
+
+
+div {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+header {
+    background-color: #89a4c7;
+    text-decoration-color: red;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.container{
+    width: 600px;
+    background-color: #005792;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
