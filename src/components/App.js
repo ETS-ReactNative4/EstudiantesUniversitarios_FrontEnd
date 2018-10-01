@@ -24,19 +24,19 @@ class App extends Component {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Organización Estudiantes Universitarios</a>
+              <a class="navbar-brand" href="#">Estudiantes Universitarios</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home">HOME</a></li>
-                <li><a href="#band">BAND</a></li>
-                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#band">NOSOTROS</a></li>
+                <li><a href="#tour">AUTORIDAD</a></li>
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="#iniciar sesión"><Link to='/login'>Iniciar Sesión</Link></a></li>
                 <li><a href="#registrarse"><Link to='/resgister'>Registrarse</Link></a></li>
 
                 <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">MAS
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu"><Link to='/login'>Inciar Sesión</Link>
@@ -51,12 +51,6 @@ class App extends Component {
           </div>
         </nav>
 
-
-
-        <header className="App-header">
-        <Link to='/login'>Inciar Sesión</Link>
-        <Link to='/register'>Registrarse</Link>
-        </header>
 
         {/*creando un componente carrucel de imagenes*/}
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -75,50 +69,64 @@ class App extends Component {
             <div class="item active">
             <img src={require('../resources/imag1.jpg')} alt="New York" />
               <div class="carousel-caption">
-                <h3>Resguardo de Pastas Aldana</h3>
-                <p>The atmosphere in New York is lorem ipsum.</p>
+                <h3>Organizacion de EStudiantes Universitarios del Resguardo de Pastas Aldana-Nariño</h3>
+                <p>Encaminada a la integración de estudiantes indígenas  regulares,</p>
+                <p>egresados y titulados de las diferentes Universidades</p>
+                <p>públicas o privadas del país.</p>
               </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag2.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Resguardo de Pastas Aldana</h3>
-                  <p>Thank you, Chicago - A night we wont forget.</p>
+                <h3>Organizacion de EStudiantes Universitarios del Resguardo de Pastas Aldana-Nariño</h3>
+                <p>Encaminada a la integración de estudiantes indígenas  regulares,</p>
+                <p>egresados y titulados de las diferentes Universidades</p>
+                <p>públicas o privadas del país.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag3.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Resguardo de Pastas Aldana</h3>
-                  <p>Thank you, Chicago - A night we wont forget.</p>
+                <h3>Organizacion de EStudiantes Universitarios del Resguardo de Pastas Aldana-Nariño</h3>
+                <p>Encaminada a la integración de estudiantes indígenas  regulares,</p>
+                <p>egresados y titulados de las diferentes Universidades</p>
+                <p>públicas o privadas del país.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag4.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Resguardo de Pastas Aldana</h3>
-                  <p>Thank you, Chicago - A night we wont forget.</p>
+                <h3>Organizacion de EStudiantes Universitarios del Resguardo de Pastas Aldana-Nariño</h3>
+                <p>Encaminada a la integración de estudiantes indígenas  regulares,</p>
+                <p>egresados y titulados de las diferentes Universidades</p>
+                <p>públicas o privadas del país.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag5.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Resguardo de Pastas Aldana</h3>
-                  <p>Thank you, Chicago - A night we wont forget.</p>
+                <h3>Organizacion de EStudiantes Universitarios del Resguardo de Pastas Aldana-Nariño</h3>
+                <p>Encaminada a la integración de estudiantes indígenas  regulares,</p>
+                <p>egresados y titulados de las diferentes Universidades</p>
+                <p>públicas o privadas del país.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag6.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Resguardo de Pastas Aldana</h3>
-                  <p>Thank you, Chicago - A night we wont forget.</p>
+                <h3>Organizacion de EStudiantes Universitarios del Resguardo de Pastas Aldana-Nariño</h3>
+                <p>Encaminada a la integración de estudiantes indígenas  regulares,</p>
+                <p>egresados y titulados de las diferentes Universidades</p>
+                <p>públicas o privadas del país.</p>
                 </div>
             </div>
             <div class="item">
               <img src={require('../resources/imag7.jpg')} alt="Chicago" />
                 <div class="carousel-caption">
-                  <h3>Resguardo de Pastas Aldana</h3>
-                  <p>Thank you, Chicago - A night we wont forget.</p>
+                <h3>Organizacion de EStudiantes Universitarios del Resguardo de Pastas Aldana-Nariño</h3>
+                <p>Encaminada a la integración de estudiantes indígenas  regulares,</p>
+                <p>egresados y titulados de las diferentes Universidades</p>
+                <p>públicas o privadas del país.</p>
                 </div>
             </div>
 
@@ -136,15 +144,21 @@ class App extends Component {
         </div>
 
         {/*creando contenedor texto centrado*/}
-        <div class="container text-center">
+        <div id="band" class="container text-center">
           <h3>Organizacion Estrudiantes Universitarios</h3>
           <p><em>Conservando nuestra identidad cultural!</em></p>
-          <p>We have created a fictional band website. Lorem ipsum..</p>
-          <br />
+          <p>La organización de estudiantes indígenas universitarios va encaminada a la integración de indígenas estudiantes regulares, egresados y titulados de </p>
+          <p>las diferentes Universidades públicas o privadas del país, con el propósito de promover la recuperación, protección y conservación de la identidad </p>
+          <p>cultural, por medio de mingas de trabajo, mingas de pensamiento, tulpas donde compartamos los saberes que nuestros mayores nos dan como</p>
+          <p>herencia y promoverlos de generación en generación, así mismo luchar por los derechos, beneficios y oportunidades de progreso que como jóvenes</p>
+          <p>indígenas poseemos</p>
+
+
+
             <div class="row">
 
               <div class="col-sm-4">
-                <p class="text-center"><strong>Name</strong></p><br />
+                <p class="text-center"><strong>MISIÓN</strong></p><br />
                 <a href="#demo" data-toggle="collapse">
                   <img src={require('../resources/simbolo1.jpg')} class="img-circle person" alt="Random Name" width="255" height="255" />
                 </a>
@@ -156,7 +170,7 @@ class App extends Component {
               </div>
 
               <div class="col-sm-4">
-                <p class="text-center"><strong>Name</strong></p><br />
+                <p class="text-center"><strong>VISIÓN</strong></p><br />
                 <a href="#demo2" data-toggle="collapse">
                   <img src={require('../resources/simbolo1.jpg')} class="img-circle person" alt="Random Name" width="255" height="255" />
                 </a>
@@ -183,7 +197,7 @@ class App extends Component {
         </div>
 
         {/*creando contenedor contacto*/}
-        <div class="container">
+        <div id="contact" class="container">
           <h3 class="text-center">Contact</h3>
           <p class="text-center"><em>We love our fans!</em></p>
 
