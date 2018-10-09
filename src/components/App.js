@@ -11,11 +11,16 @@ import '../resources/imag5.jpg';
 import '../resources/imag6.jpg';
 import '../resources/imag7.jpg';
 import {Link} from 'react-router-dom';
+{/*import RegisterPage from '../components/RegisterPage';*/}
+{/*import LoginPage from '../components/LoginPage';*/}
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+
+      {/*<RegisterPage> </RegisterPage>*/}
+      {/*<LoginPage> </LoginPage>*/}
         {/*creando barra de menu*/}
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container-fluid">
@@ -33,6 +38,8 @@ class App extends Component {
                 <li><a href="#band">NOSOTROS</a></li>
                 <li><a href="#tour">AUTORIDAD</a></li>
                 <li><a href="#contact">CONTACT</a></li>
+                {/*<li><a href="#iniciar sesión"><Link to='/login'>Iniciar Sesión</Link></a></li>*/}
+                {/*<li><a href="#registrarse"><Link to='/resgister'>Registrarse</Link></a></li>*/}
                 <li><a href="#iniciar sesión"><Link to='/login'>Iniciar Sesión</Link></a></li>
                 <li><a href="#registrarse"><Link to='/resgister'>Registrarse</Link></a></li>
 
