@@ -35,8 +35,8 @@ class App extends Component {
                 <li><a href="#band">NOSOTROS</a></li>
                 <li><a href="#tour">AUTORIDAD</a></li>
                 <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#iniciar sesión">LOGIN</a></li>
-                <li><a href="#registrarse">REGISTER</a></li>
+                <li><Link to='/loginPage'>LOGIN</Link></li>
+                <li><Link to='/RegisterPage'>REGISTRARSE</Link></li>
 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">MAS
