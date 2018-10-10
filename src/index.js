@@ -10,13 +10,9 @@ import {BrowserRouter, Route} from 'react-router-dom';
 ReactDOM.render(
   <BrowserRouter>
         <div>
-            <Route  path='/' component={App} />
-            {/*<Route  path='/login' exact component={Login} />*/}
-            {/*<Route  path='/register' exact component={Register} />*/}
-            <Route  path='/login' component={LoginPage} />
-            <Route  path='/register' component={RegisterPage} />
-
-
+            <Route exact path='/' component={App} />
+            <Route exact path='/loginPage' component={LoginPage} />
+            <Route exact path='/registerPage' component={RegisterPage} />
         </div>
     </BrowserRouter>
 

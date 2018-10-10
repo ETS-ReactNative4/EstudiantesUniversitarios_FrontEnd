@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../resources/logo.svg';
 import '../styles/App.css';
 import '../resources/simbolo1.jpg';
 import '../resources/simbolo2.jpg';
@@ -11,16 +10,14 @@ import '../resources/imag5.jpg';
 import '../resources/imag6.jpg';
 import '../resources/imag7.jpg';
 import {Link} from 'react-router-dom';
-{/*import RegisterPage from '../components/RegisterPage';*/}
-{/*import LoginPage from '../components/LoginPage';*/}
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
 
-      {/*<RegisterPage> </RegisterPage>*/}
-      {/*<LoginPage> </LoginPage>*/}
+
         {/*creando barra de menu*/}
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container-fluid">
@@ -38,16 +35,14 @@ class App extends Component {
                 <li><a href="#band">NOSOTROS</a></li>
                 <li><a href="#tour">AUTORIDAD</a></li>
                 <li><a href="#contact">CONTACT</a></li>
-                {/*<li><a href="#iniciar sesión"><Link to='/login'>Iniciar Sesión</Link></a></li>*/}
-                {/*<li><a href="#registrarse"><Link to='/resgister'>Registrarse</Link></a></li>*/}
-                <li><a href="#iniciar sesión"><Link to='/login'>Iniciar Sesión</Link></a></li>
-                <li><a href="#registrarse"><Link to='/resgister'>Registrarse</Link></a></li>
+                <li><a href="#iniciar sesión">LOGIN</a></li>
+                <li><a href="#registrarse">REGISTER</a></li>
 
                 <li class="dropdown">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">MAS
                     <span class="caret"></span>
                   </a>
-                  <ul class="dropdown-menu"><Link to='/login'>Inciar Sesión</Link>
+                  <ul class="dropdown-menu">
                     <li><a href="#">Merchandise</a></li>
                     <li><a href="#">Extras</a></li>
                     <li><a href="#">Media</a></li>
