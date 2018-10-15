@@ -21,7 +21,7 @@ class Navbar extends Component {
                   <li><a href="#home">HOME</a></li>
                   <li><Link to='/nosotros'>NOSOTROS</Link></li>
                   <li><Link to='/autoridad'>AUTORIDAD</Link></li>
-                  <li><a href="#contact">CONTACT</a></li>
+                  <li><Link to='/contacto'>CONTACTO</Link></li>
                   <li><Link to='/loginPage'>LOGIN</Link></li>
                   <li><Link to='/RegisterPage'>REGISTRARSE</Link></li>
 
