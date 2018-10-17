@@ -14,10 +14,10 @@ html {
 body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
-}
+}input
 
 a {
-    color: #92badd;
+    color: #92badd;input
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -25,7 +25,7 @@ a {
 
 h2 {
     text-align: center;
-    font-size: 16px;
+    font-size: 16px;input
     font-weight: 600;
     text-transform: uppercase;
     display:inline-block;
@@ -64,7 +64,7 @@ h2 {
     background-color: #f6f6f6;
     border-top: 1px solid #dce8f1;
     padding: 0px;
-    text-align: center;
+    text-align: center;input
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
     margin-top: 10px;
@@ -72,7 +72,7 @@ h2 {
 
 
 
-/* TABS */
+/* TABS */input
 
 h2.inactive {
     color: #cccccc;
@@ -88,7 +88,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #56baed;
+    background-color: #ff0000;
     border: none;
     color: white;
     padding: 15px;
@@ -111,7 +111,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-    background-color: #39ace7;
+    background-color: #ff0000;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
