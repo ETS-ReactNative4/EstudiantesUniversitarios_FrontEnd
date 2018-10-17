@@ -16,11 +16,7 @@ ReactDOM.render(
             <Route exact path='/' component={App} />
             <Route exact path='/LoginPage' component={LoginPage} />
             <Route exact path='/RegisterPage' component={RegisterPage} />
-<<<<<<< HEAD
             <Route exact path='/userlist' component={UserList} />
-
-=======
->>>>>>> 1dd8947636b5248e55754f857f0c586b90f9751f
         </div>
     </BrowserRouter>
     , document.getElementById('root'));

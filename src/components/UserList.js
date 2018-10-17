@@ -9,7 +9,7 @@ constructor(props){
 
   render() {
     return (
-      <User name="Jairo" idNumber="1082104556" email="jjmuesesq@unal.edu.co" beneficiary="true" password="123456" role_id="1" />
+      <User name="Jairo" idNumber="123456789" email="jjmuesesq@unal.edu.co" beneficiary="true" password="123456" role_id="1" />
     );
   }
 }
