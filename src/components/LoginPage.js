@@ -2,83 +2,71 @@ import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 
 class LoginPage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      username: '',
-      password: '',
-      error: '',
-    };
 
-    this.handlePassChange = this.handlePassChange.bind(this);
-    this.handleUserChange = this.handleUserChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.dismissError = this.dismissError.bind(this);
-  }
+    constructor(){
+        super();
+        this.state = {
+            user: "",
+            password: ""
+        }
 
-  dismissError() {
-    this.setState({ error: '' });
-  }
-
-  handleSubmit(evt) {
-    evt.preventDefault();
-
-    if (!this.state.username) {
-      return this.setState({ error: 'Usuario es obligatorio' });
     }
 
-    if (!this.state.password) {
-      return this.setState({ error: 'Contraseña es obligatoria' });
-    }
-
-    return this.setState({ error: '' });
-  }
-
-  handleUserChange(evt) {
-    this.setState({
-      username: evt.target.value,
-    });
-  };
-
-  handlePassChange(evt) {
-    this.setState({
-      password: evt.target.value,
-    });
-  }
-
-  render() {
-
+    render() {
     return (
-      <div className="Login">
-        <form onSubmit={this.handleSubmit}>
-        <div className="container">
+      <div className="LoginPage">
 
-        <header>
-          <h2>INICIO DE SESION</h2>
-        </header>
+          <div className="wrapper fadeInDown">
+              <div id="formContent">
 
-          <div>
-            <label>USUARIO:</label>
-            <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
+                  <div className="fadeIn first">
+                      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon"/>
+                  </div>
 
-            <label>CONTRASEÑA: </label>
-            <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
 
-            <input type="submit" value="Entrar" data-test="submit" />
+                  <form>
+                      <input type="text" id="login" className="fadeIn second" name="login" placeholder="Usuario *" onChange={this.upDateUser.bind(this)}/>
+                      <input type="password" id="password" className="fadeIn third" name="login" placeholder="Contraseña *" onChange={this.upDatePassword.bind(this)}/>
+                      <input type="submit"    className="fadeIn fourth BotonEntrar" value="Entrar" onClick={this.mensajeError.bind(this)}/>
+                  </form>
 
-          {
-            this.state.error &&
-            <h3 data-test="error" onClick={this.dismissError}>
-              <button onClick={this.dismissError}>✖</button>
-              {this.state.error}
-            </h3>
-          }
+
+                  <div id="formFooter">
+                      <a className="underlineHover" href="#">¿ Olvidó su contraseña ?</a>
+                  </div>
+
+              </div>
           </div>
-        </div>
-        </form>
       </div>
     );
   }
+
+  upDateUser(event){
+      this.setState({
+         user: event.target.value
+      });
+  }
+
+  upDatePassword(event){
+      this.setState({
+          password: event.target.value
+      });
+  }
+
+  mensajeError(){
+        var tmp = this.errorDatos();
+        alert(tmp);
+  }
+
+  errorDatos(){
+        var validUser = this.state.user;
+        var validPassword =  this.state.password;
+        if((validUser.length < 1) && (validPassword.length< 1)) return "LOS CAMPOS NO PUEDEN SER VACIOS";
+        if((validUser.length < 1) && (validPassword.length > 0)) return "EL USUARIO NO PUEDE SER VACIO";
+        if((validUser.length > 0) && (validPassword.length < 1)) return "LA CONTRASEÑA NO PUEDE SER VACIO";
+        return "200";
+   }
+
 }
 
 export default LoginPage;
