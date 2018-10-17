@@ -2,27 +2,6 @@ import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 
 class LoginPage extends Component {
-<<<<<<< HEAD
-
-  constructor() {
-    super();
-    this.state = {
-      username: '',
-      password: '',
-      error: '',
-    };
-
-    this.handlePassChange = this.handlePassChange.bind(this);
-    this.handleUserChange = this.handleUserChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.dismissError = this.dismissError.bind(this);
-  }
-
-  dismissError() {
-    this.setState({ error: '' });
-  }
-=======
->>>>>>> a5d4a50678bc53414bedad303168a9d443dbed4f
 
     constructor(){
         super();
