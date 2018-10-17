@@ -8,18 +8,15 @@ import RegisterPage from './components/RegisterPage';
 import Contact from './components/Contact';
 import Universities from './components/Universities';
 import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
-
+import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(
-  <BrowserRouter>
+    <BrowserRouter>
         <div>
             <Route exact path='/' component={App} />
             <Route exact path='/LoginPage' component={LoginPage} />
             <Route exact path='/RegisterPage' component={RegisterPage} />
-
         </div>
     </BrowserRouter>
-
-  , document.getElementById('root'));
+    , document.getElementById('root'));
 registerServiceWorker();
