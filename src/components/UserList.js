@@ -3,9 +3,18 @@ import User from './User';
 
 class UserList extends Component {
 
-constructor(props){
-  super(props);
-}
+  constructor(props){
+    super(props);
+    this.state = {
+      users : [] /*almacenar los datos a consumir en api rails*/
+    };
+  }
+
+  /*enviar la peticion http*/
+  componentWillMount(){
+
+  }
+
 
   render() {
     return (
