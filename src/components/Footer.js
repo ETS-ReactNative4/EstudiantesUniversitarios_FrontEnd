@@ -17,7 +17,6 @@ class Footer extends Component {
           <p><em>Camilo Mosquera</em></p>
 
         </footer>
-
       </div>
     );
   }

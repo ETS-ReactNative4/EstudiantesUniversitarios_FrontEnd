@@ -6,6 +6,7 @@ import RegisterPage from './components/RegisterPage';*/
 import Grid from './components/Grid';
 import Tabs from './components/Tabs';
 import Contact from './components/Contact';
+import Universities from './components/Universities';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route exact path='/nosotros' component={Grid} />
             <Route exact path='/autoridad' component={Tabs} />
             <Route exact path='/contacto' component={Contact} />
+            <Route exact path='/universidades' component={Universities} />
 
         </div>
     </BrowserRouter>
