@@ -38,7 +38,7 @@ class HomePage extends Component {
                           Eventos
                       </NavItem>
                       <NavItem eventKey={3} href="#">
-                          Accesorios
+                        <li><Link to='/userlist'>Usuarios</Link></li>
                       </NavItem>
                   </Nav>
                   <Nav pullRight>
