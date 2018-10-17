@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 
 class User extends Component {
 
@@ -10,12 +9,12 @@ constructor(props){
   render() {
     return (
       <div>
-        <label>neme: {this.props.name}</label>
-        <label>idNUmber: {this.props.idNumber}</label>
-        <label>email: {this.props.email}</label>
-        <label>beneficiary: {this.props.beneficiary}</label>
-        <label>password: {this.props.password}</label>
-        <label>role_id: {this.props.role_id}</label>
+        <label>neme: {this.props.name}</label><br />
+        <label>idNUmber: {this.props.idNumber}</label><br />
+        <label>email: {this.props.email}</label><br />
+        <label>beneficiary: {this.props.beneficiary}</label><br />
+        <label>password: {this.props.password}</label><br />
+        <label>role_id: {this.props.role_id}</label><br />
 
       </div>
     );
