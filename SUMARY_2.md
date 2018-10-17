@@ -15,3 +15,7 @@ CARACTERISTICAS A DESARROLLAR EN SIGUIENTE SPRINT
 - completar redux
 - completar conexion con la api de rails
 - asegurar las rutas
+
+LINK DE DESPLIEGUE HEROKU
+
+https://unipastas-front.herokuapp.com/
