@@ -16,13 +16,11 @@ class UserList extends Component {
       // GET request for remote image
         axios({
           method: 'get',
-          url:'http://unipastas-back.herokuapp.com/users',
-          config: {
-            headers: {
-              accept: 'application/json',
-            },
-            data: {},
-          },
+          url:'http://unipastas-back.herokuapp.com/users/',
+          headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
+            Accept: "application/json", // Para JSON
+            "Content-Type": "application/json", // Para JSON
+           }),
         })
         .then(response => {
           console.log(response);
