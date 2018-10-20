@@ -15,7 +15,6 @@ constructor(props){
         <label>User beneficiary: {this.props.beneficiary}</label><br />
         <label>User password: {this.props.password}</label><br />
         <label>User role_id: {this.props.role_id}</label><br />
-
       </div>
     );
   }
