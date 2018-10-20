@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../styles/HomePage.css';
+import UserList from './UserList';
 import {Nav, Navbar, NavItem} from "react-bootstrap";
 import {Link} from 'react-router-dom';
+
 
 
 class HomePage extends Component {
