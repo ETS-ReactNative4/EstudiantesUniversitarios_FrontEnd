@@ -16,26 +16,36 @@ class UserList extends Component {
       // GET request for remote image
         axios({
           method: 'get',
-          url:'http://unipastas-back.herokuapp.com/users/',
+          url:'https://unipastas-back.herokuapp.com/users',
           headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
             Accept: "application/json", // Para JSON
             "Content-Type": "application/json", // Para JSON
            }),
         })
+
         .then(response => {
-          console.log(response);
+
+          let users  = response.data.slice(0, 5);
+
+          this.setState({
+            users: users
+          })
+        })
+        .catch(function (error) {
+            console.log(error);
         });
     }
 
 
   render() {
-    const userList = this.state.users.map((user)=>{
-          <User name={user.name} idNumber={user.idNumber} email={user.email} beneficiary={user.beneficiary} password={user.password} role_id={user.role_id}/>
+    const usersList = this.state.users.map((user)=>{
+          {/*<User role_id={user.role_id} name={user.name} idNumber={user.idNumber} email={user.email} beneficiary={user.beneficiary} />*/}
+           return (<p> {user.role_id} {user.name} {user.idNumber} {user.email} {user.beneficiary}</p>)
     })
 
     return (
         <div>
-            {userList}
+            {usersList}
         </div>
     );
   }
