@@ -7,9 +7,11 @@ import UserList from './components/UserList';
 import UniversitiesList from './components/UniversitiesList';
 import RolesList from './components/RolesList';
 import TypePublications from './components/TypePublications';
+import Majors from './components/Majors';
 import App from './components/App';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+
 
 ReactDOM.render(
     <BrowserRouter>
@@ -21,6 +23,7 @@ ReactDOM.render(
             <Route exact path='/universidad' component={UniversitiesList} />
             <Route exact path='/roles' component={RolesList} />
             <Route exact path='/tipo_publicacion' component={TypePublications} />
+            <Route exact path='/autoridad' component={Majors} />
         </div>
     </BrowserRouter>
     , document.getElementById('root'));
