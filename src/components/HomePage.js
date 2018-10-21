@@ -44,7 +44,7 @@ class HomePage extends Component {
                       <MenuItem eventKey={3.1}><Link to='/usuarios'>Usuarios</Link></MenuItem>
                       <MenuItem eventKey={3.2}><Link to='/universidad'>Universidades</Link></MenuItem>
                       <MenuItem eventKey={3.3}><Link to='/roles'>Roles</Link></MenuItem>
-                      <MenuItem eventKey={3.4}><Link to='/usuarios'>Usuarios</Link></MenuItem>
+                      <MenuItem eventKey={3.4}><Link to='/tipo_publicacion'>Tipo de Publicación</Link></MenuItem>
                       <MenuItem eventKey={3.5}><Link to='/usuarios'>Usuarios</Link></MenuItem>
                       <MenuItem divider />
                       <MenuItem eventKey={3.3}>Separated link</MenuItem>
