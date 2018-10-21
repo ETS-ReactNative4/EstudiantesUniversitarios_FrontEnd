@@ -5,6 +5,7 @@ import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import UserList from './components/UserList';
 import UniversitiesList from './components/UniversitiesList';
+import RolesList from './components/RolesList';
 import App from './components/App';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -17,6 +18,7 @@ ReactDOM.render(
             <Route exact path='/RegisterPage' component={RegisterPage} />
             <Route exact path='/usuarios' component={UserList} />
             <Route exact path='/universidad' component={UniversitiesList} />
+            <Route exact path='/roles' component={RolesList} />
         </div>
     </BrowserRouter>
     , document.getElementById('root'));

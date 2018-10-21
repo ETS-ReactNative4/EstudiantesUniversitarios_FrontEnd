@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class UniversitiesList extends Component {
+class RolesList extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      universities : [] /*almacenar los datos a consumir en api rails*/
+      roles : [] /*almacenar los datos a consumir en api rails*/
     };
   }
 
@@ -14,7 +14,7 @@ class UniversitiesList extends Component {
     componentWillMount(){
       axios({
           method: 'get',
-          url:'https://unipastas-back.herokuapp.com/universities',
+          url:'https://unipastas-back.herokuapp.com/roles',
           headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
             Accept: "application/json", // Para JSON
             "Content-Type": "application/json", // Para JSON
@@ -23,10 +23,10 @@ class UniversitiesList extends Component {
 
         .then(response => {
 
-          let universities  = response.data.slice();
+          let roles  = response.data.slice();
 
           this.setState({
-            universities: universities
+            roles: roles
           })
         })
         .catch(function (error) {
@@ -36,19 +36,18 @@ class UniversitiesList extends Component {
 
 
   render() {
-    const universitiesList = this.state.universities.map((university)=>{
+    const rolesList = this.state.roles.map((rol)=>{
 
-    
-      return (<p>
-                id = {university.id} name = {university.name} city = {university.city} department = {university.department}
+    return (<p>
+                id = {rol.id} name = {rol.name}
              </p>)
            })
 
     return (
         <div>
-            {universitiesList}
+            {rolesList}
         </div>
     );
   }
 }
-export default UniversitiesList;
+export default RolesList;
