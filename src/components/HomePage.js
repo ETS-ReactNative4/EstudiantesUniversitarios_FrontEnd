@@ -3,6 +3,7 @@ import '../styles/HomePage.css';
 import UserList from './UserList';
 import {Nav, Navbar, NavItem} from "react-bootstrap";
 import {Link} from 'react-router-dom';
+import {NavDropdown, MenuItem} from "react-bootstrap";
 
 
 
@@ -11,20 +12,7 @@ class HomePage extends Component {
     return (
       <div className="HomePage">
 
-          <div id="header-wrapper">
-
-              <div id="header" className="container ">
-                  <div id="logo">
-                      <h1><a href="#">
-                          ORGANIZCIÓN DE ESTUDIANTES UNIVERSITARIOS
-                          <br/>
-                          DEL RESGUARDO DE PASTAS
-                      </a></h1>
-                  </div>
-              </div>
-          </div>
-
-          <Navbar className="container" inverse collapseOnSelect>
+        <Navbar className="container" inverse collapseOnSelect>
               <Navbar.Header>
                   <Navbar.Brand>
                       <a href="#brand">INICIO</a>
@@ -40,7 +28,7 @@ class HomePage extends Component {
                           Eventos
                       </NavItem>
                       <NavItem eventKey={3} href="#">
-                        <li><Link to='/userlist'>Usuarios</Link></li>
+                          Autoridad
                       </NavItem>
                   </Nav>
                   <Nav pullRight>
@@ -51,7 +39,20 @@ class HomePage extends Component {
                           <li><Link to='/RegisterPage'>Registrarse</Link></li>
                       </NavItem>
                   </Nav>
+                  <Nav>
+                  <NavDropdown eventKey={3} title="EndPoints" id="basic-nav-dropdown">
+                      <MenuItem eventKey={3.1}><Link to='/usuarios'>Usuarios</Link></MenuItem>
+                      <MenuItem eventKey={3.2}><Link to='/universidad'>Universidades</Link></MenuItem>
+                      <MenuItem eventKey={3.3}><Link to='/usuarios'>Usuarios</Link></MenuItem>
+                      <MenuItem eventKey={3.4}><Link to='/usuarios'>Usuarios</Link></MenuItem>
+                      <MenuItem eventKey={3.5}><Link to='/usuarios'>Usuarios</Link></MenuItem>
+                      <MenuItem divider />
+                      <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                    </NavDropdown>
+                  </Nav>
+
               </Navbar.Collapse>
+
           </Navbar>
 
           <br/>
