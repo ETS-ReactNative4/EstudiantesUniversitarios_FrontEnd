@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-/*import LoginPage from './components/LoginPage';
-import RegisterPage from './components/RegisterPage';*/
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import Contact from './components/Contact';
