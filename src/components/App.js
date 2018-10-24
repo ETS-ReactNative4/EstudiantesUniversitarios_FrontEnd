@@ -6,10 +6,7 @@ import '../styles/App.css';
 import {Panel} from "react-bootstrap";
 import ContactPage from "./ContactPage";
 
-<<<<<<< HEAD
 
-=======
->>>>>>> daaee6ce8b4a0c0039ec9ebcc3a338a3e1aa04aa
 
 class App extends Component {
 
@@ -18,10 +15,6 @@ class App extends Component {
         return (
           <div className="App ">
 
-<<<<<<< HEAD
-              <HomePage/>
-              <CarouselImages/>
-=======
 
               <Panel className="Fondo">
 
@@ -35,18 +28,13 @@ class App extends Component {
 
               </Panel>
 
->>>>>>> daaee6ce8b4a0c0039ec9ebcc3a338a3e1aa04aa
 
           </div>
 
         );
-<<<<<<< HEAD
-  }
-=======
-  
+
     }
-  
->>>>>>> daaee6ce8b4a0c0039ec9ebcc3a338a3e1aa04aa
+
 }
 
 export default App;
