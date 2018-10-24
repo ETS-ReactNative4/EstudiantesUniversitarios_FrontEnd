@@ -1,65 +1,76 @@
 import React, { Component } from 'react';
 import '../styles/HomePage.css';
-import UserList from './UserList';
-import {Nav, Navbar, NavItem} from "react-bootstrap";
-import {Link} from 'react-router-dom';
-import {NavDropdown, MenuItem} from "react-bootstrap";
-
-
+import {Breadcrumb, MenuItem, Nav, Navbar, NavDropdown, NavItem, PageHeader} from "react-bootstrap";
 
 class HomePage extends Component {
   render() {
     return (
-      <div className="HomePage">
+      <div className="HomePage container">
 
-        <Navbar className="container" inverse collapseOnSelect>
+          {/* ======================================================================== */}
+          {/* BARRA PARA EL INICIO O REGISTRO DE USUARIO */}
+          <div >
+              <Breadcrumb className="BarraHome">
+                  <Breadcrumb.Item className="LetraColor" href="#">
+                      Iniciar Sesión
+                  </Breadcrumb.Item>
+                  <Breadcrumb.Item href="#">
+                      Resgistrarse
+                  </Breadcrumb.Item>
+              </Breadcrumb>
+          </div>
+          {/* ======================================================================== */}
+
+
+          {/* ======================================================================== */}
+          {/* TITULO DE LA PAGINA */}
+          <PageHeader>
+              <h1 className="GranTitulo">
+                  OEURP
+              </h1>
+
+              <small className="MiniTitulo">
+                  Organización De Estdiantes Universitarios Del Resguardo De Pastas
+              </small>
+          </PageHeader>
+          {/* ======================================================================== */}
+
+          {/* ======================================================================== */}
+          {/* BARRA DE NAVEGACION DE LA PAGINA DE INICIO */}
+          <Navbar className="BarraNavegacion">
               <Navbar.Header>
                   <Navbar.Brand>
-                      <a href="#brand">Universitarios Pastas</a>
+                      <a href="#">INICIO</a>
                   </Navbar.Brand>
                   <Navbar.Toggle />
               </Navbar.Header>
-              <Navbar.Collapse>
-                  <Nav>
-                      <NavItem eventKey={1} href="#">
-                          Acerca de la organización
-                      </NavItem>
-                      <NavItem eventKey={2} href="#">
-                          Eventos
-                      </NavItem>
-                      <NavItem eventKey={3} href="#">
-                          Autoridad
-                      </NavItem>
-                  </Nav>
-                  <Nav pullRight>
-                      <NavItem eventKey={1} href="#">
-                          <li><Link to='/LoginPage'>Inicar Sesión</Link></li>
-                      </NavItem>
-                      <NavItem eventKey={2} href="#">
-                          <li><Link to='/RegisterPage'>Registrarse</Link></li>
-                      </NavItem>
-                  </Nav>
-                  <Nav>
-                  <NavDropdown eventKey={3} title="EndPoints" id="basic-nav-dropdown">
-                      <MenuItem eventKey={3.1}><Link to='/usuarios'>Usuarios</Link></MenuItem>
-                      <MenuItem eventKey={3.2}><Link to='/universidad'>Universidades</Link></MenuItem>
-                      <MenuItem eventKey={3.3}><Link to='/roles'>Roles</Link></MenuItem>
-                      <MenuItem eventKey={3.4}><Link to='/tipo_publicacion'>Tipo de Publicación</Link></MenuItem>
-                      <MenuItem eventKey={3.5}><Link to='/autoridad'>Autoridad</Link></MenuItem>
-                      <MenuItem divider />
-                      <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                    </NavDropdown>
-                  </Nav>
+              <Nav>
+                  <NavItem eventKey={1} href="#">
+                      Publicaciones
+                  </NavItem>
+                  <NavItem eventKey={2} href="#">
+                      Convenios Con Universidades
+                  </NavItem>
+                  <NavItem eventKey={3} href="#">
+                      Eventos
+                  </NavItem>
+              </Nav>
 
-              </Navbar.Collapse>
-
+              <Nav pullRight >
+                  <NavDropdown eventKey={1} title="Información" id="basic-nav-dropdown">
+                      <MenuItem eventKey={1.1}>¿Quienes somos?</MenuItem>
+                      <MenuItem eventKey={1.2}>Misión</MenuItem>
+                      <MenuItem eventKey={1.3}>Visión</MenuItem>
+                  </NavDropdown>
+                  <NavItem className="MenuIzquierda" eventKey={2} href="#">
+                      Contactenos
+                  </NavItem>
+              </Nav>
           </Navbar>
+          {/* ======================================================================== */}
 
-          <br/>
-          <div id="page" className="container">
-              <div className="container CuadroImagen">
-              </div>
-          </div>
+
+
       </div>
     );
   }
