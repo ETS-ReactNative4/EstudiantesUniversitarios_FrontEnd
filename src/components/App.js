@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import HomePage from './HomePage';
+import CarouselImages from './CarouselImages';
+import Users from './Users'
 import '../styles/App.css';
-import HomePage from './HomePage'
 import {Panel} from "react-bootstrap";
-import CarouselImages from "./CarouselImages";
+import ContactPage from "./ContactPage";
+
 
 class App extends Component {
 
@@ -10,6 +13,7 @@ class App extends Component {
 
         return (
           <div className="App ">
+
 
               <Panel className="Fondo">
 
@@ -22,6 +26,7 @@ class App extends Component {
                   </Panel.Body>
 
               </Panel>
+
 
           </div>
 

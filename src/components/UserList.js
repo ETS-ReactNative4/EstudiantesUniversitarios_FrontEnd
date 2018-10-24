@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import User from './User';
+
 import axios from 'axios';
 
 class UserList extends Component {
@@ -25,7 +25,8 @@ class UserList extends Component {
 
         .then(response => {
 
-          let users  = response.data.slice(0, 5);
+
+          let users  = response.data.slice();
 
           this.setState({
             users: users
@@ -39,9 +40,16 @@ class UserList extends Component {
 
   render() {
     const usersList = this.state.users.map((user)=>{
-          {/*<User role_id={user.role_id} name={user.name} idNumber={user.idNumber} email={user.email} beneficiary={user.beneficiary} />*/}
-           return (<p> {user.role_id} {user.name} {user.idNumber} {user.email} {user.beneficiary}</p>)
-    })
+
+      {/*console.log("==============================");
+      console.log(user);
+      console.log("==============================");*/}
+
+      {/*<User role_id={user.role_id} name={user.name} idNumber={user.idNumber} email={user.email} beneficiary={user.beneficiary} />*/}
+            return (<p>
+                      id = {user.id} name = {user.name} idNumber = {user.idNumber} email = {user.email} beneficiary = {String( user.beneficiary )} role_id={user.role_id}
+                   </p>)
+                 })
 
     return (
         <div>
