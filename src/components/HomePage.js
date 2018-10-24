@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import '../styles/HomePage.css';
 import {Breadcrumb, MenuItem, Nav, Navbar, NavDropdown, NavItem, PageHeader} from "react-bootstrap";
+import UserList from './UserList';
+import {Link} from 'react-router-dom';
+
 
 class HomePage extends Component {
   render() {

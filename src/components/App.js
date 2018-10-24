@@ -3,8 +3,8 @@ import HomePage from './HomePage';
 import CarouselImages from './CarouselImages';
 import Users from './Users'
 import '../styles/App.css';
+import {Panel} from "react-bootstrap";
 import ContactPage from "./ContactPage";
-
 
 
 class App extends Component {
@@ -14,13 +14,26 @@ class App extends Component {
         return (
           <div className="App ">
 
-              <HomePage/>
-              <CarouselImages/>
+
+              <Panel className="Fondo">
+
+                  <Panel.Heading>
+                      <HomePage/>
+                  </Panel.Heading>
+
+                  <Panel.Body>
+                      <CarouselImages/>
+                  </Panel.Body>
+
+              </Panel>
+
 
           </div>
 
         );
-  }
+  
+    }
+  
 }
 
 export default App;
