@@ -13,8 +13,6 @@ class App extends Component {
 
               <Panel className="Fondo">
 
-                  <h1>#####################</h1>
-
                   <Panel.Heading>
                       <HomePage/>
                   </Panel.Heading>
