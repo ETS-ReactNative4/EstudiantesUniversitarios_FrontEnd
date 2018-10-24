@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import HomePage from './HomePage'
+import HomePage from './HomePage';
+import CarouselImages from './CarouselImages';
 import Users from './Users'
 import '../styles/App.css';
 import ContactPage from "./ContactPage";
-import HomePage from "./HomePage";
+
 
 
 class App extends Component {
@@ -14,12 +15,7 @@ class App extends Component {
           <div className="App ">
 
               <HomePage/>
-              <ContactPage/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
+              <CarouselImages/>
 
           </div>
 
