@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 import ContactPage from "./ContactPage";
 import HomePage from "./HomePage";
+import {Panel} from "react-bootstrap";
+import CarouselImages from "./CarouselImages";
 
 
 class App extends Component {
@@ -11,13 +13,19 @@ class App extends Component {
         return (
           <div className="App ">
 
-              <HomePage/>
-              <ContactPage/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
+              <Panel className="Fondo">
+
+                  <Panel.Heading>
+                      <HomePage/>
+                  </Panel.Heading>
+
+                  <Panel.Body>
+                      <CarouselImages/>
+                  </Panel.Body>
+
+
+
+              </Panel>
 
           </div>
 
