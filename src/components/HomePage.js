@@ -15,7 +15,7 @@ class HomePage extends Component {
         <Navbar className="container" inverse collapseOnSelect>
               <Navbar.Header>
                   <Navbar.Brand>
-                      <a href="#brand">INICIO</a>
+                      <a href="#brand">Universitarios Pastas</a>
                   </Navbar.Brand>
                   <Navbar.Toggle />
               </Navbar.Header>
@@ -56,19 +56,10 @@ class HomePage extends Component {
           </Navbar>
 
           <br/>
-
-
           <div id="page" className="container">
-
               <div className="container CuadroImagen">
-
               </div>
-
-
-
           </div>
-
-
       </div>
     );
   }
