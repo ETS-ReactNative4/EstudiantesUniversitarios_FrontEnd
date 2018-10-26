@@ -1,27 +1,16 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import HomePage from './HomePage'
-import {Panel} from "react-bootstrap";
-import CarouselImages from "./CarouselImages";
+import RegisterPage from "./RegisterPage";
 
 class App extends Component {
 
     render() {
 
         return (
-          <div className="App ">
 
-              <Panel className="Fondo">
+          <div className="App">
 
-                  <Panel.Heading>
-                      <HomePage/>
-                  </Panel.Heading>
-
-                  <Panel.Body>
-                      <CarouselImages/>
-                  </Panel.Body>
-
-              </Panel>
+              <RegisterPage/>
 
           </div>
 

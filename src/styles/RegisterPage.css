@@ -1,3 +1,19 @@
 .RegisterPage {
 
 }
+
+.Ventana {
+    padding: 5%;
+}
+
+.BarraBotones{
+    text-align: center;
+}
+
+.Titulo{
+    text-align: center;
+}
+
+.rapido{
+    margin-top: 10px;
+}
