@@ -1,0 +1,29 @@
+.BarHome {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+}
+
+.BarraHome{
+    text-align: right;
+    background: transparent;
+    font-size: 20px;
+    color: #edff00;
+}
+
+.GranTitulo{
+    font-size: 80px;
+    color: #ff6c00;
+}
+
+.MiniTitulo{
+    font-size: 30px;
+    color: #edff00;
+}
+
+.MenuIzquierda{
+    margin-right: 20px;
+}
+
+.BarraNavegacion{
+    font-size: 18px;
+}

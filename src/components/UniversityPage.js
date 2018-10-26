@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/UniversityPage.css';
-import HomePage from "./HomePage";
+import BarHome from "./BarHome";
 import {
     Col,
     ControlLabel,
@@ -86,10 +86,12 @@ class UniversityPage extends Component {
 
 
         return (
-          <div className="UniversityPage">
+          <div >
 
               <br/>
               <br/>
+
+              <BarHome/>
 
               <Grid>
                   <Row>

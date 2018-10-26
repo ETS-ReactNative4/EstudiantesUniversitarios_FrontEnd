@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import RegisterPage from "./RegisterPage";
+import ContactPage from "./ContactPage";
+import MisionPage from "./MisionPage";
+
 
 class App extends Component {
 
@@ -10,7 +12,7 @@ class App extends Component {
 
           <div className="App">
 
-              <RegisterPage/>
+              <MisionPage/>
 
           </div>
 
