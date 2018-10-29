@@ -23,9 +23,6 @@ class App extends Component {
               {/* HELLO WORLD*/}
               {/* HELLO WORLD*/}
               {/* HELLO WORLD*/}
-              {/* HELLO WORLD*/}
-              {/* HELLO WORLD*/}
-              {/* HELLO WORLD*/}
 
 
 
