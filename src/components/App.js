@@ -16,23 +16,18 @@ class App extends Component {
               {/* hola mundoooo*/}
               {/* hola mundoooo*/}
               {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              {/* hola mundoooo*/}
-              
+
+
+              {/* HELLO WORLD*/}
+              {/* HELLO WORLD*/}
+              {/* HELLO WORLD*/}
+              {/* HELLO WORLD*/}
+              {/* HELLO WORLD*/}
+              {/* HELLO WORLD*/}
+              {/* HELLO WORLD*/}
+              {/* HELLO WORLD*/}
+
+
 
           </div>
 
