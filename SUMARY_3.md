@@ -18,4 +18,4 @@ CARACTERISTICAS A DESARROLLAR EN SIGUIENTE SPRINT
 
 LINK DE DESPLIEGUE HEROKU
 
-https://unipastas-front.herokuapp.com/
+https://unipastas-frontend.herokuapp.com/

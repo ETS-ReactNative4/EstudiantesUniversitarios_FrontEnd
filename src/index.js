@@ -11,8 +11,8 @@ import QuienesSomosPage from './components/QuienesSomosPage';
 import UniversityPage from './components/UniversityPage';
 import ContactPage from './components/ContactPage';
 import App from './components/App';
-import { Provider } from 'react-redux';
-import store from './store/index';
+//import { Provider } from 'react-redux';
+//import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
