@@ -1,5 +1,7 @@
 .ContactPage {
-
+    background-image: url("../resources/pastas2.jpg");
+    background-size: cover;
+    height: 1080px;
 }
 
 
@@ -10,3 +12,4 @@
 .CentrarBoton{
     text-align: center;
 }
+

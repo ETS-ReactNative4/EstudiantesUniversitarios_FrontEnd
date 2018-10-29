@@ -1,3 +1,21 @@
 .RegisterPage {
+    background-image: url("../resources/pastas2.jpg");
+    background-size: cover;
+    height: 1080px;
+}
 
+.Ventana {
+    padding: 5%;
+}
+
+.BarraBotones{
+    text-align: center;
+}
+
+.Titulo{
+    text-align: center;
+}
+
+.rapido{
+    margin-top: 10px;
 }
