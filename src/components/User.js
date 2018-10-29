@@ -19,4 +19,4 @@ constructor(props){
     );
   }
 }
-export default User;
+export default User; 

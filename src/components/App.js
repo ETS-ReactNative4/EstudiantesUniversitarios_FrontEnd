@@ -7,6 +7,7 @@ import {Panel} from "react-bootstrap";
 import ContactPage from "./ContactPage";
 
 
+
 class App extends Component {
 
     render() {
@@ -31,9 +32,8 @@ class App extends Component {
           </div>
 
         );
-  
+
     }
-  
 }
 
 export default App;
