@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import ContactPage from "./ContactPage";
+import VisionPage from "./VisionPage";
 import MisionPage from "./MisionPage";
 
 
@@ -12,7 +12,7 @@ class App extends Component {
 
           <div className="App">
 
-              <MisionPage/>
+              <VisionPage/>
 
           </div>
 
