@@ -86,22 +86,19 @@ class UniversityPage extends Component {
 
 
         return (
-          <div >
+          <div className={"UniversityPage"}>
 
-              <br/>
-              <br/>
+              <div className={"container"}>
 
-              <BarHome/>
+                  <BarHome/>
 
-              <Grid>
-                  <Row>
-                      {universitiesList}
-                  </Row>
-              </Grid>
+                  <Grid>
+                      <Row>
+                          {universitiesList}
+                      </Row>
+                  </Grid>
 
-              <br/>
-              <br/>
-              <br/>
+              </div>
 
           </div>
         );

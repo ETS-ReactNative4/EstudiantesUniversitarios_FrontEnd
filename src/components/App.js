@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import VisionPage from "./VisionPage";
-import MisionPage from "./MisionPage";
+import HomePage from "./HomePage";
 
 
 class App extends Component {
@@ -12,7 +11,7 @@ class App extends Component {
 
           <div className="App">
 
-              <VisionPage/>
+              <HomePage/>
 
           </div>
 

@@ -1,5 +1,7 @@
 .LoginPage {
-
+    background-image: url("../resources/pastas2.jpg");
+    background-size: cover;
+    height: 1080px;
 }
 
 .Ventana {

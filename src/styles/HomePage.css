@@ -1,15 +1,10 @@
 .HomePage {
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
+    background-image: url("../resources/pastas2.jpg");
+    background-size: cover;
+    height: 1080px;
+    font-family: 'Fredoka One', cursive;
 }
-
-.BarraHome{
-    text-align: right;
-    background: transparent;
-    font-size: 20px;
-    color: #edff00;
-}
-
+/*
 .GranTitulo{
     font-size: 80px;
     color: #ff6c00;
@@ -27,3 +22,4 @@
 .BarraNavegacion{
     font-size: 18px;
 }
+*/

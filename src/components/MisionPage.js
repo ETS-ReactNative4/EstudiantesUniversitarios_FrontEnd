@@ -10,38 +10,44 @@ class MisionPage extends Component {
 
         return (
 
-          <div className="MisionPage container">
+          <div className="MisionPage">
 
-              <BarHome/>
+              <div className={"container"}>
 
-              <Grid>
-                  <Jumbotron >
-                      <h1 className="TituloMision">Misión</h1>
+                  <BarHome/>
 
-                      <br/>
-                      <br/>
-
-                      <div className="CentrarTexto">
+                  <Grid>
+                      <Jumbotron >
+                          <h1 className="TituloMision">Misión</h1>
 
                           <br/>
                           <br/>
 
-                          <div>
+                          <div className="CentrarTexto">
 
-                              <p>Integración de Estudiantes Indigenas Universitarios.</p>
                               <br/>
                               <br/>
-                              <p>Promover la recuperación, protección y conservación de la identidad cultural.</p>
-                              <br/>
-                              <br/>
-                              <p>luchar por los derechos, beneficios y oportunidades de progreso que como jóvenes indígenas poseemos.</p>
+
+                              <div>
+
+                                  <p>Integración de Estudiantes Indigenas Universitarios.</p>
+                                  <br/>
+                                  <br/>
+                                  <p>Promover la recuperación, protección y conservación de la identidad cultural.</p>
+                                  <br/>
+                                  <br/>
+                                  <p>luchar por los derechos, beneficios y oportunidades de progreso que como jóvenes indígenas poseemos.</p>
+
+                              </div>
 
                           </div>
 
-                      </div>
+                      </Jumbotron>
 
-                  </Jumbotron>
-              </Grid>
+                  </Grid>
+
+              </div>
+
           </div>
 
         );

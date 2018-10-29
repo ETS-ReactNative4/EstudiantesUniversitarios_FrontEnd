@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-/*import '../styles/HomePage.css';*/
+import '../styles/HomePage.css';
 import BarHome from "./BarHome";
 import CarouselImages from "./CarouselImages";
 
@@ -11,10 +11,13 @@ class HomePage extends Component {
 
           <div className="HomePage">
 
-              <BarHome/>
+              <div className={"container"}>
 
-              <CarouselImages/>
+                  <BarHome/>
 
+                  <CarouselImages/>
+
+              </div>
           </div>
 
         );

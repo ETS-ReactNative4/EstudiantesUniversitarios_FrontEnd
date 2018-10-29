@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/BarHome.css';
+import {Link} from 'react-router-dom';
 import {Breadcrumb, MenuItem, Nav, Navbar, NavDropdown, NavItem, PageHeader} from "react-bootstrap";
 
 
@@ -12,11 +13,11 @@ class BarHome extends Component {
           {/* BARRA PARA EL INICIO O REGISTRO DE USUARIO */}
           <div>
               <Breadcrumb className="BarraHome">
-                  <Breadcrumb.Item className="LetraColor" href="#">
-                      Iniciar Sesión
+                  <Breadcrumb.Item className="LetraColor">
+                      <Link to='/LoginPage'>Inicar Sesión</Link>
                   </Breadcrumb.Item>
                   <Breadcrumb.Item href="#">
-                      Resgistrarse
+                      <Link to='/RegisterPage'>Resgistrarse</Link>
                   </Breadcrumb.Item>
               </Breadcrumb>
           </div>
@@ -42,7 +43,8 @@ class BarHome extends Component {
           <Navbar className="BarraNavegacion" collapseOnSelect>
               <Navbar.Header>
                   <Navbar.Brand>
-                      <a href="#">INICIO</a>
+                      {/*<a href="#">INICIO</a>*/}
+                      <Link to='/HomePage'>INICIO</Link>
                   </Navbar.Brand>
                   <Navbar.Toggle />
               </Navbar.Header>
@@ -52,20 +54,29 @@ class BarHome extends Component {
                           /Publicaciones/
                       </NavItem>
                       <NavItem eventKey={2} href="#">
-                          /Convenios Con Universidades/
+                          <Link to='/UniversityPage'>/Convenios Con Universidades/</Link>
+                          {/*/Convenios Con Universidades/*/}
                       </NavItem>
                       <NavItem eventKey={3} href="#">
-                          /Eventos/
+                          <Link to='/EventPage'> /Eventos/ </Link>
                       </NavItem>
                   </Nav>
                   <Nav pullRight>
                       <NavDropdown eventKey={1} title="Información" id="basic-nav-dropdown">
-                          <MenuItem eventKey={1.1}>¿Quienes somos?</MenuItem>
-                          <MenuItem eventKey={1.2}>Misión</MenuItem>
-                          <MenuItem eventKey={1.3}>Visión</MenuItem>
+                          <MenuItem eventKey={1.1}>
+                              <Link to='/QuienesSomosPage'> ¿Quienes somos? </Link>
+                          </MenuItem>
+
+                          <MenuItem eventKey={1.2}>
+                              <Link to='/MisionPage'> Misión </Link>
+                          </MenuItem>
+
+                          <MenuItem eventKey={1.3}>
+                              <Link to='/VisionPage'> Visión </Link>
+                          </MenuItem>
                       </NavDropdown>
                       <NavItem className="MenuIzquierda" eventKey={2} href="#">
-                          Contactenos
+                          <Link to='/ContactPage'>Contactenos</Link>
                       </NavItem>
                   </Nav>
               </Navbar.Collapse>
