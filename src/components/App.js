@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import HomePage from './HomePage';
-import CarouselImages from './CarouselImages';
-import Users from './Users'
 import '../styles/App.css';
-import {Panel} from "react-bootstrap";
-import ContactPage from "./ContactPage";
-
+import HomePage from "./HomePage";
 
 
 class App extends Component {
@@ -13,20 +8,14 @@ class App extends Component {
     render() {
 
         return (
-          <div className="App ">
 
+          <div className="App">
 
-              <Panel className="Fondo">
+              <HomePage/>
 
-                  <Panel.Heading>
-                      <HomePage/>
-                  </Panel.Heading>
-
-                  <Panel.Body>
-                      <CarouselImages/>
-                  </Panel.Body>
-
-              </Panel>
+              {/* hola mundoooo*/}
+              {/* hola mundoooo*/}
+              {/* hola mundoooo*/}
 
 
           </div>

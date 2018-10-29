@@ -1,9 +1,9 @@
 .App {
     background-image: url("../resources/pastas2.jpg");
     background-size: cover;
+    height: 1080px;
 }
 
 .Fondo {
-    background-image: url("../resources/pastas2.jpg");
-    background-size: cover;
+   background: transparent;
 }

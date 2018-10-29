@@ -1,12 +1,13 @@
-.LoginPage {
+.MisionPage {
     background-image: url("../resources/pastas2.jpg");
     background-size: cover;
     height: 1080px;
 }
 
-.Ventana {
+.TituloMision{
+    text-align: center;
 }
 
-.BarraBotones{
+.CentrarTexto{
     text-align: center;
 }
