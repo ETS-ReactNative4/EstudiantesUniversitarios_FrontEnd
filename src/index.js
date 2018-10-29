@@ -9,6 +9,8 @@ import RolesList from './components/RolesList';
 import TypePublications from './components/TypePublications';
 import Majors from './components/Majors';
 import App from './components/App';
+import { Provider } from 'react-redux';
+import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
