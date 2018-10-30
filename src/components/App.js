@@ -14,6 +14,10 @@ class App extends Component {
               <HomePage/>
 
               {/* hola mundo*/}
+              {/* hola mundo*/}
+              {/* hola mundo*/}
+              {/* hola mundo*/}
+              {/* hola mundo*/}
 
           </div>
 
