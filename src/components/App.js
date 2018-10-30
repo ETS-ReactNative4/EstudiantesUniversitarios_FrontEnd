@@ -13,6 +13,8 @@ class App extends Component {
 
               <HomePage/>
 
+              {/* hola mundo*/}
+
           </div>
 
         );
