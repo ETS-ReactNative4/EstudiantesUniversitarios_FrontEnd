@@ -86,21 +86,38 @@ class UniversityPage extends Component {
 
 
         return (
-          <div className={"UniversityPage"}>
+            <div className={"UniversityPage"}>
 
-              <div className={"container"}>
+                {/*========================================================================================*/}
+                <Panel>
 
-                  <BarHome/>
 
-                  <Grid>
-                      <Row>
-                          {universitiesList}
-                      </Row>
-                  </Grid>
+                    {/*========================================================================================*/}
+                    <Panel.Heading>
+                        <Panel.Title className="ListaUniversidades" toggle>
+                            <h1>
+                                Universidades Con Convenio
+                            </h1> 
+                        </Panel.Title>
+                    </Panel.Heading>
+                    {/*========================================================================================*/}
 
-              </div>
 
-          </div>
+                    {/*========================================================================================*/}
+                    <Panel.Collapse>
+                        <Panel.Body>
+                            <Row>
+                                {universitiesList}
+                            </Row>
+                        </Panel.Body>
+                    </Panel.Collapse>
+                    {/*========================================================================================*/}
+
+
+                </Panel>
+                 {/*========================================================================================*/}
+
+            </div>
         );
   }
 }
