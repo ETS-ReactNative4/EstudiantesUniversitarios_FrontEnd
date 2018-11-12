@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../styles/Welcome.css';
 
 class Welcome extends Component{
     state = { message: undefined }
