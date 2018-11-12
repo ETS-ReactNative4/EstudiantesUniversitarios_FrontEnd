@@ -8,7 +8,7 @@ class LoginPage extends Component {
     handleSubmit = event => {
         event.preventDefault();
 
-        fetch("http://unipastas-back.herokuapp.com/user_token",
+        fetch("https://unipastas-back.herokuapp.com/user_token",
             {
                 method: 'POST',
                 body: JSON.stringify({
