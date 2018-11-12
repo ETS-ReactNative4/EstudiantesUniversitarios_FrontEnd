@@ -58,7 +58,7 @@ class LoginPage extends Component {
                                         <ButtonGroup  >
                                             <Button type="submit" bsStyle="success"> Entrar </Button>
                                             <Button bsStyle="danger">
-                                                <Link to='/HomePage'>Volvern</Link>
+                                                <Link to='/HomePage'>Volver</Link>
                                             </Button>
                                         </ButtonGroup>
 
