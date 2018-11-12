@@ -1,12 +1,9 @@
-.LoginPage {
+.QuienesSomosPage {
     background-image: url("../resources/pastas2.jpg");
     background-size: cover;
     height: 1080px;
 }
 
-.Ventana {
-}
-
-.BarraBotones{
-    text-align: center;
+.Fondo {
+   background: transparent;
 }

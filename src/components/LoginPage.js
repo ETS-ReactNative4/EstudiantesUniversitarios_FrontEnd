@@ -1,72 +1,83 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
+import {Link} from 'react-router-dom';
+import {Button, ButtonGroup, Col, ControlLabel, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
 
 class LoginPage extends Component {
 
-    constructor(){
-        super();
-        this.state = {
-            user: "",
-            password: ""
-        }
-
-    }
-
     render() {
-    return (
-      <div className="LoginPage">
 
-          <div className="wrapper fadeInDown">
-              <div id="formContent">
+        return (
 
-                  <div className="fadeIn first">
-                      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon"/>
-                  </div>
+            <div className="LoginPage">
 
+                <div className={"container"}>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
 
-                  <form>
-                      <input type="text" id="login" className="fadeIn second" name="login" placeholder="Usuario *" onChange={this.upDateUser.bind(this)}/>
-                      <input type="password" id="password" className="fadeIn third" name="login" placeholder="Contraseña *" onChange={this.upDatePassword.bind(this)}/>
-                      <input type="submit"    className="fadeIn fourth BotonEntrar" value="Entrar" onClick={this.mensajeError.bind(this)}/>
-                  </form>
+                    <Row>
 
+                        <Col xs={12} md={3}>
+                        </Col>
 
-                  <div id="formFooter">
-                      <a className="underlineHover" href="#">¿ Olvidó su contraseña ?</a>
-                  </div>
+                        <Col xs={12} md={6}>
 
-              </div>
-          </div>
-      </div>
-    );
-  }
+                            <Jumbotron className="Ventana">
 
-  upDateUser(event){
-      this.setState({
-         user: event.target.value
-      });
-  }
+                                <br/>
+                                <br/>
 
-  upDatePassword(event){
-      this.setState({
-          password: event.target.value
-      });
-  }
+                                <Form horizontal>
+                                    <FormGroup controlId="formHorizontalEmail">
+                                        <Col componentClass={ControlLabel} sm={3}>
+                                            E-Mail:
+                                        </Col>
 
-  mensajeError(){
-        var tmp = this.errorDatos();
-        alert(tmp);
-  }
+                                        <Col sm={9}>
+                                            <FormControl type="email" placeholder="ejemplo@prueba.com" />
+                                        </Col>
+                                    </FormGroup>
 
-  errorDatos(){
-        var validUser = this.state.user;
-        var validPassword =  this.state.password;
-        if((validUser.length < 1) && (validPassword.length< 1)) return "LOS CAMPOS NO PUEDEN SER VACIOS";
-        if((validUser.length < 1) && (validPassword.length > 0)) return "EL USUARIO NO PUEDE SER VACIO";
-        if((validUser.length > 0) && (validPassword.length < 1)) return "LA CONTRASEÑA NO PUEDE SER VACIO";
-        return "200";
-   }
+                                    <FormGroup controlId="formHorizontalPassword">
+                                        <Col componentClass={ControlLabel} sm={3}>
+                                            Contraseña:
+                                        </Col>
+                                        <Col sm={9}>
+                                            <FormControl type="password" placeholder="contraseña" />
+                                        </Col>
+                                    </FormGroup>
 
-}
+                                    <FormGroup className="BarraBotones">
+
+                                        <ButtonGroup  >
+                                            <Button type="submit" bsStyle="success"> Entrar </Button>
+                                            <Button bsStyle="danger">
+                                                <Link to='/HomePage'>Volver</Link>
+                                            </Button>
+                                        </ButtonGroup>
+
+                                    </FormGroup>
+                                </Form>
+
+                            </Jumbotron>
+
+                        </Col>
+                    </Row>
+
+                    <Col xs={12} md={3}>
+                    </Col>
+                </div>
+            </div>
+
+            );
+
+        }
+    }
 
 export default LoginPage;
