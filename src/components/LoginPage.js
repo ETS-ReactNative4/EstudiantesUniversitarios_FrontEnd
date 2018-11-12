@@ -30,13 +30,17 @@ class LoginPage extends Component {
 
                             <Jumbotron className="Ventana">
 
+                                <h2 className="LabelsLogin">
+                                    INICIAR SESIÓN
+                                </h2>
+
                                 <br/>
                                 <br/>
 
                                 <Form horizontal>
                                     <FormGroup controlId="formHorizontalEmail">
-                                        <Col componentClass={ControlLabel} sm={3}>
-                                            E-Mail:
+                                        <Col className="LabelsLogin" sm={3}>
+                                            Correo:
                                         </Col>
 
                                         <Col sm={9}>
@@ -45,7 +49,7 @@ class LoginPage extends Component {
                                     </FormGroup>
 
                                     <FormGroup controlId="formHorizontalPassword">
-                                        <Col componentClass={ControlLabel} sm={3}>
+                                        <Col className="LabelsLogin" sm={3}>
                                             Contraseña:
                                         </Col>
                                         <Col sm={9}>
@@ -53,12 +57,19 @@ class LoginPage extends Component {
                                         </Col>
                                     </FormGroup>
 
+                                    <br></br>
+                                    
+
                                     <FormGroup className="BarraBotones">
 
-                                        <ButtonGroup  >
-                                            <Button type="submit" bsStyle="success"> Entrar </Button>
-                                            <Button bsStyle="danger">
-                                                <Link to='/HomePage'>Volvern</Link>
+                                        <ButtonGroup>
+                                            <Button className="LoginBotonEntrar">
+                                                Entrar 
+                                            </Button>
+
+                                            <Button className="LoginBotonCancelar"> 
+                                                <Link to='/'> Volver </Link>
+
                                             </Button>
                                         </ButtonGroup>
 

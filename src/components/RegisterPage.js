@@ -19,8 +19,7 @@ class RegisterPage extends Component {
                     <br/>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
+                   
 
                     <Row>
 
@@ -31,13 +30,14 @@ class RegisterPage extends Component {
 
                             <Jumbotron className="Ventana">
 
-                                <br/>
-                                <h1 className="Titulo">Registrarse</h1>
-                                <br/>
+                                <div className="LabelsRegister">
+                                        <h1 > Registrarse </h1>
+                                </div>
+                                <br></br>
 
                                 <Form horizontal>
                                     <FormGroup controlId="formHorizontalNombre">
-                                        <Col componentClass={ControlLabel} sm={3}>
+                                        <Col className="LabelsRegister" sm={3}>
                                             Nombre:
                                         </Col>
 
@@ -47,27 +47,27 @@ class RegisterPage extends Component {
                                     </FormGroup>
 
                                     <FormGroup controlId="formHorizontalApellido">
-                                        <Col componentClass={ControlLabel} sm={3}>
+                                        <Col className="LabelsRegister CampoApellido" sm={3}>
                                             Apellido:
                                         </Col>
 
-                                        <Col sm={9}>
+                                        <Col sm={9} className="CampoApellido">
                                             <FormControl type="text" placeholder="" />
                                         </Col>
                                     </FormGroup>
 
                                     <FormGroup controlId="formHorizontalEmail">
-                                        <Col componentClass={ControlLabel} sm={3}>
+                                        <Col className="LabelsRegister" sm={3}>
                                             Correo electrónico:
                                         </Col>
 
-                                        <Col sm={9}>
+                                        <Col sm={9} className="CampoCorreo">
                                             <FormControl type="email" placeholder="ejemplo@prueba.com" />
                                         </Col>
                                     </FormGroup>
 
                                     <FormGroup controlId="formHorizontalPassword">
-                                        <Col componentClass={ControlLabel} sm={3}>
+                                        <Col className="LabelsRegister" sm={3}>
                                             Contraseña:
                                         </Col>
                                         <Col sm={9}>
@@ -76,7 +76,7 @@ class RegisterPage extends Component {
                                     </FormGroup>
 
                                     <FormGroup controlId="formHorizontalConfPassword">
-                                        <Col componentClass={ControlLabel} sm={3}>
+                                        <Col className="LabelsRegister" sm={3}>
                                             Confirmar Contraseña:
                                         </Col>
                                         <Col className="rapido" sm={9}>
@@ -87,9 +87,12 @@ class RegisterPage extends Component {
                                     <FormGroup className="BarraBotones">
 
                                         <ButtonGroup  >
-                                            <Button type="submit" bsStyle="success"> Crear Usuario </Button>
-                                            <Button bsStyle="danger">
-                                                <Link to='/HomePage'>Volver</Link>
+                                            <Button className="RegisterBotonCrear" > 
+                                                Crear Usuario 
+                                            </Button>
+                                            
+                                            <Button className="RegisterBotonCancelar">
+                                                <Link to='/'>Volver</Link>
                                             </Button>
                                         </ButtonGroup>
 
