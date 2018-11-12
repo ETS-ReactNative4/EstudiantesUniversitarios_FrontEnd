@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
+import Welcome from './components/Welcome';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import HomePage from './components/HomePage';
@@ -30,6 +31,7 @@ ReactDOM.render(
             <Route exact path='/UniversityPage' component={UniversityPage} />
             <Route exact path='/QuienesSomosPage' component={QuienesSomosPage} />
             <Route exact path='/ContactPage' component={ContactPage} />
+            <Route exact path='/welcome' component={Welcome} />
         </div>
     </BrowserRouter>
     , document.getElementById('root'));
