@@ -12,6 +12,8 @@ import QuienesSomosPage from './components/QuienesSomosPage';
 import UniversityPage from './components/UniversityPage';
 import ContactPage from './components/ContactPage';
 import App from './components/App';
+import NewBarHome from './components/NewBarHome';
+import UserLoginOk from './components/UserLoginOk';
 //import { Provider } from 'react-redux';
 //import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
@@ -31,6 +33,8 @@ ReactDOM.render(
             <Route exact path='/UniversityPage' component={UniversityPage} />
             <Route exact path='/QuienesSomosPage' component={QuienesSomosPage} />
             <Route exact path='/ContactPage' component={ContactPage} />
+            <Route exact path='/NewBarHome' component={NewBarHome} />
+            <Route exact path='/UserLoginOk' component={UserLoginOk} />
             <Route exact path='/welcome' component={Welcome} />
         </div>
     </BrowserRouter>

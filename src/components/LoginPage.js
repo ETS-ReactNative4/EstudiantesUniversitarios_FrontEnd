@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
-import {Button, ButtonGroup, Col, ControlLabel, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
 
 class LoginPage extends Component {
 
@@ -54,6 +54,10 @@ class LoginPage extends Component {
 
                             <Jumbotron className="Ventana">
 
+                                <h2 className="LabelsLogin">
+                                    INICIAR SESIÓN
+                                </h2>
+
                                 <br/>
                                 <br/>
 
@@ -70,8 +74,10 @@ class LoginPage extends Component {
                                 {/**}
                                 <Form horizontal onSubmit={this.handleSubmit}>
                                     <FormGroup controlId="formHorizontalEmail">
-                                        <Col componentClass={ControlLabel} sm={3}>
-                                            <label htmlFor='email'>E-mail:</label> <br/>
+                                        <Col className="LabelsLogin" sm={3}>
+                                            Correo:
+                                        {/*<Col componentClass={ControlLabel} sm={3}>
+                                            <label htmlFor='email'>E-mail:</label> <br/>*/}
                                         </Col>
 
                                         <Col sm={9}>
@@ -81,20 +87,37 @@ class LoginPage extends Component {
                                     </FormGroup>
 
                                     <FormGroup controlId="formHorizontalPassword">
-                                        <Col componentClass={ControlLabel} sm={3}>
-                                            <label htmlFor='password'>password</label> <br/>
+
+                                        <Col className="LabelsLogin" sm={3}>
+                                            Contraseña:
+
+                                          {/*<Col componentClass={ControlLabel} sm={3}>
+                                            <label htmlFor='password'>password</label> <br/>*/}
+
                                         </Col>
                                         <Col sm={9}>
                                             <FormControl type="password" placeholder="contraseña" id='password' name='password' ref={node => {this.inputNode2 = node}}/>
                                         </Col>
                                     </FormGroup>
 
+                                    <br></br>
+                                    
+
                                     <FormGroup className="BarraBotones">
 
-                                        <ButtonGroup  >
+                                        <ButtonGroup>
+                                            <Button className="LoginBotonEntrar">
+                                                <Link to='/UserLoginOk'>Entrar</Link>
+                                            </Button>
+
+                                            <Button className="LoginBotonCancelar"> 
+                                                <Link to='/'> Volver </Link>
+
+                                        {/*<ButtonGroup  >
                                             <Button type="submit" bsStyle="success"> Ingresar </Button>
                                             <Button bsStyle="danger">
-                                                <Link to='/HomePage'>Volver</Link>
+                                                <Link to='/HomePage'>Volver</Link>*/}
+
                                             </Button>
                                         </ButtonGroup>
 
