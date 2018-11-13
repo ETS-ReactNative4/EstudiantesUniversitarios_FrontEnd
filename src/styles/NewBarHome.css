@@ -1,0 +1,97 @@
+.NewBarHome {
+  text-align: center;
+  
+}
+
+.Todooo{
+  border-radius: 26px;
+  background: transparent;
+  border: transparent; 
+}
+
+.AlinearBotones{
+text-align: right;
+padding-right: inherit;
+}
+
+.Cabezera{
+  background:rgba(14, 140, 24, 0.85);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.MiFooter{
+  font-family: 'Alfa Slab One', cursive;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 10px;
+}
+
+
+.Contenedores {
+  background: rgba(53, 56, 49, 0.65);
+  padding-top: 0px;
+  padding-bottom: 25px;
+  color: white;
+}
+
+.ContenedorQuienesSomosImagen{
+  padding-top: 15%;
+  border-radius: 10px;
+}
+.Imagenes{
+  border-radius: 20px;
+}
+
+.BarraTitulo{
+  font-family: 'Alfa Slab One', cursive;
+  margin-top: 1%;
+  background: rgba(150, 2, 0, 0.85);
+  color: black;
+  margin-bottom: 10px;
+}
+
+.container .jumbotron{
+  border-radius: 15px;
+}
+
+.panel1{
+  text-align: justify;
+  background:transparent;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.MiniContenedorTitulo{
+  font-family: 'Alfa Slab One', cursive;
+  text-align: center;
+  color: white;
+}
+
+.ContenedorVisionImagen{
+  padding-top: 5%;
+  padding-bottom: 0%;
+}
+
+.ContenedorMisionImagen{
+  padding-top: 5%;
+  padding-bottom: 0%;
+}
+
+.BotonInicarSesion{
+  font-family: 'Alfa Slab One', cursive;
+  background: white;
+  color: white;
+}
+
+
+.BotonRegistarse{
+  font-family: 'Alfa Slab One', cursive;
+  background: white;
+  color: white;
+}
+
+a{
+  color: black;
+}

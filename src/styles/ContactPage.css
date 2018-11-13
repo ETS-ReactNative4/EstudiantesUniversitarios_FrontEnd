@@ -1,15 +1,18 @@
 .ContactPage {
-    background-image: url("../resources/pastas2.jpg");
-    background-size: cover;
-    height: 1080px;
+   
 }
 
 
-.BrodeCampoIzq{
-
+.InformacionContacto{
+    font-family: 'Alfa Slab One', cursive;
 }
 
-.CentrarBoton{
-    text-align: center;
+.ContenedorInformacion{
+    border: 5px solid #bce8f1;
+    border-radius: 20px;
 }
 
+.ContenedorContacto{
+    border: 5px solid #d6e9c6;
+    border-radius: 20px;
+}

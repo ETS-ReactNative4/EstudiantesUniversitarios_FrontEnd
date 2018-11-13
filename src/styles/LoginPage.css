@@ -1,12 +1,37 @@
 .LoginPage {
     background-image: url("../resources/pastas2.jpg");
     background-size: cover;
-    height: 1080px;
+    /*height: 1080px;*/
+    background-attachment: fixed;
 }
 
-.Ventana {
-}
 
 .BarraBotones{
     text-align: center;
+}
+
+.Ventana{
+    background: rgba(53, 56, 49, 0.75);
+    text-align: center;
+}
+
+.LabelsLogin{
+    color: white;
+    margin-top: 10px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.LoginBotonEntrar{
+    color: black;
+    background: green;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.LoginBotonCancelar{
+    background: red;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+a {
+    color: white;
 }
