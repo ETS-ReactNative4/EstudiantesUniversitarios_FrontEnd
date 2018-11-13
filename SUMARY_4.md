@@ -12,6 +12,7 @@ CARACTERISTICAS A DESARROLLAR EN SIGUIENTE SPRINT
 
 - Vista del administrador
 - Subir archivos
+- Login con redes sociales y google
 
 LINK DE DESPLIEGUE HEROKU
 
