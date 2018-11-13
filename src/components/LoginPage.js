@@ -71,7 +71,7 @@ class LoginPage extends Component {
                                     <input type='submit' value='Sign In'/>
                                 </form>
 
-                                {/**}
+                                
                                 <Form horizontal onSubmit={this.handleSubmit}>
                                     <FormGroup controlId="formHorizontalEmail">
                                         <Col className="LabelsLogin" sm={3}>
@@ -123,7 +123,7 @@ class LoginPage extends Component {
 
                                     </FormGroup>
                                 </Form>
-                                {**/}
+                                
 
                             </Jumbotron>
 
