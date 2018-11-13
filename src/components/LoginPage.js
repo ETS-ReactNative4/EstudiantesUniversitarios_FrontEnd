@@ -61,6 +61,9 @@ class LoginPage extends Component {
                                 <br/>
                                 <br/>
 
+                                
+                                {/*====================================================================*/}
+                                {/*
                                 <form onSubmit={this.handleSubmit}>
                                     <label htmlFor='email'>email</label> <br/>
                                     <input type='email' id='email' name='email' ref={node => {this.inputNode1 = node}}/> <br/>
@@ -70,7 +73,8 @@ class LoginPage extends Component {
 
                                     <input type='submit' value='Sign In'/>
                                 </form>
-
+                                */}
+                                {/*====================================================================*/}
                                 
                                 <Form horizontal onSubmit={this.handleSubmit}>
                                     <FormGroup controlId="formHorizontalEmail">
