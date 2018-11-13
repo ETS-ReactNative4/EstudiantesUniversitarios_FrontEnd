@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/RegisterPage.css';
-import {Button, ButtonGroup, Col, ControlLabel, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 class RegisterPage extends Component {

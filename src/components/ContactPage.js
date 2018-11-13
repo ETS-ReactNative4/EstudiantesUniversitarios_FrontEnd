@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/ContactPage.css';
-import {Button, Col, ControlLabel, Form, FormControl, FormGroup, Grid, Label, Panel, Row} from "react-bootstrap";
-import BarHome from "./BarHome";
+import {Button, Col, ControlLabel, Form, FormControl, FormGroup, Label, Panel, Row} from "react-bootstrap";
 
 
 class ContactPage extends Component {

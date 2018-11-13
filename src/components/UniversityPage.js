@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/UniversityPage.css';
-import BarHome from "./BarHome";
-import {
-    Col,
-    ControlLabel,
-    Form,
-    FormControl,
-    FormGroup,
-    Grid,
-    Panel,
-    PanelGroup,
-    Row,
-    Thumbnail
-} from "react-bootstrap";
+import { Col, ControlLabel, Form, FormControl, FormGroup, Panel, PanelGroup, Row, Thumbnail } from "react-bootstrap";
 import * as axios from "axios";
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
-import {Button, ButtonGroup, Col, ControlLabel, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
 
 class LoginPage extends Component {
 
@@ -64,7 +64,7 @@ class LoginPage extends Component {
 
                                         <ButtonGroup>
                                             <Button className="LoginBotonEntrar">
-                                                Entrar 
+                                                <Link to='/UserLoginOk'>Entrar</Link>
                                             </Button>
 
                                             <Button className="LoginBotonCancelar"> 
