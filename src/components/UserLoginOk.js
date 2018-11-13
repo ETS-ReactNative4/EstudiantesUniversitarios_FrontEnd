@@ -84,7 +84,7 @@ class UserLoginOk extends Component {
                                 <Label> ID :</Label> 
                             </div>
                             <div>
-                                1234567890
+                                123456
                             </div>
                         </h3>
                     </Col>
