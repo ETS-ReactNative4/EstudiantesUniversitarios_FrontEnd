@@ -39,13 +39,30 @@ class NewBarHome extends Component {
 
            {/*========================================================================================*/}
            <Jumbotron className="BarraTitulo">
-               <h1>
-                   OEURP
-               </h1>
+           <Row>
+               <Col  xs={12} md={2}>
+                    <br></br>
+                    <br></br>
+                    <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema.jpg')} />
+               </Col>
+               
+               <Col  xs={12} md={8}>
+                    <h1>
+                        OEURP
+                    </h1>
 
-               <h3>
-                   Organización De Estdiantes Universitarios Del Resguardo De Pastas
-               </h3>
+                    <h3>
+                        Organización De Estdiantes Universitarios Del Resguardo De Pastas
+                    </h3>
+               </Col>
+
+               <Col xs={12} md={2}>
+                    <br></br>
+                    <br></br>
+                    <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema.jpg')} />
+               </Col>
+              
+            </Row>
            </Jumbotron>
            {/*========================================================================================*/}
            
