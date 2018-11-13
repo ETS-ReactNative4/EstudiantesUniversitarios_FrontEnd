@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
+import Welcome from './components/Welcome';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import HomePage from './components/HomePage';
@@ -13,6 +14,8 @@ import ContactPage from './components/ContactPage';
 import App from './components/App';
 import NewBarHome from './components/NewBarHome';
 import UserLoginOk from './components/UserLoginOk';
+//import { Provider } from 'react-redux';
+//import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -32,7 +35,7 @@ ReactDOM.render(
             <Route exact path='/ContactPage' component={ContactPage} />
             <Route exact path='/NewBarHome' component={NewBarHome} />
             <Route exact path='/UserLoginOk' component={UserLoginOk} />
-
+            <Route exact path='/welcome' component={Welcome} />
         </div>
     </BrowserRouter>
     , document.getElementById('root'));
