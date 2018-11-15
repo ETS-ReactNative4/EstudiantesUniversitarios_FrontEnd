@@ -62,6 +62,7 @@
 
 .CentrarSubirArchivos {
     text-align: center;
+    margin-top: 0px;
 }
 
 .BotonesSubirDocumento {
@@ -70,4 +71,8 @@
 .CentrarArchivos {
     margin-left: 35%;
     margin-right: 0%
+}
+
+.VentanasArchivo {
+
 }
