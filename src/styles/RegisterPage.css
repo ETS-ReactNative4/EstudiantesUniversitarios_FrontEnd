@@ -5,17 +5,38 @@
 }
 
 .Ventana {
-    padding: 5%;
+    padding-top: 3%;
 }
 
 .BarraBotones{
     text-align: center;
 }
 
-.Titulo{
-    text-align: center;
-}
 
 .rapido{
+    margin-top: 10px;
+}
+
+.LabelsRegister {
+    color: white;
+    margin-top: 10px;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.RegisterBotonCrear {
+    color: black;
+    background: green;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.RegisterBotonCancelar{
+    background: red;
+    font-family: 'Alfa Slab One', cursive;   
+}
+.CampoCorreo{
+    margin-top: 10px;
+}
+
+.CampoApellido{
     margin-top: 10px;
 }

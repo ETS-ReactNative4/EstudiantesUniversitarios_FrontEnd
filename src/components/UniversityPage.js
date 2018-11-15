@@ -1,18 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/UniversityPage.css';
-import BarHome from "./BarHome";
-import {
-    Col,
-    ControlLabel,
-    Form,
-    FormControl,
-    FormGroup,
-    Grid,
-    Panel,
-    PanelGroup,
-    Row,
-    Thumbnail
-} from "react-bootstrap";
+import { Col, ControlLabel, Form, FormControl, FormGroup, Panel, PanelGroup, Row, Thumbnail } from "react-bootstrap";
 import * as axios from "axios";
 
 
@@ -86,21 +74,38 @@ class UniversityPage extends Component {
 
 
         return (
-          <div className={"UniversityPage"}>
+            <div className={"UniversityPage"}>
 
-              <div className={"container"}>
+                {/*========================================================================================*/}
+                <Panel>
 
-                  <BarHome/>
 
-                  <Grid>
-                      <Row>
-                          {universitiesList}
-                      </Row>
-                  </Grid>
+                    {/*========================================================================================*/}
+                    <Panel.Heading>
+                        <Panel.Title className="ListaUniversidades" toggle>
+                            <h1>
+                                Universidades Con Convenio
+                            </h1> 
+                        </Panel.Title>
+                    </Panel.Heading>
+                    {/*========================================================================================*/}
 
-              </div>
 
-          </div>
+                    {/*========================================================================================*/}
+                    <Panel.Collapse>
+                        <Panel.Body>
+                            <Row>
+                                {universitiesList}
+                            </Row>
+                        </Panel.Body>
+                    </Panel.Collapse>
+                    {/*========================================================================================*/}
+
+
+                </Panel>
+                 {/*========================================================================================*/}
+
+            </div>
         );
   }
 }
