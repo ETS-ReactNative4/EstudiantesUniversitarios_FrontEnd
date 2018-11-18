@@ -111,7 +111,7 @@ class LoginPage extends Component {
 
                                         <ButtonGroup>
                                             <Button className="LoginBotonEntrar">
-                                                <Link to='/UserLoginOk'>Entrar</Link>
+                                                <Link to='/UserLoginSuccess'>Entrar</Link>
                                             </Button>
 
                                             <Button className="LoginBotonCancelar"> 

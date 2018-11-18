@@ -1,0 +1,83 @@
+.UserLoginSuccess {
+    background-image: url("../resources/pastas2.jpg");
+    background-size: cover;
+    /*height: 1080px;*/
+    background-attachment: fixed;
+}
+
+.Fondo {
+   background: transparent;
+}
+
+.BordesMenuItem {
+    border: solid; 
+}
+
+
+.BotonCerrarSesion {
+    text-align: center;
+}
+
+.LogoUserIn {
+    margin-left: 15px;
+}
+
+.LabelRol {
+    margin-bottom: 10px;
+}
+
+.LabelId {
+    margin-bottom: 10px;
+}
+
+.LabelNombre {
+    margin-bottom: 10px;
+}
+
+.CentrarDatos{
+    text-align: left;
+}
+
+.h3, h3{
+    margin-top: 10px;
+}
+
+.DatosInicio {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-top: 1%;
+}
+
+.OpcionesMenu {
+    text-align: center;
+}
+
+.DatosMenu {
+    
+}
+
+.BotonesDatos {
+    text-align: right;
+}
+
+.BordesLaterales {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.CentrarSubirArchivos {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.BotonesSubirDocumento {
+    text-align: center;
+}
+.CentrarArchivos {
+    margin-left: 35%;
+    margin-right: 0%
+}
+
+.VentanasArchivo {
+
+}
