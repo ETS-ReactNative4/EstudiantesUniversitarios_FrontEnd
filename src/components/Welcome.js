@@ -7,7 +7,7 @@ class Welcome extends Component{
     componentDidMount(){
         let jwt = window.localStorage.getItem('jwt');
 
-        fetch("http://unipastas-back.herokuapp.com/auth",
+        fetch("https://unipastas-back.herokuapp.com/auth",
             {
                 method: 'GET',
                 headers: {
