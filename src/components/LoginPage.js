@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
-import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Image, Jumbotron, Panel, Row} from "react-bootstrap";
 
 class LoginPage extends Component {
 
@@ -38,8 +38,32 @@ class LoginPage extends Component {
                 <div className={"container"}>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
+                    <Jumbotron className="BarraTitulo">
+                        <Row>
+                            <Col  xs={12} md={2}>
+                                <br></br>
+                                <br></br>
+                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema.jpg')} />
+                            </Col>
+
+                            <Col  xs={12} md={8}>
+                                <h1>
+                                    OEURP
+                                </h1>
+
+                                <h3>
+                                    Organización De Estudiantes Universitarios Del Resguardo De Pastas
+                                </h3>
+                            </Col>
+
+                            <Col xs={12} md={2}>
+                                <br></br>
+                                <br></br>
+                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema1.jpg')} />
+                            </Col>
+
+                        </Row>
+                    </Jumbotron>
                     <br/>
                     <br/>
                     <br/>
