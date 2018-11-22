@@ -46,7 +46,7 @@ class LoginPage extends Component {
 
                                     <FormGroup controlId="formHorizontalPassword">
                                         <Col componentClass={ControlLabel} sm={3}>
-                                            Contraseña:
+                                            PASSWORD:
                                         </Col>
                                         <Col sm={9}>
                                             <FormControl type="password" placeholder="contraseña" />
@@ -56,7 +56,7 @@ class LoginPage extends Component {
                                     <FormGroup className="BarraBotones">
 
                                         <ButtonGroup  >
-                                            <Button type="submit" bsStyle="success"> Entrar </Button>
+                                            <Button bsStyle="success"> Entrar </Button>
                                             <Button bsStyle="danger">
                                                 <Link to='/HomePage'>Volvern</Link>
                                             </Button>
