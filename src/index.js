@@ -10,6 +10,7 @@ import EventPage from './components/EventPage';
 import QuienesSomosPage from './components/QuienesSomosPage';
 import UniversityPage from './components/UniversityPage';
 import ContactPage from './components/ContactPage';
+import Welcome2 from './components/Welcome2';
 import App from './components/App';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -26,6 +27,7 @@ ReactDOM.render(
             <Route exact path='/UniversityPage' component={UniversityPage} />
             <Route exact path='/QuienesSomosPage' component={QuienesSomosPage} />
             <Route exact path='/ContactPage' component={ContactPage} />
+            <Route exact path='/welcome' component={Welcome2} />
         </div>
     </BrowserRouter>
     , document.getElementById('root'));
