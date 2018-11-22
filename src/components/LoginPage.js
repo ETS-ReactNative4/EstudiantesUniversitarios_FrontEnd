@@ -38,7 +38,7 @@ class LoginPage extends Component {
                 <div className={"container"}>
                     <br/>
                     <br/>
-                    <Jumbotron className="BarraTitulo">
+                    {/**}<Jumbotron className="BarraTitulo">
                         <Row>
                             <Col  xs={12} md={2}>
                                 <br></br>
@@ -63,7 +63,7 @@ class LoginPage extends Component {
                             </Col>
 
                         </Row>
-                    </Jumbotron>
+                    </Jumbotron>{**/}
                     <br/>
                     <br/>
                     <br/>

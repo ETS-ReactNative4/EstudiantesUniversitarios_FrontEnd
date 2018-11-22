@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../styles/Welcome.css';
 
 class Welcome extends Component{
     state = { message: undefined }
@@ -7,7 +6,7 @@ class Welcome extends Component{
     componentDidMount(){
         let jwt = window.localStorage.getItem('jwt');
 
-        fetch("https://unipastas-back.herokuapp.com/auth",
+        fetch("http://unipastas-back.herokuapp.com/auth",
             {
                 method: 'GET',
                 headers: {
