@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
-import {Button, ButtonGroup, Col, ControlLabel, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import { Col, Jumbotron, Row} from "react-bootstrap";
 import Welcome2 from '../components/Welcome2';
 
 class LoginPage extends Component {
