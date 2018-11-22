@@ -15,6 +15,19 @@ class LoginPage extends Component {
         picture: '',
     }
 
+    responseFacebook = response => {
+        //console.log(response);
+        this.setState({
+            isLoggedIn: true,
+            userID: response.userID,
+            name: response.name,
+            email: response.email,
+            picture: response.picture.data.url
+        });
+    }
+
+    componentClicked = () => console.log('clicked');
+
     handleSubmit = event => {
         event.preventDefault();
 
@@ -43,6 +56,22 @@ class LoginPage extends Component {
 
         let fbContent;
         if(this.state.isLoggedIn){
+            //fbContent=null;
+            fbContent = (
+
+                <div style={{
+                    width:'400px',
+                    margin: 'auto',
+                    background: '#f4f4f4',
+                    padding:'20px'
+                }}>
+
+                    <img src={this.state.picture} alt={this.state.name} />
+                    <h2>Bienvenido {this.state.name}</h2>
+                    correo: {this.state.email}
+
+                </div>
+            );
 
         }else{
             //agregando botom junto con appID de cuenta de facebook
@@ -176,6 +205,7 @@ class LoginPage extends Component {
                                         </ButtonGroup>
 
                                     </FormGroup>
+                                    {fbContent}
                                 </Form>
                                 
 
@@ -186,10 +216,11 @@ class LoginPage extends Component {
 
                     <Col xs={12} md={3}>
                     </Col>
+
+
                 </div>
 
-                <br></br>
-                <br></br>
+
                 <br></br>
                 <br></br>
                 <br></br>
