@@ -2,8 +2,18 @@ import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
 import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Image, Jumbotron, Panel, Row} from "react-bootstrap";
+import FacebookLogin from 'react-facebook-login';
 
 class LoginPage extends Component {
+
+    //agregando estados para login con facebock
+    state={
+        isLoggedIn: false,
+        userID: '',
+        name: '',
+        email: '',
+        picture: '',
+    }
 
     handleSubmit = event => {
         event.preventDefault();
@@ -30,6 +40,22 @@ class LoginPage extends Component {
     }
 
     render() {
+
+        let fbContent;
+        if(this.state.isLoggedIn){
+
+        }else{
+            //agregando botom junto con appID de cuenta de facebook
+            fbContent = (
+                <FacebookLogin
+                    appId="588574214930002"
+                    autoLoad={true}
+                    fields="name,email,picture"
+                    onClick={this.componentClicked}
+                    callback={this.responseFacebook}
+                />
+            );
+        }
 
         return (
 
