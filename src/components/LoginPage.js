@@ -65,41 +65,10 @@ class LoginPage extends Component {
                                         <label htmlFor='password'>password</label> <br/>
                                         <input type='password' id='password' name='password' ref={node => {this.inputNode2 = node}}/> <br/>
 
-                                        <input type='submit' value='Sign In'/>
+                                        <input type='submit' value='Sign Innnn'/>
                                     </form>
                                 </div>
-                                {/**}
-                                <Form horizontal>
-                                    <FormGroup controlId="formHorizontalEmail">
-                                        <Col componentClass={ControlLabel} sm={3}>
-                                            E-Mail:
-                                        </Col>
-
-                                        <Col sm={9}>
-                                            <FormControl type="email" placeholder="ejemplo@prueba.com" />
-                                        </Col>
-                                    </FormGroup>
-
-                                    <FormGroup controlId="formHorizontalPassword">
-                                        <Col componentClass={ControlLabel} sm={3}>
-                                            PASSWORD:
-                                        </Col>
-                                        <Col sm={9}>
-                                            <FormControl type="password" placeholder="contraseña" />
-                                        </Col>
-                                    </FormGroup>
-
-                                    <FormGroup className="BarraBotones">
-
-                                        <ButtonGroup  >
-                                            <Button bsStyle="success"> Entrar </Button>
-                                            <Button bsStyle="danger">
-                                                <Link to='/HomePage'>Volvern</Link>
-                                            </Button>
-                                        </ButtonGroup>
-
-                                    </FormGroup>
-                                </Form>{**/}
+                                
 
                             </Jumbotron>
 
