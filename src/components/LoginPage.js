@@ -25,7 +25,7 @@ class LoginPage extends Component {
         ).then(res => res.json()).then(res => (console.log(res.jwt),
                 window.localStorage.setItem('jwt', res.jwt)
         ))
-            .then(() => this.props.history.push('/welcome'))
+            .then(() => this.props.history.push('/UserLoginSuccess'))
             .catch(function(error){console.log('Error: ', error.message)})
     }
 
@@ -62,26 +62,10 @@ class LoginPage extends Component {
                                 <br/>
 
                                 
-                                {/*====================================================================*/}
-                                {/*
-                                <form onSubmit={this.handleSubmit}>
-                                    <label htmlFor='email'>email</label> <br/>
-                                    <input type='email' id='email' name='email' ref={node => {this.inputNode1 = node}}/> <br/>
-
-                                    <label htmlFor='password'>password</label> <br/>
-                                    <input type='password' id='password' name='password' ref={node => {this.inputNode2 = node}}/> <br/>
-
-                                    <input type='submit' value='Sign In'/>
-                                </form>
-                                */}
-                                {/*====================================================================*/}
-                                
                                 <Form horizontal onSubmit={this.handleSubmit}>
                                     <FormGroup controlId="formHorizontalEmail">
                                         <Col className="LabelsLogin" sm={3}>
                                             Correo:
-                                        {/*<Col componentClass={ControlLabel} sm={3}>
-                                            <label htmlFor='email'>E-mail:</label> <br/>*/}
                                         </Col>
 
                                         <Col sm={9}>
@@ -94,10 +78,6 @@ class LoginPage extends Component {
 
                                         <Col className="LabelsLogin" sm={3}>
                                             Contraseña:
-
-                                          {/*<Col componentClass={ControlLabel} sm={3}>
-                                            <label htmlFor='password'>password</label> <br/>*/}
-
                                         </Col>
                                         <Col sm={9}>
                                             <FormControl type="password" placeholder="contraseña" id='password' name='password' ref={node => {this.inputNode2 = node}}/>
@@ -111,16 +91,12 @@ class LoginPage extends Component {
 
                                         <ButtonGroup>
                                             <Button className="LoginBotonEntrar">
-                                                <Link to='/UserLoginSuccess'>Entrar</Link>
+                                                Entrar
+                                                {/*<Link to='/UserLoginSuccess'>Entrar</Link>*/}
                                             </Button>
 
                                             <Button className="LoginBotonCancelar"> 
                                                 <Link to='/'> Volver </Link>
-
-                                        {/*<ButtonGroup  >
-                                            <Button type="submit" bsStyle="success"> Ingresar </Button>
-                                            <Button bsStyle="danger">
-                                                <Link to='/HomePage'>Volver</Link>*/}
 
                                             </Button>
                                         </ButtonGroup>
