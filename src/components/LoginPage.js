@@ -97,8 +97,6 @@ class LoginPage extends Component {
                     <br/>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
 
                     <Row>
 
