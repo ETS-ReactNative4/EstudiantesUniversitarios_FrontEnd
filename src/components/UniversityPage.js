@@ -84,7 +84,7 @@ class UniversityPage extends Component {
                     <Panel.Heading>
                         <Panel.Title className="ListaUniversidades" toggle>
                             <h1>
-                                Universidades Con Convenio
+                                UNIVERSIDADES CON CONVENIO
                             </h1> 
                         </Panel.Title>
                     </Panel.Heading>

@@ -1,13 +1,35 @@
-.UserLoginOk {
+.UserLoginSuccess {
     background-image: url("../resources/pastas2.jpg");
     background-size: cover;
     /*height: 1080px;*/
     background-attachment: fixed;
+    font-family: 'Baloo Da', cursive;
+    font-size: 125%;
+}
+
+.Ventana {
+    background: rgba(53, 56, 49, 0.75);
+    text-align: center;
+    color: white;
+}
+
+.ColorTitulo {
+    background: red;
+}
+
+.Menuuu {
+    padding-top: 0px
 }
 
 .Fondo {
    background: transparent;
 }
+
+.BordesMenuItem {
+    border: solid;
+    background: rgba(255, 255, 255, 0.65);
+}
+
 
 .BotonCerrarSesion {
     text-align: center;
@@ -73,6 +95,7 @@
     margin-right: 0%
 }
 
-.VentanasArchivo {
-
+.MiTexto {
+    text-align: justify;
+    color: black;
 }

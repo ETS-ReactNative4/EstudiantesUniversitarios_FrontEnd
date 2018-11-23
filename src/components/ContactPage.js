@@ -18,7 +18,7 @@ class ContactPage extends Component {
                     <Panel.Heading>
                         <Panel.Title className="InformacionContacto" toggle>
                             <h1>
-                                Información De Contacto
+                                INFORMACIÓN DE CONTACTO
                             </h1> 
                         </Panel.Title>
                     </Panel.Heading>
@@ -28,17 +28,19 @@ class ContactPage extends Component {
                     <Panel.Collapse>
 
                         {/*========================================================================================*/}
-                        <Panel.Body>
+                        <Panel.Body >
                             <Row>
 
                                 {/*========================================================================================*/}
-                                <Col xs={12} md={3}>
+                                <Col xs={12} md={4}>
                                     <Panel className="ContenedorInformacion" bsStyle="info" >
+                                        <div className="InformacionTitulo">
                                         <Panel.Heading >
                                             <Panel.Title className="InformacionContacto">
-                                                Información
+                                                INFORMACIÓN
                                             </Panel.Title>
                                         </Panel.Heading>
+                                        </div>
                                         <Panel.Body>
                                             <h4>
                                                 Ubicación:
@@ -71,13 +73,17 @@ class ContactPage extends Component {
 
 
                                 {/*========================================================================================*/}
-                                <Col xs={12} md={9}>
+                                <Col xs={12} md={8}>
                                     <Panel className="ContenedorContacto" bsStyle="success">
-                                        <Panel.Heading>
-                                            <Panel.Title className="InformacionContacto">
-                                                Sugerencias / Dudas / Inquietudes
-                                            </Panel.Title>
-                                        </Panel.Heading>
+                                        
+                                        <div className="ContactoTitulo">
+                                            <Panel.Heading >
+                                                <Panel.Title className="InformacionContacto">
+                                                    SUGERENCIAS / DUDAS / INQUIETUDES
+                                                </Panel.Title>
+                                            </Panel.Heading>
+                                        </div>
+                                    
                                         <Panel.Body>
                                             <FormGroup inline>
 
