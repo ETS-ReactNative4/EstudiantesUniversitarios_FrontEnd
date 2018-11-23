@@ -14,6 +14,8 @@ import ContactPage from './components/ContactPage';
 import App from './components/App';
 import NewBarHome from './components/NewBarHome';
 import UserLoginSuccess from './components/UserLoginSuccess';
+import ListEventos from './services/ListEventos';
+
 //import { Provider } from 'react-redux';
 //import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
@@ -36,6 +38,8 @@ ReactDOM.render(
             <Route exact path='/NewBarHome' component={NewBarHome} />
             <Route exact path='/UserLoginSuccess' component={UserLoginSuccess} />
             <Route exact path='/welcome' component={Welcome} />
+            <Route exact path='/publicaciones' component={ListEventos} />
+
         </div>
     </BrowserRouter>
     , document.getElementById('root'));

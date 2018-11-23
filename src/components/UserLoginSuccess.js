@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/UserLoginSuccess.css';
 import {Link} from 'react-router-dom';
 import { Table, FormGroup, Nav, NavItem, Tab, Jumbotron, Label, Row, Col, Button, Image, Panel, ControlLabel, FormControl} from "react-bootstrap";
-
+import ListEventos from '../services/ListEventos'
 
 
 class UserLoginSuccess extends Component {
@@ -336,7 +336,7 @@ class UserLoginSuccess extends Component {
                                 <Panel id="collapsible-panel-example-2" >
                                     <Panel.Heading>
                                         <Panel.Title toggle>
-                                            EVENTO 11
+                                            <Link to='/publicaciones'>LISTA EVENTOS</Link>
                                         </Panel.Title>
                                     </Panel.Heading>
                                     <Panel.Collapse>
