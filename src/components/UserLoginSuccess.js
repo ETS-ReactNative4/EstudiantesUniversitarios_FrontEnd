@@ -52,7 +52,7 @@ class UserLoginSuccess extends Component {
         return (
 
           <div className="UserLoginSuccess">
-
+            <br></br>
                 <div className="container">
             {/*========================================================================================*/}
             <Jumbotron className="DatosInicio">
@@ -133,9 +133,7 @@ class UserLoginSuccess extends Component {
             {/*========================================================================================*/}
             </Row>
 
-            <br></br>
-            <br></br>
-            <br></br>
+           
             
 
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -335,18 +333,20 @@ class UserLoginSuccess extends Component {
                                     </Col>
                                 </Row>
 
-                                <Panel id="" >
+                                <Panel id="collapsible-panel-example-2" >
                                     <Panel.Heading>
                                         <Panel.Title toggle>
-                                            Evento Prueba 1
+                                            EVENTO 11
                                         </Panel.Title>
                                     </Panel.Heading>
                                     <Panel.Collapse>
                                         <Panel.Body>
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
-                                        accusamus terry richardson ad squid. Nihil anim keffiyeh
-                                        helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                        ea proident.
+                                        <div className="MiTexto">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                            accusamus terry richardson ad squid. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                            ea proident.
+                                        </div>
                                         <br></br>
                                         <br></br>
                                         <Button  bsStyle ="info">Mas Información</Button>
@@ -357,15 +357,17 @@ class UserLoginSuccess extends Component {
                                 <Panel id="collapsible-panel-example-2" >
                                     <Panel.Heading>
                                         <Panel.Title toggle>
-                                            Evento Prueba 1
+                                           EVENTO 22
                                         </Panel.Title>
                                     </Panel.Heading>
                                     <Panel.Collapse>
                                         <Panel.Body>
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
-                                        accusamus terry richardson ad squid. Nihil anim keffiyeh
-                                        helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                        ea proident.
+                                        <div className="MiTexto">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                            accusamus terry richardson ad squid. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                            ea proident.
+                                        </div>
                                         <br></br>
                                         <br></br>
                                         <Button  bsStyle ="info">Mas Información</Button>
@@ -376,15 +378,17 @@ class UserLoginSuccess extends Component {
                                 <Panel id="collapsible-panel-example-2" >
                                     <Panel.Heading>
                                         <Panel.Title toggle>
-                                            Evento Prueba 1
+                                            EVENTO 33
                                         </Panel.Title>
                                     </Panel.Heading>
                                     <Panel.Collapse>
-                                        <Panel.Body>
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
-                                        accusamus terry richardson ad squid. Nihil anim keffiyeh
-                                        helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                                        ea proident.
+                                        <Panel.Body >
+                                        <div className="MiTexto">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                            accusamus terry richardson ad squid. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                            ea proident.
+                                        </div>
                                         <br></br>
                                         <br></br>
                                         <Button  bsStyle ="info">Mas Información</Button>
@@ -416,12 +420,8 @@ class UserLoginSuccess extends Component {
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+            
+           
 
           </div>
 

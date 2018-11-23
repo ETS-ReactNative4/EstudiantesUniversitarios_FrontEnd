@@ -95,6 +95,7 @@
     margin-right: 0%
 }
 
-.VentanasArchivo {
-
+.MiTexto {
+    text-align: justify;
+    color: black;
 }
