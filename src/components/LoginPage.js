@@ -93,32 +93,6 @@ class LoginPage extends Component {
                 <div className={"container"}>
                     <br/>
                     <br/>
-                    <Jumbotron className="BarraTitulo">
-                        <Row>
-                            <Col  xs={12} md={2}>
-                                <br></br>
-                                <br></br>
-                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema.jpg')} />
-                            </Col>
-
-                            <Col  xs={12} md={8}>
-                                <h1>
-                                    OEURP
-                                </h1>
-
-                                <h3>
-                                    Organización De Estudiantes Universitarios Del Resguardo De Pastas
-                                </h3>
-                            </Col>
-
-                            <Col xs={12} md={2}>
-                                <br></br>
-                                <br></br>
-                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema1.jpg')} />
-                            </Col>
-
-                        </Row>
-                    </Jumbotron>
                     <br/>
                     <br/>
                     <br/>
