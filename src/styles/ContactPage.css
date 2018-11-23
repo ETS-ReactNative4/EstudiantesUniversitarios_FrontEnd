@@ -1,10 +1,10 @@
 .ContactPage {
-   
+    font-family: 'Baloo Da', cursive;
 }
 
 
 .InformacionContacto{
-    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Baloo Da', cursive;
 }
 
 .ContenedorInformacion{
@@ -15,4 +15,17 @@
 .ContenedorContacto{
     border: 5px solid #d6e9c6;
     border-radius: 20px;
+}
+
+.ContactoTitulo {
+    /*background: rgba(149, 198, 108, 1);*/
+    background:  rgba(223, 240, 216, 1);
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 5px solid rgba(214, 233, 198, 1);
+}
+
+.InformacionTitulo {
+    background:  rgba(217, 237, 247, 1);
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 5px solid rgba(188, 232, 241, 1);
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
-import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import {Button, ButtonGroup, Col, Form, FormGroup, Jumbotron, Row} from "react-bootstrap";
 
 class LoginPage extends Component {
 
@@ -54,9 +54,9 @@ class LoginPage extends Component {
 
                             <Jumbotron className="Ventana">
 
-                                <h2 className="LabelsLogin">
+                                <h1 className="LabelsLogin">
                                     INICIAR SESIÓN
-                                </h2>
+                                </h1>
 
                                 <br/>
                                 <br/>
@@ -69,8 +69,7 @@ class LoginPage extends Component {
                                         </Col>
 
                                         <Col sm={9}>
-                                            <FormControl type="email" placeholder="ejemplo@prueba.com" id="email" name="email" ref={node => {this.inputNode1 = node}}/>
-
+                                            <input  className="container EstiloCampos" placeholder='ejemplo@prueba.com' type='email' id='email' name='email' ref={node => {this.inputNode1 = node}}/>
                                         </Col>
                                     </FormGroup>
 
@@ -79,8 +78,9 @@ class LoginPage extends Component {
                                         <Col className="LabelsLogin" sm={3}>
                                             Contraseña:
                                         </Col>
-                                        <Col sm={9}>
-                                            <FormControl type="password" placeholder="contraseña" id='password' name='password' ref={node => {this.inputNode2 = node}}/>
+
+                                        <Col sm={9} >
+                                            <input  className="container EstiloCampos" placeholder="contraseña" type='password' id='password' name='password' ref={node => {this.inputNode2 = node}}/>
                                         </Col>
                                     </FormGroup>
 
@@ -90,7 +90,7 @@ class LoginPage extends Component {
                                     <FormGroup className="BarraBotones">
 
                                         <ButtonGroup>
-                                            <Button className="LoginBotonEntrar">
+                                            <Button className="LoginBotonEntrar" type="submit">
                                                 Entrar
                                                 {/*<Link to='/UserLoginSuccess'>Entrar</Link>*/}
                                             </Button>

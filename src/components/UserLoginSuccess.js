@@ -16,6 +16,25 @@ class UserLoginSuccess extends Component {
       }
 
 
+    
+    state = { message: undefined }
+
+    componentDidMount(){
+        let jwt = window.localStorage.getItem('jwt');
+
+        fetch("http://unipastas-back.herokuapp.com/auth",
+            {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + jwt,
+                },
+            },
+        ).then(res => res.json(), console.log(this.state.message))
+            .then(res => (console.log(res.msg), this.setState({message: res.msg})
+            ))
+    }
+
+
     render() {
         
         function FieldGroup({ id, label, ...props }) {
@@ -38,7 +57,7 @@ class UserLoginSuccess extends Component {
             {/*========================================================================================*/}
             <Jumbotron className="DatosInicio">
                 <Row>
-                    <Col xs={12} md={4} className="BotonCerrarSesion">
+                    <Col xs={12} md={3} className="BotonCerrarSesion">
                         <div >
                             <Button bsStyle ="danger">
                                 <Link to='/'>CERRAR SESIÓN</Link>
@@ -50,8 +69,8 @@ class UserLoginSuccess extends Component {
                 <br></br>
 
                 <Row>    
-                    <Col xs={12} md={4} className="BotonCerrarSesion">
-                        <Image className="LogoUserIn" src={require('../resources/LogoUser.png')} rounded/>
+                    <Col xs={12} md={3} className="BotonCerrarSesion">
+                        <Image className="LogoUserIn" width={150} height={150} src={require('../resources/LogoUsuario.jpg')} rounded/>
                     </Col>
                     
                     <Col xs={12} md={4}>
@@ -71,14 +90,14 @@ class UserLoginSuccess extends Component {
                             </div>
 
                             <div>
-                                Fulanito Perezzzzzzz
+                                {this.state.message}
                             </div>
                             
                         </h3>
                     </Col>
 
 
-                    <Col xs={12} md={4}> 
+                    <Col xs={12} md={5}> 
                         <h3>
                             <div className="LabelId">
                                 <Label> ID :</Label> 
@@ -120,52 +139,19 @@ class UserLoginSuccess extends Component {
             
 
             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                <Row className="">
-                    <Col sm={4}>
-                    {/*<Nav bsStyle="pills" stacked>
-                        <NavItem eventKey="first">Datos Personales</NavItem>
-                        <br></br>
-                        <NavItem eventKey="second">Proyectos</NavItem>
-                        <br></br>
-                        <NavItem eventKey="third">Actividades</NavItem>
-                        <br></br>
-                    </Nav>*/}
+                <Row>
+                    <Col sm={4} >
 
-
-                        
-                        <Panel>
+                        <Panel className="Ventana Menuuu"> 
                             
-                            <Panel.Heading>
-                                <Panel.Title > 
+                            <Panel.Heading className="ColorTitulo">
+                                <Panel.Title> 
                                     <h2> MENÚ </h2>
                                 </Panel.Title>
                             </Panel.Heading>
-                            <Panel.Body>
-                                {/* 
-                            <ListGroup>
-                                
-                                <ListGroupItem>
-                                    <h3>
-                                       <NavItem eventKey="first">Datos Personales</NavItem>
-                                    </h3>
-                                </ListGroupItem>
-                                
-                                <ListGroupItem>
-                                    <h3>
-                                        <NavItem eventKey="second">Proyectos</NavItem>
-                                    </h3>
-                                </ListGroupItem>
-                                
-                                <ListGroupItem>
-                                    <h3>
-                                        <NavItem eventKey="third">Actividades</NavItem>
-                                    </h3>
-                                </ListGroupItem>
-                                
-                            </ListGroup>
-                            */}
 
-                            <Nav bsStyle="" stacked>
+                            <Panel.Body>    
+                            <Nav stacked>
                                 <NavItem className="BordesMenuItem" eventKey="first">Datos Personales</NavItem>
                                 <br></br>
                                 <NavItem className="BordesMenuItem" eventKey="second">Proyectos</NavItem>
@@ -187,11 +173,13 @@ class UserLoginSuccess extends Component {
                         {/*===================================================================================== */} 
                         {/* PESTANA DE DATOS PERSONALES */}
                         {/*===================================================================================== */}
-                            <Jumbotron>
+                            <Jumbotron className="Ventana">
                                     {/*<FormGroup controlId="formValidationSuccess1" >*/}
                                     <Row className="BordesLaterales">    
                                         <Row>
                                             <Col xs={12} md={6}>
+                                                
+                                                <br></br>
                                                 <ControlLabel>NOMBRE:</ControlLabel>
                                                 <FormControl disabled type="text" />
 
@@ -207,6 +195,7 @@ class UserLoginSuccess extends Component {
                                             </Col>
 
                                             <Col xs={12} md={6}>
+                                                <br></br>
                                                 <ControlLabel>E-MAIL:</ControlLabel>
                                                 <FormControl disabled type="text" />
 
@@ -244,7 +233,7 @@ class UserLoginSuccess extends Component {
                         {/* PESTANA DE DATOS PERSONALES */}
                         {/*===================================================================================== */}
 
-                            <Jumbotron>
+                            <Jumbotron className="Ventana">
                                 <Row className="BordesLaterales VentanasArchivo">
                                     <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first">
                                     <Row className="clearfix">
@@ -329,7 +318,7 @@ class UserLoginSuccess extends Component {
                         {/* PESTANA DE DATOS PERSONALES */}
                         {/*===================================================================================== */}
                         
-                            <Jumbotron>
+                            <Jumbotron className="Ventana">
                                 <Row>
                                     <Col xs={12} md={1}>
                                         <Button  bsStyle ="success">Filtrar</Button>

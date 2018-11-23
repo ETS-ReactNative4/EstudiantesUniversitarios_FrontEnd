@@ -173,7 +173,7 @@ class NewBarHome extends Component {
 
             
             <Panel.Footer className="MiFooter">
-                <h3> Universidad Nacional De Colombia.  Bogota D.C. -- Colombia. 2018 </h3>
+                <h3> Universidad Nacional De Colombia.  Bogotá D.C. -- Colombia. 2018 </h3>
             </Panel.Footer>
 
         </Panel>

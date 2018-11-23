@@ -3,6 +3,22 @@
     background-size: cover;
     /*height: 1080px;*/
     background-attachment: fixed;
+    font-family: 'Baloo Da', cursive;
+    font-size: 125%;
+}
+
+.Ventana {
+    background: rgba(53, 56, 49, 0.75);
+    text-align: center;
+    color: white;
+}
+
+.ColorTitulo {
+    background: red;
+}
+
+.Menuuu {
+    padding-top: 0px
 }
 
 .Fondo {
@@ -10,7 +26,8 @@
 }
 
 .BordesMenuItem {
-    border: solid; 
+    border: solid;
+    background: rgba(255, 255, 255, 0.65);
 }
 
 

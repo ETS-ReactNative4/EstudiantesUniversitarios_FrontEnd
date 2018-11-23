@@ -3,6 +3,7 @@
     background-size: cover;
     /*height: 1080px;*/
     background-attachment: fixed;
+    font-family: 'Baloo Da', cursive;
 }
 
 
@@ -10,28 +11,32 @@
     text-align: center;
 }
 
-.Ventana{
+.Ventana {
     background: rgba(53, 56, 49, 0.75);
     text-align: center;
 }
 
-.LabelsLogin{
+.LabelsLogin {
     color: white;
-    margin-top: 10px;
-    font-family: 'Alfa Slab One', cursive;
+    margin-top: 0px;
+    font-size: 150%;
 }
 
-.LoginBotonEntrar{
+.LoginBotonEntrar {
     color: black;
     background: green;
-    font-family: 'Alfa Slab One', cursive;
+    font-size: 100%;
 }
 
-.LoginBotonCancelar{
+.LoginBotonCancelar {
     background: red;
-    font-family: 'Alfa Slab One', cursive;
+    
 }
 
 a {
     color: white;
+}
+
+.EstiloCampos {
+    border-radius: 10px;
 }
