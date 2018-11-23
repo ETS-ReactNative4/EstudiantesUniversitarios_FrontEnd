@@ -13,7 +13,7 @@ class Welcome extends Component{
                     'Authorization': 'Bearer ' + jwt,
                 },
             },
-        ).then(res => res.json())
+        ).then(res => res.json(), console.log(this.state.message))
             .then(res => (console.log(res.msg), this.setState({message: res.msg})
             ))
     }
@@ -23,6 +23,7 @@ class Welcome extends Component{
         return(
             <div>
                 <h1>{this.state.message}</h1>
+                <h1> hola mundo esto es una prueba </h1>
             </div>
         )
     }

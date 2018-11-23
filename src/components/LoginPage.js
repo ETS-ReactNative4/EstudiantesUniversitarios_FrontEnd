@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
-import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Image, Jumbotron, Panel, Row} from "react-bootstrap";
+import {Button, ButtonGroup, Col, Form, FormGroup, Jumbotron, Row} from "react-bootstrap";
 import FacebookLogin from 'react-facebook-login';
 
 class LoginPage extends Component {
@@ -48,7 +48,7 @@ class LoginPage extends Component {
         ).then(res => res.json()).then(res => (console.log(res.jwt),
                 window.localStorage.setItem('jwt', res.jwt)
         ))
-            .then(() => this.props.history.push('/welcome'))
+            .then(() => this.props.history.push('/UserLoginSuccess'))
             .catch(function(error){console.log('Error: ', error.message)})
     }
 
@@ -93,32 +93,8 @@ class LoginPage extends Component {
                 <div className={"container"}>
                     <br/>
                     <br/>
-                    <Jumbotron className="BarraTitulo">
-                        <Row>
-                            <Col  xs={12} md={2}>
-                                <br></br>
-                                <br></br>
-                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema.jpg')} />
-                            </Col>
-
-                            <Col  xs={12} md={8}>
-                                <h1>
-                                    OEURP
-                                </h1>
-
-                                <h3>
-                                    Organización De Estudiantes Universitarios Del Resguardo De Pastas
-                                </h3>
-                            </Col>
-
-                            <Col xs={12} md={2}>
-                                <br></br>
-                                <br></br>
-                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema1.jpg')} />
-                            </Col>
-
-                        </Row>
-                    </Jumbotron>
+                    <br/>
+                    <br/>
                     <br/>
                     <br/>
                     <br/>
@@ -133,39 +109,22 @@ class LoginPage extends Component {
 
                             <Jumbotron className="Ventana">
 
-                                <h2 className="LabelsLogin">
+                                <h1 className="LabelsLogin">
                                     INICIAR SESIÓN
-                                </h2>
+                                </h1>
 
                                 <br/>
                                 <br/>
 
-                                
-                                {/*====================================================================*/}
-                                {/*
-                                <form onSubmit={this.handleSubmit}>
-                                    <label htmlFor='email'>email</label> <br/>
-                                    <input type='email' id='email' name='email' ref={node => {this.inputNode1 = node}}/> <br/>
-
-                                    <label htmlFor='password'>password</label> <br/>
-                                    <input type='password' id='password' name='password' ref={node => {this.inputNode2 = node}}/> <br/>
-
-                                    <input type='submit' value='Sign In'/>
-                                </form>
-                                */}
-                                {/*====================================================================*/}
                                 
                                 <Form horizontal onSubmit={this.handleSubmit}>
                                     <FormGroup controlId="formHorizontalEmail">
                                         <Col className="LabelsLogin" sm={3}>
                                             Correo:
-                                        {/*<Col componentClass={ControlLabel} sm={3}>
-                                            <label htmlFor='email'>E-mail:</label> <br/>*/}
                                         </Col>
 
                                         <Col sm={9}>
-                                            <FormControl type="email" placeholder="ejemplo@prueba.com" id="email" name="email" ref={node => {this.inputNode1 = node}}/>
-
+                                            <input  className="container EstiloCampos" placeholder='ejemplo@prueba.com' type='email' id='email' name='email' ref={node => {this.inputNode1 = node}}/>
                                         </Col>
                                     </FormGroup>
 
@@ -173,13 +132,10 @@ class LoginPage extends Component {
 
                                         <Col className="LabelsLogin" sm={3}>
                                             Contraseña:
-
-                                          {/*<Col componentClass={ControlLabel} sm={3}>
-                                            <label htmlFor='password'>password</label> <br/>*/}
-
                                         </Col>
-                                        <Col sm={9}>
-                                            <FormControl type="password" placeholder="contraseña" id='password' name='password' ref={node => {this.inputNode2 = node}}/>
+
+                                        <Col sm={9} >
+                                            <input  className="container EstiloCampos" placeholder="contraseña" type='password' id='password' name='password' ref={node => {this.inputNode2 = node}}/>
                                         </Col>
                                     </FormGroup>
 
@@ -189,17 +145,13 @@ class LoginPage extends Component {
                                     <FormGroup className="BarraBotones">
 
                                         <ButtonGroup>
-                                            <Button className="LoginBotonEntrar">
-                                                <Link to='/welcome'>Entrar</Link>
+
+                                            <Button className="LoginBotonEntrar" type="submit">
+                                                Entrar
                                             </Button>
 
                                             <Button className="LoginBotonCancelar"> 
                                                 <Link to='/'> Volver </Link>
-
-                                        {/*<ButtonGroup  >
-                                            <Button type="submit" bsStyle="success"> Ingresar </Button>
-                                            <Button bsStyle="danger">
-                                                <Link to='/HomePage'>Volver</Link>*/}
 
                                             </Button>
                                         </ButtonGroup>

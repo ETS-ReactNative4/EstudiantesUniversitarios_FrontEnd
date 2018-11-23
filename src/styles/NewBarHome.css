@@ -1,6 +1,6 @@
 .NewBarHome {
   text-align: center;
-  
+  font-family: 'Baloo Da', cursive;
 }
 
 .Todooo{
@@ -21,7 +21,8 @@ padding-right: inherit;
 }
 
 .MiFooter{
-  font-family: 'Alfa Slab One', cursive;
+  /*font-family: 'Alfa Slab One', cursive;*/
+  font-family: 'Baloo Da', cursive;
   background: rgba(0, 0, 0, 0.75);
   color: white;
   border-radius: 10px;
@@ -44,7 +45,8 @@ padding-right: inherit;
 }
 
 .BarraTitulo{
-  font-family: 'Alfa Slab One', cursive;
+  /*font-family: 'Alfa Slab One', cursive;*/
+  font-family: 'Baloo Da', cursive;
   margin-top: 1%;
   background: rgba(150, 2, 0, 0.85);
   color: black;
@@ -64,7 +66,8 @@ padding-right: inherit;
 }
 
 .MiniContenedorTitulo{
-  font-family: 'Alfa Slab One', cursive;
+  /*font-family: 'Alfa Slab One', cursive;*/
+  font-family: 'Baloo Da', cursive;
   text-align: center;
   color: white;
 }
@@ -80,14 +83,16 @@ padding-right: inherit;
 }
 
 .BotonInicarSesion{
-  font-family: 'Alfa Slab One', cursive;
+  /*font-family: 'Alfa Slab One', cursive;*/
+  font-family: 'Baloo Da', cursive;
   background: white;
   color: white;
 }
 
 
 .BotonRegistarse{
-  font-family: 'Alfa Slab One', cursive;
+  /*font-family: 'Alfa Slab One', cursive;*/
+  font-family: 'Baloo Da', cursive;
   background: white;
   color: white;
 }
