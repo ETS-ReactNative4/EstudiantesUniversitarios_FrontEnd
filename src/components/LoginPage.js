@@ -2,13 +2,36 @@ import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
 import {Button, ButtonGroup, Col, Form, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import FacebookLogin from 'react-facebook-login';
 
 class LoginPage extends Component {
+
+    //agregando estados para login con facebock
+    state={
+        isLoggedIn: false,
+        userID: '',
+        name: '',
+        email: '',
+        picture: '',
+    }
+
+    responseFacebook = response => {
+        //console.log(response);
+        this.setState({
+            isLoggedIn: true,
+            userID: response.userID,
+            name: response.name,
+            email: response.email,
+            picture: response.picture.data.url
+        });
+    }
+
+    componentClicked = () => console.log('clicked');
 
     handleSubmit = event => {
         event.preventDefault();
 
-        fetch("http://unipastas-back.herokuapp.com/user_token",
+        fetch("https://unipastas-back.herokuapp.com/user_token",
             {
                 method: 'POST',
                 body: JSON.stringify({
@@ -31,6 +54,38 @@ class LoginPage extends Component {
 
     render() {
 
+        let fbContent;
+        if(this.state.isLoggedIn){
+            //fbContent=null;
+            fbContent = (
+
+                <div style={{
+                    width:'400px',
+                    margin: 'auto',
+                    background: '#f4f4f4',
+                    padding:'20px'
+                }}>
+
+                    <img src={this.state.picture} alt={this.state.name} />
+                    <h2>Bienvenido {this.state.name}</h2>
+                    correo: {this.state.email}
+
+                </div>
+            );
+
+        }else{
+            //agregando botom junto con appID de cuenta de facebook
+            fbContent = (
+                <FacebookLogin
+                    appId="588574214930002"
+                    autoLoad={true}
+                    fields="name,email,picture"
+                    onClick={this.componentClicked}
+                    callback={this.responseFacebook}
+                />
+            );
+        }
+
         return (
 
             <div className="LoginPage">
@@ -38,8 +93,32 @@ class LoginPage extends Component {
                 <div className={"container"}>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
+                    <Jumbotron className="BarraTitulo">
+                        <Row>
+                            <Col  xs={12} md={2}>
+                                <br></br>
+                                <br></br>
+                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema.jpg')} />
+                            </Col>
+
+                            <Col  xs={12} md={8}>
+                                <h1>
+                                    OEURP
+                                </h1>
+
+                                <h3>
+                                    Organización De Estudiantes Universitarios Del Resguardo De Pastas
+                                </h3>
+                            </Col>
+
+                            <Col xs={12} md={2}>
+                                <br></br>
+                                <br></br>
+                                <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema1.jpg')} />
+                            </Col>
+
+                        </Row>
+                    </Jumbotron>
                     <br/>
                     <br/>
                     <br/>
@@ -90,9 +169,9 @@ class LoginPage extends Component {
                                     <FormGroup className="BarraBotones">
 
                                         <ButtonGroup>
+
                                             <Button className="LoginBotonEntrar" type="submit">
                                                 Entrar
-                                                {/*<Link to='/UserLoginSuccess'>Entrar</Link>*/}
                                             </Button>
 
                                             <Button className="LoginBotonCancelar"> 
@@ -102,6 +181,7 @@ class LoginPage extends Component {
                                         </ButtonGroup>
 
                                     </FormGroup>
+                                    {fbContent}
                                 </Form>
                                 
 
@@ -112,10 +192,11 @@ class LoginPage extends Component {
 
                     <Col xs={12} md={3}>
                     </Col>
+
+
                 </div>
 
-                <br></br>
-                <br></br>
+
                 <br></br>
                 <br></br>
                 <br></br>
