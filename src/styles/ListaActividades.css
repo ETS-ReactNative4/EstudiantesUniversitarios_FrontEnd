@@ -1,0 +1,42 @@
+.ListaActividades {
+    background-image: url("../resources/pastas2.jpg");
+    background-size: cover;
+    /*height: 1080px;*/
+    background-attachment: fixed;
+}
+
+.ArregloActividades {
+    color: black;
+    text-align: justify;
+}
+
+.AjustarLetra {
+    font-family: 'Baloo Da', cursive;
+}
+
+.AjustartTexto {
+    text-align: justify;
+}
+.BotonPublicarComentario {
+    text-align: right;
+}
+
+.BotonMasInformacion {
+    text-align: center;
+}
+
+.VentanaEmergente {
+    border-radius: 25px;
+}
+
+.modal-content {
+    border-radius: 15px;
+}
+
+.panel-group .panel {
+    border-radius: 15px;
+}
+
+.RedondearBoton {
+    border-radius: 15px;
+}
