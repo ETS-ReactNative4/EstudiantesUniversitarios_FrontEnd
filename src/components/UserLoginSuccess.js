@@ -357,12 +357,12 @@ class UserLoginSuccess extends Component {
                                 <Panel id="collapsible-panel-example-2" >
                                     <Panel.Heading>
                                         <Panel.Title toggle>
-                                           EVENTO 22
+                                            <Link to='/estadosdocumento'>LISTA ESTADOS DOCUMENTOS</Link>
                                         </Panel.Title>
                                     </Panel.Heading>
                                     <Panel.Collapse>
                                         <Panel.Body>
-                                        <div className="MiTexto">
+                                        <div className="MiTexto">s
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life
                                             accusamus terry richardson ad squid. Nihil anim keffiyeh
                                             helvetica, craft beer labore wes anderson cred nesciunt sapiente
