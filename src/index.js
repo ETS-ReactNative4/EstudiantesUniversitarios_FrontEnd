@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-import Welcome from './components/Welcome';
+import Welcome from './services/Welcome';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import HomePage from './components/HomePage';
@@ -16,11 +16,13 @@ import NewBarHome from './components/NewBarHome';
 import UserLoginSuccess from './components/UserLoginSuccess';
 import ListEventos from './services/ListEventos';
 import List_estado_documento from './services/List_estado_documento';
+import UsuarioLogueado from './services/UsuarioLogueado';
 
 //import { Provider } from 'react-redux';
 //import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+
 
 
 
@@ -39,9 +41,12 @@ ReactDOM.render(
             <Route exact path='/ContactPage' component={ContactPage} />
             <Route exact path='/NewBarHome' component={NewBarHome} />
             <Route exact path='/UserLoginSuccess' component={UserLoginSuccess} />
+            {/**endpoints**/}
             <Route exact path='/welcome' component={Welcome} />
             <Route exact path='/publicaciones' component={ListEventos} />
             <Route exact path='/estadosdocumento' component={List_estado_documento} />
+            <Route exact path='/datosUsuario' component={UsuarioLogueado} />
+
 
 
         </div>

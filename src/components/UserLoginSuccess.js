@@ -6,10 +6,6 @@ import { Table, FormGroup, Nav, NavItem, Tab, Jumbotron, Label, Row, Col, Button
 import ListaActividades from './ListaActividades';
 
 
-{/* import ListEventos from '../services/ListEventos' */}
-
-
-
 class UserLoginSuccess extends Component {
 
     constructor(props, context) {
