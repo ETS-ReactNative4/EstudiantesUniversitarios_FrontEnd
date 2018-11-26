@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import '../styles/UserLoginSuccess.css';
 import {Link} from 'react-router-dom';
 import { Table, FormGroup, Nav, NavItem, Tab, Jumbotron, Label, Row, Col, Button, Image, Panel, ControlLabel, FormControl} from "react-bootstrap";
+
 import ListaActividades from './ListaActividades';
+
+
+{/* import ListEventos from '../services/ListEventos' */}
 
 
 
@@ -319,6 +323,89 @@ class UserLoginSuccess extends Component {
                         {/*===================================================================================== */}
                         
                             <ListaActividades/>
+
+                           {/*
+                            <Jumbotron className="Ventana">
+                                <Row>
+                                    <Col xs={12} md={1}>
+                                        <Button  bsStyle ="success">Filtrar</Button>
+                                    </Col>
+                                    <Col xs={12} md={3}>
+                                    <FormGroup controlId="formControlsSelect">
+                                        <FormControl componentClass="select" placeholder="select">
+                                            <option value="select">Todo</option>
+                                            <option value="1">Eventos</option>
+                                            <option value="2">Asesorias</option>
+                                            <option value="3">Publicaciones</option>
+                                        </FormControl>
+                                    </FormGroup>
+                                    </Col>
+                                </Row>
+
+                                <Panel id="collapsible-panel-example-2" >
+                                    <Panel.Heading>
+                                        <Panel.Title toggle>
+                                            <Link to='/publicaciones'>LISTA EVENTOS</Link>
+                                        </Panel.Title>
+                                    </Panel.Heading>
+                                    <Panel.Collapse>
+                                        <Panel.Body>
+                                        <div className="MiTexto">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                            accusamus terry richardson ad squid. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                            ea proident.
+                                        </div>
+                                        <br></br>
+                                        <br></br>
+                                        <Button  bsStyle ="info">Mas Información</Button>
+                                        </Panel.Body>  
+                                    </Panel.Collapse>
+                                </Panel>
+
+                                <Panel id="collapsible-panel-example-2" >
+                                    <Panel.Heading>
+                                        <Panel.Title toggle>
+                                           EVENTO 22
+                                        </Panel.Title>
+                                    </Panel.Heading>
+                                    <Panel.Collapse>
+                                        <Panel.Body>
+                                        <div className="MiTexto">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                            accusamus terry richardson ad squid. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                            ea proident.
+                                        </div>
+                                        <br></br>
+                                        <br></br>
+                                        <Button  bsStyle ="info">Mas Información</Button>
+                                        </Panel.Body>  
+                                    </Panel.Collapse>
+                                </Panel>
+
+                                <Panel id="collapsible-panel-example-2" >
+                                    <Panel.Heading>
+                                        <Panel.Title toggle>
+                                            EVENTO 33
+                                        </Panel.Title>
+                                    </Panel.Heading>
+                                    <Panel.Collapse>
+                                        <Panel.Body >
+                                        <div className="MiTexto">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                            accusamus terry richardson ad squid. Nihil anim keffiyeh
+                                            helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                            ea proident.
+                                        </div>
+                                        <br></br>
+                                        <br></br>
+                                        <Button  bsStyle ="info">Mas Información</Button>
+                                        </Panel.Body>  
+                                    </Panel.Collapse>
+                                </Panel>
+                            </Jumbotron>
+                            */}
                         
                         {/*===================================================================================== */}
                         </Tab.Pane>
