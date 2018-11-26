@@ -49,6 +49,7 @@ class LoginPage extends Component {
                 window.localStorage.setItem('jwt', res.jwt)
         ))
             .then(() => this.props.history.push('/UserLoginSuccess'))
+            //.then(() => this.props.history.push('/datosUsuario'))
             .catch(function(error){console.log('Error: ', error.message)})
     }
 
