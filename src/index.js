@@ -15,11 +15,13 @@ import App from './components/App';
 import NewBarHome from './components/NewBarHome';
 import UserLoginSuccess from './components/UserLoginSuccess';
 import ListEventos from './services/ListEventos';
+import List_estado_documento from './services/List_estado_documento';
 
 //import { Provider } from 'react-redux';
 //import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+
 
 
 ReactDOM.render(
@@ -39,6 +41,8 @@ ReactDOM.render(
             <Route exact path='/UserLoginSuccess' component={UserLoginSuccess} />
             <Route exact path='/welcome' component={Welcome} />
             <Route exact path='/publicaciones' component={ListEventos} />
+            <Route exact path='/estadosdocumento' component={List_estado_documento} />
+
 
         </div>
     </BrowserRouter>
