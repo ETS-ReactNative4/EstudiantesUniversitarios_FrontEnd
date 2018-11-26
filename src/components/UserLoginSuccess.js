@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/UserLoginSuccess.css';
 import {Link} from 'react-router-dom';
 import { Table, FormGroup, Nav, NavItem, Tab, Jumbotron, Label, Row, Col, Button, Image, Panel, ControlLabel, FormControl} from "react-bootstrap";
-import ListEventos from '../services/ListEventos'
+//import ListEventos from '../services/ListEventos'
 
 
 class UserLoginSuccess extends Component {
