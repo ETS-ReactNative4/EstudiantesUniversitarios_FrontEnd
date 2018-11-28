@@ -24,11 +24,12 @@ class NewBarHome extends Component {
                 <Panel.Heading >
                     <Row className="AlinearBotones">
                             <Button className="BotonInicarSesion" type="submit">
-                                <Link to='/LoginPage'>Inicar Sesión</Link>
+                               <Link to='/LoginPage'>Inicar Sesión</Link>
                             </Button>
                             {' '}
                             <Button className="BotonRegistarse" type="submit">
-                                <Link to='/RegisterPage'>Resgistrarse</Link>
+                                {/**<Link to='/RegisterPage'>Resgistrarse</Link>**/}
+                                <Link to='/registroUsuario'>Resgistrarse</Link>
                             </Button>
                     </Row>
                 </Panel.Heading>

@@ -17,11 +17,13 @@ import UserLoginSuccess from './components/UserLoginSuccess';
 import ListEventos from './services/ListEventos';
 import List_estado_documento from './services/List_estado_documento';
 import UsuarioLogueado from './services/UsuarioLogueado';
+import UsuarioRegistrado from './services/UsuarioRegistrado';
 
 //import { Provider } from 'react-redux';
 //import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+
 
 
 
@@ -46,6 +48,8 @@ ReactDOM.render(
             <Route exact path='/publicaciones' component={ListEventos} />
             <Route exact path='/estadosdocumento' component={List_estado_documento} />
             <Route exact path='/datosUsuario' component={UsuarioLogueado} />
+            <Route exact path='/registroUsuario' component={UsuarioRegistrado} />
+
 
 
 
