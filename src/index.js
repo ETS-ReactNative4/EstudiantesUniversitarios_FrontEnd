@@ -49,7 +49,7 @@ ReactDOM.render(
             <Route exact path='/publicaciones' component={ListEventos} />
             <Route exact path='/estadosdocumento' component={List_estado_documento} />
             <Route exact path='/datosUsuario' component={UsuarioLogueado} />
-            <Route exact path='/registroUsuario' component={RegistroUsuario} />
+            <Route exact path='/registroUsuario' component={UsuarioRegistrado} />
 
 
 

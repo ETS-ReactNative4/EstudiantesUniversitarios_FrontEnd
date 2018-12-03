@@ -5,7 +5,10 @@ class UsuarioRegistrado extends Component {
 
     state = {
         name: '',
-        email: ''
+        email: '',
+        idnumber:'',
+        role_id: '',
+        password: ''
     }
 
     handleChangeName = event => {
@@ -16,15 +19,35 @@ class UsuarioRegistrado extends Component {
         this.setState({ email : event.target.value});
     }
 
+    handleChangeIdnumber = event => {
+        this.setState({ idnumber : event.target.value});
+    }
+
+    handleChangeRoleId = event => {
+        this.setState({ role_id : event.target.value});
+    }
+
+    handleChangePassword = event => {
+        this.setState({ password : event.target.value});
+    }
+
     handleSubmit = event => {
         event.preventDefault();
 
         const user = {
             name: this.state.name,
-            email: this.state.email
+            email: this.state.email,
+            idnumber: this.state.idnumber,
+            role_id: this.state.role_id,
+            password: this.state.password
         };
 
-        axios.post(`https://unipastas-back.herokuapp.com/users`, { user })
+        var headers = {
+            Accept: "application/json",
+            'Content-Type': 'application/json',
+        }
+
+        axios.post(`https://unipastas-back.herokuapp.com/users`, { user }, {headers:headers})
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -51,9 +74,28 @@ class UsuarioRegistrado extends Component {
                             <input type="text" email="email" onChange={this.handleChangeEmail} />
                         </label>
                         <br/>
+                        <label>
+                            Identificacón:
+                            <input type="number" idnumber="idnumber" onChange={this.handleChangeIdnumber} />
+                        </label>
+                        <br/>
+                        <label>
+                            Role_Id:
+                            <input type="number" role_id ="role_id" onChange={this.handleChangeRoleId} />
+                        </label>
+                        <br/>
+                        <label>
+                            Contraseña:
+                            <input type="text" password="password" onChange={this.handleChangePassword} />
+                        </label>
+                        <br/>
+
+
                         <button type="submit">Registrarse</button>
                     </form>
                 </div>
+
+                <p>{JSON.stringify(this.state)}</p>
             </div>
 
         );

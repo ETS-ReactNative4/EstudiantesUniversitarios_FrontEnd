@@ -28,7 +28,7 @@ class RegistroUsuario extends Component {
         })
     }
 
-    
+
     render() {
 
         return (
