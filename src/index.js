@@ -23,6 +23,7 @@ import UsuarioRegistrado from './services/UsuarioRegistrado';
 //import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+import RegistroUsuario from "./services/RegistroUsuario";
 
 
 
@@ -48,7 +49,7 @@ ReactDOM.render(
             <Route exact path='/publicaciones' component={ListEventos} />
             <Route exact path='/estadosdocumento' component={List_estado_documento} />
             <Route exact path='/datosUsuario' component={UsuarioLogueado} />
-            <Route exact path='/registroUsuario' component={UsuarioRegistrado} />
+            <Route exact path='/registroUsuario' component={RegistroUsuario} />
 
 
 
