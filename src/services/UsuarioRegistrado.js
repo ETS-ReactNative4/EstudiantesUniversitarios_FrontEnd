@@ -47,7 +47,7 @@ class UsuarioRegistrado extends Component {
             'Content-Type': 'application/json',
         }
 
-        axios.post(`https://unipastas-back.herokuapp.com/users`, { user }, {headers:headers})
+        axios.post(`http://unipastas-back.herokuapp.com/users`, { user }, {headers:headers})
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -104,3 +104,5 @@ class UsuarioRegistrado extends Component {
 }
 
 export default UsuarioRegistrado;
+
+//<script>alert('')</script>
