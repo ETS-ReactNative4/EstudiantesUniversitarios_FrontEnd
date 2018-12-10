@@ -7,8 +7,8 @@ class UsuarioRegistrado extends Component {
         name: '',
         email: '',
         idnumber:'',
-        role_id: '',
-        password: ''
+        password: '',
+        role_id: ''
     }
 
     handleChangeName = event => {
@@ -47,7 +47,9 @@ class UsuarioRegistrado extends Component {
             'Content-Type': 'application/json',
         }
 
-        axios.post(`http://unipastas-back.herokuapp.com/users`, { user }, {headers:headers})
+
+        axios.post(`https://unipastas-back.herokuapp.com/users`, { name: this.state.name, email: this.state.email, idnumber: this.state.idnumber, role_id: this.state.role_id, password: this.state.password }, {headers:headers})
+
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -66,7 +68,7 @@ class UsuarioRegistrado extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <label>
                             Nombre:
-                            <input type="text" className="name" onChange={this.handleChangeName} />
+                            <input type="text" name="name" onChange={this.handleChangeName} />
                         </label>
                         <br/>
                         <label>
@@ -76,12 +78,7 @@ class UsuarioRegistrado extends Component {
                         <br/>
                         <label>
                             Identificacón:
-                            <input type="number" idnumber="idnumber" onChange={this.handleChangeIdnumber} />
-                        </label>
-                        <br/>
-                        <label>
-                            Role_Id:
-                            <input type="number" role_id ="role_id" onChange={this.handleChangeRoleId} />
+                            <input type="text" idnumber="idnumber" onChange={this.handleChangeIdnumber} />
                         </label>
                         <br/>
                         <label>
@@ -89,8 +86,12 @@ class UsuarioRegistrado extends Component {
                             <input type="text" password="password" onChange={this.handleChangePassword} />
                         </label>
                         <br/>
-
-
+                        <label>
+                            Role_Id:
+                            <input type="text" role_id ="role_id" onChange={this.handleChangeRoleId} />
+                        </label>
+                        <br/>
+                        
                         <button type="submit">Registrarse</button>
                     </form>
                 </div>
