@@ -1,11 +1,44 @@
 import React, { Component } from 'react';
 import '../styles/RegisterPage.css';
-import {Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import {HelpBlock, ControlLabel, Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 class RegisterPage extends Component {
 
+    
+
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+           name: "",
+           validName: false,
+           idNumber:"",
+           validIdNumber: false,
+           email:"",
+           validEmail: false
+        }
+    }
+
+    validarNombre(event) {
+        const soloTexto = /^([A-Za-z])+((\s)*([A-Za-z]))*$/;
+
+        const valid = soloTexto.test(event.target.value);
+        
+        console.log(valid);
+        console.log(event.target.value);
+
+        if(valid){
+            this.setState({ [event.target.name]: event.target.value });
+            this.setState({ valid });
+        } else {
+            this.setState({ valid });
+        }
+    }
+
+
     render() {
+
 
         return (
 
@@ -35,59 +68,26 @@ class RegisterPage extends Component {
                                 </div>
                                 <br></br>
 
+                                {/* ************************************************************************************ */}
+                                {/* ************************************************************************************ */}
+                                <ControlLabel>Nombre completo:</ControlLabel>
+                                <FormGroup controlId="formValidationSuccess1" validationState="success">
+                                    <FormControl type="text" />
+                                    
+                                    <HelpBlock>{this.state.validName ? "El nombre solo puede contener letras" : ""}</HelpBlock>
+                                </FormGroup>
+                                {/* ************************************************************************************ */}
+                                {/* ************************************************************************************ */}
+
                                 <Form horizontal>
-                                    <FormGroup controlId="formHorizontalNombre">
-                                        <Col className="LabelsRegister" sm={3}>
-                                            Nombre:
-                                        </Col>
+                        
 
-                                        <Col sm={9}>
-                                            <FormControl type="text" placeholder="" />
-                                        </Col>
-                                    </FormGroup>
-
-                                    <FormGroup controlId="formHorizontalApellido">
-                                        <Col className="LabelsRegister CampoApellido" sm={3}>
-                                            Apellido:
-                                        </Col>
-
-                                        <Col sm={9} className="CampoApellido">
-                                            <FormControl type="text" placeholder="" />
-                                        </Col>
-                                    </FormGroup>
-
-                                    <FormGroup controlId="formHorizontalEmail">
-                                        <Col className="LabelsRegister" sm={3}>
-                                            Correo electrónico:
-                                        </Col>
-
-                                        <Col sm={9} className="CampoCorreo">
-                                            <FormControl type="email" placeholder="ejemplo@prueba.com" />
-                                        </Col>
-                                    </FormGroup>
-
-                                    <FormGroup controlId="formHorizontalPassword">
-                                        <Col className="LabelsRegister" sm={3}>
-                                            Contraseña:
-                                        </Col>
-                                        <Col sm={9}>
-                                            <FormControl type="password" placeholder="contraseña" />
-                                        </Col>
-                                    </FormGroup>
-
-                                    <FormGroup controlId="formHorizontalConfPassword">
-                                        <Col className="LabelsRegister" sm={3}>
-                                            Confirmar Contraseña:
-                                        </Col>
-                                        <Col className="rapido" sm={9}>
-                                            <FormControl type="password" placeholder="contraseña" />
-                                        </Col>
-                                    </FormGroup>
+                                    <p>{JSON.stringify(this.state)}</p>
 
                                     <FormGroup className="BarraBotones">
 
                                         <ButtonGroup  >
-                                            <Button className="RegisterBotonCrear" > 
+                                            <Button className="RegisterBotonCrear"> 
                                                 Crear Usuario 
                                             </Button>
                                             
