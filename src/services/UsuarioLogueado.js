@@ -1,73 +1,47 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, {Component} from 'react';
 
-class UsuarioLogueado extends Component {
+class UsuarioLogueado extends Component{
+    state = {
+                name: '',
+                idnumber: '',
+                email: '',
 
-    constructor(props){
-        super(props);
-        this.state = {
-            usuario : [] /*almacenar los datos a consumir en api rails*/
-        };
-    }
+            }
 
-    /*enviar la peticion http*/
-    componentWillMount(){
-
+    componentDidMount(){
         let jwt = window.localStorage.getItem('jwt');
-        {/**
-        fetch("http://unipastas-back.herokuapp.com/auth",
+
+        fetch("https://unipastas-back.herokuapp.com/auth",
             {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer ' + jwt,
                 },
             },
-        ).then(res => res.json(), console.log(this.state.message))
-            .then(res => (console.log(res.msg), this.setState({message: res.msg})
-            ))**/}
-
-
-        axios({
-            method: 'GET',
-            url:'https://unipastas-back.herokuapp.com/auth',
-            headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
-                Accept: "application/json", // Para JSON
-                "Content-Type": "application/json", // Para JSON
-                Authorization: 'Bearer ' + jwt
-               //Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NDM4ODc1ODAsInN1YiI6M30.iNcTy8eR7L15Bj2PmhkxZ4ne5FB9VgJlmvMXlTk6tG4"
-            }),
-        })
-
-            .then(response => {
-
-                let usuario  = response.data.slice();
-
+        ).then(res => res.json())
+            //.then(res => (console.log(res.name), this.setState({name: res.name})
+            //))
+            .then(res => {
                 this.setState({
-                    usuario: usuario
+                    name: res.name,
+                    idnumber: res.idnumber,
+                    email: res.email
                 })
             })
-            .catch(function (error) {
-                console.log(error);
-            });
     }
 
 
-    render() {
-        const Usuario = this.state.usuario.map((user)=>{
 
 
-            return(
-                <p>
-                id = {user.id} name = {user.name} idnumber = {user.idnumber} email = {user.email} password = {user.password} role_id = {user.role_id}
-                </p>)
-        })
-
-        return (
+    render(){
+        return(
             <div>
-                <h1>Datos de Usuario</h1>
-                {Usuario}
+                <h1>Bienvenido al sistema de información de la Organizacion de Estudiantes Universitarios</h1>
+                <h2>Usuario: {this.state.name}</h2>
+                <h2>Identificación: {this.state.idnumber}</h2>
+                <h2>Correo: {this.state.email}</h2>
             </div>
-        );
+        )
     }
-}
+ }
 export default UsuarioLogueado;
