@@ -17,22 +17,36 @@ class UserLoginSuccess extends Component {
       }
 
 
-    
-    state = { message: undefined }
+
+    state = {
+        name: '',
+        idnumber: '',
+        email: '',
+        role_id: ''
+
+    }
 
     componentDidMount(){
         let jwt = window.localStorage.getItem('jwt');
 
-        fetch("http://unipastas-back.herokuapp.com/auth",
+        fetch("https://unipastas-back.herokuapp.com/auth",
             {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer ' + jwt,
                 },
             },
-        ).then(res => res.json(), console.log(this.state.message))
-            .then(res => (console.log(res.msg), this.setState({message: res.msg})
-            ))
+        ).then(res => res.json())
+        //.then(res => (console.log(res.name), this.setState({name: res.name})
+        //))
+            .then(res => {
+                this.setState({
+                    name: res.name,
+                    idnumber: res.idnumber,
+                    email: res.email,
+                    role_id: res.role_id
+                })
+            })
     }
 
 
@@ -81,7 +95,8 @@ class UserLoginSuccess extends Component {
                             </div>
                               
                             <div>
-                                Usuario estantar
+                                {this.state.role_id == "1"? "ROL ADMINISTRADOR": this.state.role_id == "2"? "ROL ESTUDIANTE": "ROL AUTORIDAD TRADICIONAL"}
+
                             </div>
                         </h3>
 
@@ -91,8 +106,7 @@ class UserLoginSuccess extends Component {
                             </div>
 
                             <div>
-                                {this.state.message}
-                                hola mundo
+                                {this.state.name}
                             </div>
                             
                         </h3>
@@ -105,7 +119,7 @@ class UserLoginSuccess extends Component {
                                 <Label> ID :</Label> 
                             </div>
                             <div>
-                                1234567890
+                                {this.state.idnumber}
                             </div>
                         </h3>
                     </Col>
@@ -180,24 +194,19 @@ class UserLoginSuccess extends Component {
                                             <Col xs={12} md={6}>
                                                 
                                                 <br></br>
-                                                <ControlLabel>NOMBRE:</ControlLabel>
-                                                <FormControl disabled type="text" />
+                                                <ControlLabel>NOMBRES:</ControlLabel>
+                                                <FormControl className="centrarNombre" disabled type="text" value={this.state.name}/>
 
                                                 <br></br>
 
-                                                <ControlLabel>APELLIDO:</ControlLabel>
-                                                <FormControl disabled type="text" />
-
-                                                <br></br>
-
-                                                <ControlLabel>CÉDULA:</ControlLabel>
-                                                <FormControl disabled type="text" />
+                                                <ControlLabel>IDENTIFICACIÓN:</ControlLabel>
+                                                <FormControl className="centrarIdnumber" disabled type="text" value={this.state.idnumber}/>
                                             </Col>
 
                                             <Col xs={12} md={6}>
                                                 <br></br>
                                                 <ControlLabel>E-MAIL:</ControlLabel>
-                                                <FormControl disabled type="text" />
+                                                <FormControl className="centrarEmail" disabled type="text" value={this.state.email}/>
 
                                                 <br></br>
 
