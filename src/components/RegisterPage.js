@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/RegisterPage.css';
-import {HelpBlock, ControlLabel, Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
+import {ControlLabel, Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
 class RegisterPage extends Component {
@@ -13,29 +13,16 @@ class RegisterPage extends Component {
         this.state = {
            name: "",
            validName: false,
-           idNumber:"",
-           validIdNumber: false,
-           email:"",
-           validEmail: false
         }
     }
 
     validarNombre(event) {
         const soloTexto = /^([A-Za-z])+((\s)*([A-Za-z]))*$/;
 
-        const valid = soloTexto.test(event.target.value);
-        
-        console.log(valid);
-        console.log(event.target.value);
-
-        if(valid){
-            this.setState({ [event.target.name]: event.target.value });
-            this.setState({ valid });
-        } else {
-            this.setState({ valid });
-        }
+        const validName = soloTexto.test(event.target.value);
     }
 
+    
 
     render() {
 
@@ -70,11 +57,10 @@ class RegisterPage extends Component {
 
                                 {/* ************************************************************************************ */}
                                 {/* ************************************************************************************ */}
-                                <ControlLabel>Nombre completo:</ControlLabel>
-                                <FormGroup controlId="formValidationSuccess1" validationState="success">
+                                <FormGroup controlId="formValidationError2" validationState={null}>
+                                    <ControlLabel>Input with error and feedback icon</ControlLabel>
                                     <FormControl type="text" />
-                                    
-                                    <HelpBlock>{this.state.validName ? "El nombre solo puede contener letras" : ""}</HelpBlock>
+                                    <FormControl.Feedback />
                                 </FormGroup>
                                 {/* ************************************************************************************ */}
                                 {/* ************************************************************************************ */}

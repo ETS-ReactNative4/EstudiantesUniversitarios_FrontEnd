@@ -185,21 +185,13 @@ class UserLoginSuccess extends Component {
                                                 <FormControl disabled type="text" />
 
                                                 <br></br>
-
-                                                <ControlLabel>APELLIDO:</ControlLabel>
-                                                <FormControl disabled type="text" />
-
-                                                <br></br>
-
-                                                <ControlLabel>CÉDULA:</ControlLabel>
-                                                <FormControl disabled type="text" />
-                                            </Col>
-
-                                            <Col xs={12} md={6}>
-                                                <br></br>
                                                 <ControlLabel>E-MAIL:</ControlLabel>
                                                 <FormControl disabled type="text" />
 
+                                            </Col>
+
+                                            <Col xs={12} md={6}>
+                                                
                                                 <br></br>
 
                                                 <ControlLabel>DIRECCIÓN:</ControlLabel>
