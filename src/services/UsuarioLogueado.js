@@ -6,7 +6,8 @@ class UsuarioLogueado extends Component{
     constructor(props){
         super(props);
         this.state = {
-          actividades : [] /*almacenar los datos a consumir en api rails*/
+          actividades : [], /*almacenar los datos a consumir en api rails*/
+          eventos : []
         };
       }
 
@@ -70,6 +71,50 @@ class UsuarioLogueado extends Component{
               console.log(error);
           });
 
+        axios({
+            method: 'get',
+            url:'https://unipastas-back.herokuapp.com/publications_events',
+            headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
+              Accept: "application/json", // Para JSON
+              "Content-Type": "application/json", // Para JSON
+              'Authorization': 'Bearer ' + jwt,
+             }),
+          })
+
+          .then(response1 => {
+
+            let eventos  = response1.data.slice();
+  
+            this.setState({
+              eventos: eventos
+            })
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+        
+        axios({
+            method: 'get',
+            url:'https://unipastas-back.herokuapp.com/publications_events',
+            headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
+              Accept: "application/json", // Para JSON
+              "Content-Type": "application/json", // Para JSON
+              'Authorization': 'Bearer ' + jwt,
+             }),
+          })
+
+          .then(response1 => {
+
+            let eventos  = response1.data.slice();
+  
+            this.setState({
+              eventos: eventos
+            })
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+
     }
 
 
@@ -79,9 +124,35 @@ class UsuarioLogueado extends Component{
 
     
             return (<p>
-                      id = {actividad.id} name = {actividad.name} description = {actividad.description} place = {actividad.place}
+                      id = {actividad.id}
+                      name = {actividad.name}
+                      description = {actividad.description}
+                      startdate = {actividad.stardate} 
+                      place = {actividad.place} 
+                      latitude = {actividad.latitude} 
+                      longitude = {actividad.longitude} 
+                      user_id = {actividad.user_id}
+                      type_publication_id = {actividad.type_publication_id} 
                    </p>)
+                   
                  })
+        
+        const eventosList = this.state.eventos.map((evento)=>{
+
+    
+                    return (<p>
+                              id = {evento.id}
+                              name = {evento.name}
+                              description = {evento.description}
+                              startdate = {evento.stardate} 
+                              place = {evento.place} 
+                              latitude = {evento.latitude} 
+                              longitude = {evento.longitude} 
+                              user_id = {evento.user_id}
+                              type_publication_id = {evento.type_publication_id} 
+                           </p>)
+                           
+                         })
 
         return(
             <div>
@@ -91,8 +162,27 @@ class UsuarioLogueado extends Component{
                 <h2>Correo: {this.state.email}</h2>
 
                 <h1>listando actividades</h1>
+                <h2>listado de publicaciones sin filtrar</h2>
+
                 <div>
                     {actividadesList}
+                </div>
+
+                <h2>listado de eventos</h2>
+                    {eventosList}
+                <div>
+                    
+                </div>
+
+                <h2>listado de accesorias</h2>
+
+                <div>
+                    
+                </div>
+                <h2>listado de publicaciones</h2>
+
+                <div>
+                   
                 </div>
 
             </div>

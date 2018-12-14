@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/ListaActividades.css';
 import { Label, Col, Row, FormControl, Button, Modal, Panel, PanelGroup, Jumbotron} from "react-bootstrap";
+import axios from 'axios';
 
 
 class ListaActividades extends Component {
@@ -14,9 +15,37 @@ class ListaActividades extends Component {
     
         this.state = {
           show: false,
-          open: false
+          open: false,
+          actividades : [] /*almacenar los datos a consumir en api rails*/
         };
       }
+
+      componentWillMount(){
+        let jwt = window.localStorage.getItem('jwt');
+
+        axios({
+            method: 'get',
+            url:'https://unipastas-back.herokuapp.com/publications',
+            headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
+              Accept: "application/json", // Para JSON
+              "Content-Type": "application/json", // Para JSON
+              'Authorization': 'Bearer ' + jwt,
+             }),
+          })
+
+          .then(response => {
+
+            let actividades  = response.data.slice();
+  
+            this.setState({
+              actividades: actividades
+            })
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+
+    }
     
       handleClose() {
         this.setState({ show: false });
@@ -31,6 +60,22 @@ class ListaActividades extends Component {
       }
 
     render() {
+
+        const actividadesList = this.state.actividades.map((actividad)=>{
+
+    
+            return (<p>
+                      id = {actividad.id}
+                      name = {actividad.name}
+                      description = {actividad.description}
+                      startdate = {actividad.stardate} 
+                      place = {actividad.place} 
+                      latitude = {actividad.latitude} 
+                      longitude = {actividad.longitude} 
+                      user_id = {actividad.user_id}
+                      type_publication_id = {actividad.type_publication_id} 
+                   </p>)
+                 })
 
 
         return (
@@ -344,6 +389,10 @@ class ListaActividades extends Component {
                 </PanelGroup>
 
             </Jumbotron>
+            <div>
+            {actividadesList}
+            </div>
+            
 
           </div>
 

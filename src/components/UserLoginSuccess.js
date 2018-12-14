@@ -239,7 +239,7 @@ class UserLoginSuccess extends Component {
 
                         <Tab.Pane eventKey="second">
                         {/*===================================================================================== */} 
-                        {/* PESTANA DE DATOS PERSONALES */}
+                        {/* PESTANA PROYECTOS */}
                         {/*===================================================================================== */}
 
                             <Jumbotron className="Ventana">
@@ -324,7 +324,7 @@ class UserLoginSuccess extends Component {
 
                         <Tab.Pane eventKey="third">
                         {/*===================================================================================== */} 
-                        {/* PESTANA DE DATOS PERSONALES */}
+                        {/* PESTANA DE ACCTIVIDADES */}
                         {/*===================================================================================== */}
                         
                             <ListaActividades/>
