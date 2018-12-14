@@ -1,0 +1,406 @@
+[33mcommit 64376710a8be54e7e752eac21593c6a3ba10afb5[m[33m ([m[1;36mHEAD -> [m[1;32mendpoints[m[33m, [m[1;31morigin/endpoints[m[33m)[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Fri Dec 14 10:28:08 2018 -0500
+
+    consimiendo endpoint actividades -> lista de eventos
+
+[33mcommit f155b4bd6892ea8369d64d58ff99733d4f6219e0[m
+Merge: 5b1c5fb 5f5be23
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Thu Dec 13 17:14:11 2018 -0500
+
+    Merge branch 'release_gonzalo' of https://github.com/HeavyGear/EstudiantesUniversitarios_FrontEnd into endpoints
+
+[33mcommit 5b1c5fb7d6bc82cc175477ae4ce14531f7d7e453[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Thu Dec 13 16:55:34 2018 -0500
+
+    consumo exitoso lista de actividades
+
+[33mcommit 5f5be23fd32397f89bd5df73b9fe4e6575646f41[m[33m ([m[1;31morigin/release_gonzalo[m[33m, [m[1;32mrelease_gonzalo[m[33m)[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Thu Dec 13 12:41:02 2018 -0500
+
+    validación de campos provicional
+
+[33mcommit 7916f6aa4b4905053866817f385313daa98d5de4[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Tue Dec 11 23:10:32 2018 -0500
+
+    commit
+
+[33mcommit bd83e53108e57616ce63b6d922f8243d41b4235b[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Tue Dec 11 16:39:34 2018 -0500
+
+    Login User, interfaz exitosa
+
+[33mcommit 1e2fed05e39f22528e0faa09467452df90e17ad7[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Tue Dec 11 16:36:42 2018 -0500
+
+    commit
+
+[33mcommit ab2b53fdf282cb082b6459e0af08266afb2a63ed[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Tue Dec 11 15:38:54 2018 -0500
+
+    Eliminando componentes obsoletos
+
+[33mcommit 2ced07680a72592c56bbbf9654faa9146b430801[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Mon Dec 10 22:46:41 2018 -0500
+
+    Loguin usuario exitoso
+
+[33mcommit a1bd32838dd336f37aaf7ce133d9933721d71f72[m
+Merge: c2e9730 78d6662
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Dec 9 20:42:06 2018 -0500
+
+    arreglando conflicto pull endpoints
+
+[33mcommit c2e9730c63d396ddd95139e03d9bbc26b98e047e[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Dec 9 20:39:43 2018 -0500
+
+    actualizando endpoints
+
+[33mcommit 78d6662f14f27b64964a0e412173a0205306d5cb[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Mon Dec 3 00:43:52 2018 -0500
+
+    Registrar Usuario
+    
+    Ya funciona el registro de usuario,pero faltan validaciones de errores como si el usuario ya esta registrado o algun campo no cumple con los requisitos
+
+[33mcommit ba5035213db8ad00c1d934a655bf63ea02629ac8[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Dec 2 20:54:43 2018 -0500
+
+    arreglando endpoint para registro de usuario, aun con errores
+
+[33mcommit 2157307932bb10489898ab73e7a0c09f34229437[m
+Merge: 1ab13ae 5448f73
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Dec 2 19:52:10 2018 -0500
+
+    Merge branch 'endpoints' of https://github.com/HeavyGear/EstudiantesUniversitarios_FrontEnd into endpoints
+
+[33mcommit 1ab13aeeeff5d221e017069bf05a35eabfd3f934[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Dec 2 19:51:31 2018 -0500
+
+    probando otro cambio para registro de usuario
+
+[33mcommit 5448f7316ffacda82ee0f636fdcc0701dee934ba[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Sun Dec 2 19:33:33 2018 -0500
+
+    commit
+
+[33mcommit 0e9070921e96b5a3acd67138bc83e04c417e4593[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Tue Nov 27 20:09:45 2018 -0500
+
+    estableciendo endpoint para usuario registrado
+
+[33mcommit f89316af75a904c3005f7a7ce7d047ec427a7807[m[33m ([m[1;33mtag: SPRINT_REVISION_5[m[33m, [m[1;31morigin/master[m[33m, [m[1;31mheroku/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Mon Nov 26 02:09:23 2018 -0500
+
+    SUMMARY_5
+
+[33mcommit c07bcc5c8d79f156ebae1fecf3d84ce2bf51e61c[m
+Merge: 44fbf6f 02a8ece
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Mon Nov 26 01:49:49 2018 -0500
+
+    Merge branch 'develop'
+
+[33mcommit 02a8eced0685a5dd872fdf33cecc59aaa25df9fe[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Merge: f1249b3 9c650fa
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Mon Nov 26 01:47:06 2018 -0500
+
+    solucionando conflicto merge a develop
+
+[33mcommit f1249b3d31bae924942a11f99d2ec7daafff76a4[m[33m ([m[1;31morigin/release_jairo[m[33m, [m[1;32mrelease_jairo[m[33m)[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Mon Nov 26 01:36:40 2018 -0500
+
+    configurando endpoint usuario logueado con autorización
+
+[33mcommit 44fbf6fefe0cb0835fde0cfb575a73d5e2f32f6f[m
+Merge: d73609c 9c650fa
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Mon Nov 26 01:07:13 2018 -0500
+
+    Merge pull request #55 from HeavyGear/develop
+    
+    Develop
+
+[33mcommit 9c650fad20c0039f8c8497c5b55fb89faffbff1b[m
+Merge: cf3312e f72f63d
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Mon Nov 26 01:00:44 2018 -0500
+
+    Merge pull request #54 from HeavyGear/release_gonzalo
+    
+    Release gonzalo
+
+[33mcommit f72f63dc0bcd5789a820db032c7403396ff09cc9[m
+Merge: 70e9a21 cf3312e
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Mon Nov 26 01:00:36 2018 -0500
+
+    Merge branch 'develop' into release_gonzalo
+
+[33mcommit 70e9a21595aae062f4e47f4efa615332103511cb[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Mon Nov 26 00:56:00 2018 -0500
+
+    commit
+
+[33mcommit 648d56330708d5fbb12b572926b8a4e4c78b167d[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Nov 25 23:02:02 2018 -0500
+
+    actualizando directorio de enpoints: lista de roles y lista de universidades
+
+[33mcommit d73609cd9d69df8d8461294df814bbd17438fd64[m
+Merge: c3a4aa1 ac55c62
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Nov 25 19:07:16 2018 -0500
+
+    Merge pull request #53 from HeavyGear/endpoints
+    
+    consumiento endpoint  Lista de estados de documento
+
+[33mcommit ac55c629bc1dabe5ce3c4d60444c65032ce41677[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sun Nov 25 19:05:35 2018 -0500
+
+    consumiento endpoint  Lista de estados de documento
+
+[33mcommit f408c851a8c7eb1d8ea60130784c5af19e6442b5[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Sun Nov 25 10:58:39 2018 -0500
+
+    Commit Listado Actividades
+    
+    Ventana desplegable y vista del esquema de comentarios y de campo para escribir un nuevo cometario
+
+[33mcommit c3a4aa193275eb8ab56ba53a3b2cc5c34442ab49[m
+Merge: ca297ab cf3312e
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sat Nov 24 13:04:07 2018 -0500
+
+    Merge pull request #52 from HeavyGear/endpoints
+    
+    configurando autorización de token con usuario ya logueado. Consumo d…
+
+[33mcommit cf3312e69f8cdb28603c6ae1ef25ced898521ec7[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Sat Nov 24 12:40:15 2018 -0500
+
+    configurando autorización de token con usuario ya logueado. Consumo de endpont lista de eventos satisfactorio
+
+[33mcommit ca297ab62ae1bba3dcd9e62626e3ff13b318d303[m
+Merge: b9d42b1 7fffd2e
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Fri Nov 23 17:55:15 2018 -0500
+
+    Merge pull request #51 from HeavyGear/endpoints
+    
+    agregando directorio para consumo de enpoints services y probando enp…
+
+[33mcommit 7fffd2ef3b9c248ee66870805be2631e3d532bc5[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Fri Nov 23 17:54:08 2018 -0500
+
+    agregando directorio para consumo de enpoints services y probando enpoint de lista de publicaciones
+
+[33mcommit b9d42b1743fa3398a9332d000b6e87cf8ef98d6a[m
+Merge: afd2eaf dd47e2a
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Fri Nov 23 03:08:00 2018 -0500
+
+    Merge pull request #50 from HeavyGear/develop
+    
+    Develop
+
+[33mcommit dd47e2a89340483734239fe0c30b693a55b7cb62[m
+Merge: 37d787f f0297bd
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Fri Nov 23 03:06:06 2018 -0500
+
+    Merge pull request #49 from HeavyGear/release_gonzalo
+    
+    commit
+
+[33mcommit f0297bd58939108f2adad0586102c00e08ca6070[m
+Merge: 1b433fb 37d787f
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Fri Nov 23 03:05:59 2018 -0500
+
+    Merge branch 'develop' into release_gonzalo
+
+[33mcommit 1b433fbcf136538c582e264d927fdcdb3402e6fb[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Fri Nov 23 03:04:52 2018 -0500
+
+    commit
+
+[33mcommit afd2eaf0a5a5f0fe88d4c5059961f3a090157d5f[m
+Merge: 9a103e5 37d787f
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Fri Nov 23 02:59:57 2018 -0500
+
+    Merge pull request #48 from HeavyGear/develop
+    
+    Develop
+
+[33mcommit 37d787f8ca7c431521d335ebe499c4c98f3fcc13[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Fri Nov 23 02:58:58 2018 -0500
+
+    commit
+
+[33mcommit 890398b3b17058cb74981b6a8db8ef0a4c2a3d7a[m
+Merge: 6ebbb04 f80db9a
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Fri Nov 23 02:53:15 2018 -0500
+
+    Merge pull request #47 from HeavyGear/release_gonzalo
+    
+    Release gonzalo
+
+[33mcommit f80db9aab0fd51ea8f66fbd938a7915485011ec0[m
+Merge: 9543d4a 6ebbb04
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Fri Nov 23 02:53:07 2018 -0500
+
+    Merge branch 'develop' into release_gonzalo
+
+[33mcommit 9543d4a0648bfb94fd12b61c3f858cad5af2f2ef[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Fri Nov 23 02:50:54 2018 -0500
+
+    commit
+
+[33mcommit c8e6743a1e6a6ddbe3e9f869120fd6baa3707e51[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Fri Nov 23 02:38:02 2018 -0500
+
+    commit
+
+[33mcommit 77d171e521c9e6e0172ad35f67ffa8c8993b582a[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Thu Nov 22 19:06:21 2018 -0500
+
+    commit
+
+[33mcommit 9a103e566298249d283eecc19df5a5080e6845cd[m
+Merge: 904273b 6ebbb04
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Thu Nov 22 00:01:20 2018 -0500
+
+    Merge pull request #46 from HeavyGear/facebook_login
+    
+    Facebook login
+
+[33mcommit 6ebbb04ad1cdf8a0206f2b0a4a692b27b9a553ed[m[33m ([m[1;31morigin/facebook_login[m[33m, [m[1;32mfacebook_login[m[33m)[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 21 23:58:49 2018 -0500
+
+    probando boton login con facebook y configuración de login exitoso. Aun no redirige a nueva vista
+
+[33mcommit 62e4eeecd81e7b7df8d06803b25ac9333fdce37d[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 21 23:17:21 2018 -0500
+
+    cnfigurando estados para login con facebook y boton con appID de cuenta Facebook
+
+[33mcommit c77e06dc3ed14426ca40506d1ab892ca83376b8f[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 21 22:34:03 2018 -0500
+
+    actualizando encabezado en vista login
+
+[33mcommit f21e37943def4699659d61cf88884646cb9c239d[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 21 20:16:30 2018 -0500
+
+    instalando libreria react-facebook-login
+
+[33mcommit f610221ca33db239cacc836d0fe4d4edcefcc506[m
+Merge: 031e95a 904273b
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 21 15:08:29 2018 -0500
+
+    Merge branch 'master' of https://github.com/HeavyGear/EstudiantesUniversitarios_FrontEnd into facebook_login
+
+[33mcommit 031e95a9ce40e900aa59184d90a8236f2e39b3e8[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 21 14:55:01 2018 -0500
+
+    modificando barra de titulo en loginPage y agregando emblema1
+
+[33mcommit da272c9f99c9d346e4d79586c4515e08d9be9dae[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Sun Nov 18 13:22:44 2018 -0500
+
+    userpage modificacion
+
+[33mcommit 2a743139fa762d5a8ecc8b785d770e16457d9f47[m
+Merge: f5897e5 e2a02c8
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 14 19:47:53 2018 -0500
+
+    Merge pull request #45 from HeavyGear/develop
+    
+    Develop
+
+[33mcommit c19435778cb8a49d77f736762f96f7d70f91c70b[m
+Merge: 039ab00 48ec755
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 14 19:36:14 2018 -0500
+
+    Merge remote-tracking branch 'origin/release_gonzalo' into release_gonzalo
+
+[33mcommit 039ab00d4328bade10f6d35fef1731be9d14ed75[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Wed Nov 14 19:35:59 2018 -0500
+
+    agregando emblema 1
+
+[33mcommit 48ec755b4139e7bdf3752ca0fd61c0cf0a97edfc[m
+Author: Gonzalo Eduardo Baez Sabogal <gebaezs@unal.edu.co>
+Date:   Tue Nov 13 00:54:25 2018 -0500
+
+    correcciones de ortografia
+
+[33mcommit 904273b3acb46418c3071be0f5c573321855ea8d[m
+Merge: c78055d e2a02c8
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Tue Nov 13 00:10:30 2018 -0500
+
+    Merge pull request #44 from HeavyGear/develop
+    
+    Develop
+
+[33mcommit e2a02c8f9c8d6a0a9f2e7923d182f852be58c3e2[m
+Merge: bb9120c 1591c0c
+Author: Gonzalo Eduardo Baez Sabogal <32652193+gebaezs@users.noreply.github.com>
+Date:   Tue Nov 13 00:09:56 2018 -0500
+
+    Merge pull request #43 from HeavyGear/release_gonzalo
+    
+    nuevos logos
+
+[33mcommit c78055dfbd2ecdf52347dd8c432206f27a495b43[m[33m ([m[1;33mtag: SPRINT_REVISION_4[m[33m)[m
+Author: Jhon Jairo Mueses Quitiaquez <jjmuesesq@unal.edu.co>
+Date:   Mon Nov 12 23:57:04 2018 -0500
+
+    SPRINT_REVISION_4

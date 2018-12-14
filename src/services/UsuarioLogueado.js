@@ -7,7 +7,9 @@ class UsuarioLogueado extends Component{
         super(props);
         this.state = {
           actividades : [], /*almacenar los datos a consumir en api rails*/
-          eventos : []
+          eventos : [],
+          accesorias: [],
+          publicaciones: []
         };
       }
 
@@ -48,7 +50,9 @@ class UsuarioLogueado extends Component{
 
     componentWillMount(){
         let jwt = window.localStorage.getItem('jwt');
-
+        //-----------------------------------------------------------------------------------------------
+        //Endpoint para listar actividades sin filtrar
+        //-----------------------------------------------------------------------------------------------
         axios({
             method: 'get',
             url:'https://unipastas-back.herokuapp.com/publications',
@@ -58,7 +62,7 @@ class UsuarioLogueado extends Component{
               'Authorization': 'Bearer ' + jwt,
              }),
           })
-
+          
           .then(response => {
 
             let actividades  = response.data.slice();
@@ -71,6 +75,9 @@ class UsuarioLogueado extends Component{
               console.log(error);
           });
 
+        //-----------------------------------------------------------------------------------------------
+        //Endpoint para actividades  -> listar eventos 
+        //-----------------------------------------------------------------------------------------------
         axios({
             method: 'get',
             url:'https://unipastas-back.herokuapp.com/publications_events',
@@ -80,7 +87,7 @@ class UsuarioLogueado extends Component{
               'Authorization': 'Bearer ' + jwt,
              }),
           })
-
+          
           .then(response1 => {
 
             let eventos  = response1.data.slice();
@@ -93,27 +100,57 @@ class UsuarioLogueado extends Component{
               console.log(error);
           });
         
+        
+        //-----------------------------------------------------------------------------------------------
+        //Endpoint para actividades -> listar accesosrias
+        //-----------------------------------------------------------------------------------------------
         axios({
             method: 'get',
-            url:'https://unipastas-back.herokuapp.com/publications_events',
+            url:'https://unipastas-back.herokuapp.com/publications_consultancies',
             headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
               Accept: "application/json", // Para JSON
               "Content-Type": "application/json", // Para JSON
               'Authorization': 'Bearer ' + jwt,
              }),
           })
+          
+          .then(response2 => {
 
-          .then(response1 => {
-
-            let eventos  = response1.data.slice();
+            let accesorias  = response2.data.slice();
   
             this.setState({
-              eventos: eventos
+              accesorias: accesorias
             })
           })
           .catch(function (error) {
               console.log(error);
           });
+
+
+        //-----------------------------------------------------------------------------------------------
+        //Endpoint para actividades -> listar publicaciones
+        //-----------------------------------------------------------------------------------------------
+        axios({
+            method: 'get',
+            url:' https://unipastas-back.herokuapp.com/publications_publications',
+            headers: ({ // Headers se usa para modificar los encabezados, como se haría en Postman
+              Accept: "application/json", // Para JSON
+              "Content-Type": "application/json", // Para JSON
+              'Authorization': 'Bearer ' + jwt,
+             }),
+          })
+          
+          .then(response3 => {
+
+            let accesorias  = response3.data.slice();
+  
+            this.setState({
+              publicaciones: publicaciones
+            })
+          })
+          .catch(function (error) {
+              console.log(error);
+          });  
 
     }
 
@@ -153,6 +190,39 @@ class UsuarioLogueado extends Component{
                            </p>)
                            
                          })
+        const accesoriasList = this.state.accesorias.map((accesoria)=>{
+
+    
+                    return (<p>
+                              id = {accesoria.id}
+                              name = {accesoria.name}
+                              description = {accesoria.description}
+                              startdate = {accesoria.stardate} 
+                              place = {accesoria.place} 
+                              latitude = {accesoria.latitude} 
+                              longitude = {accesoria.longitude} 
+                              user_id = {accesoria.user_id}
+                              type_publication_id = {accesoria.type_publication_id} 
+                           </p>)
+                           
+                         })
+                         
+        const publicacionesList = this.state.publicaciones.map((publicacion)=>{
+
+    
+                    return (<p>
+                              id = {publicacion.id}
+                              name = {publicacion.name}
+                              description = {publicacion.description}
+                              startdate = {publicacion.stardate} 
+                              place = {publicacion.place} 
+                              latitude = {publicacion.latitude} 
+                              longitude = {publicacion.longitude} 
+                              user_id = {publicacion.user_id}
+                              type_publication_id = {publicacion.type_publication_id} 
+                           </p>)
+                           
+                         })
 
         return(
             <div>
@@ -162,25 +232,23 @@ class UsuarioLogueado extends Component{
                 <h2>Correo: {this.state.email}</h2>
 
                 <h1>listando actividades</h1>
-                <h2>listado de publicaciones sin filtrar</h2>
-
+                
+                <h2>listado de Actividades sin filtrar</h2>
                 <div>
                     {actividadesList}
                 </div>
 
-                <h2>listado de eventos</h2>
-                    {eventosList}
+                <h2>listado de eventos</h2>                    
                 <div>
-                    
+                    {eventosList}
                 </div>
 
                 <h2>listado de accesorias</h2>
-
                 <div>
-                    
+                    {accesoriasList}
                 </div>
+                
                 <h2>listado de publicaciones</h2>
-
                 <div>
                    
                 </div>
