@@ -6,8 +6,10 @@ class ListComentarios extends Component{
     constructor(props){
         super(props);
         this.state = {
-            comentarios:[]
-          
+            comentarios:[],
+            id: '',
+            body: '',
+            publication_id:''            
         };
       }
 
@@ -17,7 +19,17 @@ class ListComentarios extends Component{
                 email: ''
             }
 
-    
+    handleChangeId = event => {
+        this.setState({ id : event.target.value});
+    }
+
+    handleChangeBody = event => {
+        this.setState({ body : event.target.value});
+    }
+
+    handleChangePublication_id = event => {
+        this.setState({ publication_id : event.target.value});
+    }
 
     componentDidMount(){
         let jwt = window.localStorage.getItem('jwt');
@@ -44,6 +56,36 @@ class ListComentarios extends Component{
             })
             
 
+    }
+
+    //-----------------------------------------------------------------------------------------------
+    //Endpoint para crear comentarios - publication_id = 1
+    //-----------------------------------------------------------------------------------------------
+
+    handleSubmit = event => {
+        let jwt = window.localStorage.getItem('jwt');
+
+        event.preventDefault();
+
+        const coment = {
+            id: this.state.id,
+            body: this.state.body,
+            publication_id: this.state.publication_id            
+        };
+
+        var headers = {
+            Accept: "application/json",
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + jwt,
+        }
+
+
+        axios.post(`https://unipastas-back.herokuapp.com/publications/1/comments`, { id: this.state.id, body: this.state.body, publication_id: this.state.publication_id }, {headers:headers})
+
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
     }
 
     componentWillMount(){
@@ -99,9 +141,27 @@ class ListComentarios extends Component{
 
                 <h1>listando comentarios</h1>
                 
-                <h2>consumiendo comentarios</h2>
+                <h2>consumiendo endpoint lista comentarios</h2>
                 <div>
                     {comentariosList}
+                </div>
+
+                <h2>consumiendo endpoint crear comentarios</h2>
+                <div>
+                <div>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Contenido:
+                            <input type="text" body="body" onChange={this.handleChangeBody} />
+                        </label>
+                        <br/>
+                        
+                        
+                        <button type="submit">Comentar</button>
+                    </form>
+                </div>
+
+                <p>{JSON.stringify(this.state)}</p>
                 </div>
 
                
