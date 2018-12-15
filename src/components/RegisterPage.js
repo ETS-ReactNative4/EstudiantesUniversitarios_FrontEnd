@@ -168,7 +168,6 @@ class RegisterPage extends Component {
                                     {/* ************************************************************************************ */}
 
                                     <FormGroup className="BarraBotones">
-
                                         <ButtonGroup  >
                                             <Button className="RegisterBotonCrear"> 
                                                 Crear Usuario 
@@ -178,8 +177,8 @@ class RegisterPage extends Component {
                                                 <Link to='/'>Volver</Link>
                                             </Button>
                                         </ButtonGroup>
+                                    </FormGroup>
 
-                                </FormGroup>
                                 </Form>
                             </Jumbotron>
                         </Col>
