@@ -37,9 +37,7 @@ class ListaActividades extends Component {
 
             let actividades  = response.data.slice();
   
-            this.setState({
-              actividades: actividades
-            })
+            this.setState({actividades})
           })
           .catch(function (error) {
               console.log(error);
@@ -68,7 +66,7 @@ class ListaActividades extends Component {
                       id = {actividad.id}
                       name = {actividad.name}
                       description = {actividad.description}
-                      startdate = {actividad.stardate} 
+                      startdate = {String(actividad.startdate)}
                       place = {actividad.place} 
                       latitude = {actividad.latitude} 
                       longitude = {actividad.longitude} 
