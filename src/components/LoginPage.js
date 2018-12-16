@@ -10,6 +10,7 @@ class LoginPage extends Component {
         super(props);
 
         this.state = {
+            role_id: "",
             email: " ",
             isValidEmail: false,
             password: " "
@@ -50,7 +51,7 @@ class LoginPage extends Component {
                     'Content-Type': 'application/json'
                 },
             },
-        ).then(res => res.json()).then(res => (console.log(res.jwt),
+        ).then(res => res.json()).then(res => ((console.log(res.jwt),console.log("holamundooooooooooooooooooooooooooooooooooooooooo"), console.log(res)),
                 window.localStorage.setItem('jwt', res.jwt)
         ))
             .then(() => this.props.history.push('/UserLoginSuccess'))

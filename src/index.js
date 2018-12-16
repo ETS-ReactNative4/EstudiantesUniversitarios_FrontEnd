@@ -14,10 +14,10 @@ import ContactPage from './components/ContactPage';
 import App from './components/App';
 import NewBarHome from './components/NewBarHome';
 import UserLoginSuccess from './components/UserLoginSuccess';
+import UserAdminSuccess from './components/UserAdminSuccess';
 import ListEventos from './services/ListEventos';
+import Redireccionar from './components/Redireccionar'
 
-//import { Provider } from 'react-redux';
-//import store from './store/index';
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -37,8 +37,11 @@ ReactDOM.render(
             <Route exact path='/ContactPage' component={ContactPage} />
             <Route exact path='/NewBarHome' component={NewBarHome} />
             <Route exact path='/UserLoginSuccess' component={UserLoginSuccess} />
+            <Route exact path='/UserAdminSuccess' component={UserAdminSuccess} />
             <Route exact path='/welcome' component={Welcome} />
             <Route exact path='/publicaciones' component={ListEventos} />
+            <Route exact path='/Redireccionar' component={Redireccionar} />
+
 
         </div>
     </BrowserRouter>

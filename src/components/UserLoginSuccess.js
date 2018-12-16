@@ -3,12 +3,6 @@ import axios from 'axios';
 import '../styles/UserLoginSuccess.css';
 import {Link} from 'react-router-dom';
 import { PanelGroup, Modal, Table, FormGroup, Nav, NavItem, Tab, Jumbotron, Label, Row, Col, Button, Image, Panel, ControlLabel, FormControl} from "react-bootstrap";
-// import ListaActividades from './ListaActividades';
-
-
-{/* import ListEventos from '../services/ListEventos' */}
-
-
 
 class UserLoginSuccess extends Component {
 
