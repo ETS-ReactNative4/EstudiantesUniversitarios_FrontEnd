@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/RegisterPage.css';
+import axios from "axios";
 import {Link} from "react-router-dom";
 import {HelpBlock, ControlLabel, Button, ButtonGroup, Col, Form, FormControl, FormGroup, Jumbotron, Row} from "react-bootstrap";
 
@@ -11,12 +12,13 @@ class RegisterPage extends Component {
         this.state = {
            name: " ",
            isValidName: false,
-           idNumber: " ",
+           idnumber: " ",
            isValidIdNumber: false,
            email: " ",
            isValidEmail: false,
            password: " ",
-           isValidPassword: false
+           isValidPassword: false,
+           role_id: "2"
         };
 
         this.validateName = this.validateName.bind(this);
@@ -35,10 +37,10 @@ class RegisterPage extends Component {
 
     validateIdNumber(event) {
         const soloNumeros = /^([0-9])+$/;
-        const idNumber = event.target.value;
-        const isValidIdNumber = soloNumeros.test(idNumber);
+        const idnumber = event.target.value;
+        const isValidIdNumber = soloNumeros.test(idnumber);
         this.setState({ isValidIdNumber });
-        this.setState({ idNumber });
+        this.setState({ idnumber });
     }
 
     validateEmail(event) {
@@ -56,6 +58,32 @@ class RegisterPage extends Component {
         this.setState({ isValidPassword });
         this.setState({ password });
     } 
+
+
+    handleSubmit = event => {
+        event.preventDefault();
+
+        const user = {
+            name: this.state.name,
+            email: this.state.email,
+            idnumber: this.state.idnumber,
+            role_id: "2",
+            password: this.state.password
+        };
+
+        var headers = {
+            Accept: "application/json",
+            'Content-Type': 'application/json',
+        }
+
+
+        axios.post(`https://unipastas-back.herokuapp.com/users`, { name: this.state.name, email: this.state.email, idnumber: this.state.idnumber, role_id: this.state.role_id, password: this.state.password }, {headers:headers})
+
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
+    }
 
     render() {
 
@@ -78,7 +106,7 @@ class RegisterPage extends Component {
                                 </div>
                                 <br></br>
 
-                                <Form horizontal>
+                                <Form horizontal  onSubmit={this.handleSubmit}>
                                     {/* ************************************************************************************ */}
                                     {/* ************************************************************************************ */}
                                     <FormGroup controlId="formValidationName" validationState={this.state.name.length === 1 ? null : this.state.isValidName ? "success" : "error"}>
@@ -102,7 +130,7 @@ class RegisterPage extends Component {
                                     </FormGroup>
 
 
-                                    <FormGroup controlId="formValidationIdNumber" validationState={ this.state.idNumber.length === 1 ? null : this.state.isValidIdNumber ? "success" : "error"}>
+                                    <FormGroup controlId="formValidationIdNumber" validationState={ this.state.idnumber.length === 1 ? null : this.state.isValidIdNumber ? "success" : "error"}>
                                         <Row>
                                             <Col className="MiniLabelsRegister" xs={12} md={3}>
                                                 <ControlLabel>NÚMERO DE IDENTIFICACIÓN: </ControlLabel>
@@ -116,7 +144,7 @@ class RegisterPage extends Component {
                                                     
                                             </Col>
                                             <Col xs={12} md={9}>
-                                                <HelpBlock>{ (this.state.idNumber.length === 0  & !this.state.isValidIdNumber) || (this.state.idNumber.length > 1  & !this.state.isValidIdNumber) ? "El número de identificación solo debe contener números y no puede ser vacio" : ""}</HelpBlock>
+                                                <HelpBlock>{ (this.state.idnumber.length === 0  & !this.state.isValidIdNumber) || (this.state.idnumber.length > 1  & !this.state.isValidIdNumber) ? "El número de identificación solo debe contener números y no puede ser vacio" : ""}</HelpBlock>
                                             </Col>
                                         </Row>
                                         <FormControl.Feedback />
@@ -169,7 +197,7 @@ class RegisterPage extends Component {
 
                                     <FormGroup className="BarraBotones">
                                         <ButtonGroup  >
-                                            <Button className="RegisterBotonCrear"> 
+                                            <Button type="submit" className="RegisterBotonCrear"> 
                                                 Crear Usuario 
                                             </Button>
                                             
@@ -183,7 +211,7 @@ class RegisterPage extends Component {
                             </Jumbotron>
                         </Col>
                     </Row>
-
+<p>{JSON.stringify(this.state)}</p>
                     <Col xs={12} md={2} />
                 </div>
             </div>
