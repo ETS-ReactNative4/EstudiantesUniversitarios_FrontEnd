@@ -142,7 +142,7 @@ class UsuarioLogueado extends Component{
           
           .then(response3 => {
 
-            let accesorias  = response3.data.slice();
+            let publicaciones  = response3.data.slice();
   
             this.setState({
               publicaciones: publicaciones
@@ -250,7 +250,7 @@ class UsuarioLogueado extends Component{
                 
                 <h2>listado de publicaciones</h2>
                 <div>
-                   
+                    {publicacionesList}
                 </div>
 
             </div>
