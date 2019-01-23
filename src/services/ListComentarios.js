@@ -9,6 +9,7 @@ class ListComentarios extends Component{
             comentarios:[],
             id: '',
             body: '',
+            username:'',
             publication_id:''            
         };
       }
@@ -70,6 +71,7 @@ class ListComentarios extends Component{
         const coment = {
             id: this.state.id,
             body: this.state.body,
+            username:this.state.body,
             publication_id: this.state.publication_id            
         };
 
@@ -80,7 +82,7 @@ class ListComentarios extends Component{
         }
 
 
-        axios.post(`https://unipastas-back.herokuapp.com/publications/1/comments`, { id: this.state.id, body: this.state.body, publication_id: this.state.publication_id }, {headers:headers})
+        axios.post(`https://unipastas-back.herokuapp.com/publications/1/comments`, { id: this.state.id, body: this.state.body, username: this.state.username, publication_id: this.state.publication_id }, {headers:headers})
 
             .then(res => {
                 console.log(res);
@@ -125,6 +127,7 @@ class ListComentarios extends Component{
 
                       id = {comentario.id}
                       body = {comentario.body}
+                      username = {comentario.username}
                       publication_id = {comentario.publication_id}
                       
                    </p>)
@@ -145,11 +148,20 @@ class ListComentarios extends Component{
                 <div>
                     {comentariosList}
                 </div>
-
+                
                 <h2>consumiendo endpoint crear comentarios</h2>
                 <div>
                 <div>
                     <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Nombre publicación:
+                            <input type="text" body="body" onChange={this.handleChangeBody} />
+                        </label>
+                        <label>
+                            Usuario:
+                            <input type="text" body="body" onChange={this.handleChangeBody} />
+                        </label>
+
                         <label>
                             Contenido:
                             <input type="text" body="body" onChange={this.handleChangeBody} />
@@ -160,6 +172,7 @@ class ListComentarios extends Component{
                         <button type="submit">Comentar</button>
                     </form>
                 </div>
+                
 
                 <p>{JSON.stringify(this.state)}</p>
                 </div>
