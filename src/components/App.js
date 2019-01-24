@@ -11,6 +11,8 @@ class App extends Component {
 
           <div className="App">
 
+              {/* <UserAdminSuccess/> */}
+
               <NewBarHome/>
 
           </div>
