@@ -43,7 +43,7 @@ class NewBarHome extends Component {
                <Col  xs={12} md={2}>
                     <br></br>
                     <br></br>
-                    <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema.jpg')} />
+                    <Image className="Imagenes" width={100} height={100} alt="100x100" src={require('../resources/emblema1.jpg')} />
                </Col>
                
                <Col  xs={12} md={8}>
