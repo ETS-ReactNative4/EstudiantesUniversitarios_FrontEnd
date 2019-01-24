@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-import Welcome from './components/Welcome';
+import Welcome from './services/Welcome';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import HomePage from './components/HomePage';
@@ -17,9 +17,10 @@ import UserLoginSuccess from './components/UserLoginSuccess';
 import UserAdminSuccess from './components/UserAdminSuccess';
 import ListEventos from './services/ListEventos';
 import Redireccionar from './components/Redireccionar'
-
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+
+
 
 
 ReactDOM.render(
@@ -41,7 +42,6 @@ ReactDOM.render(
             <Route exact path='/welcome' component={Welcome} />
             <Route exact path='/publicaciones' component={ListEventos} />
             <Route exact path='/Redireccionar' component={Redireccionar} />
-
 
         </div>
     </BrowserRouter>

@@ -1220,10 +1220,9 @@ class UserLoginSuccess extends Component {
                                     </Row>
                                     </Tab.Container>
                                 </Row>
+
                             </Jumbotron>
 
-
-                       
                         {/*===================================================================================== */}
                         </Tab.Pane>
                     </Tab.Content>
