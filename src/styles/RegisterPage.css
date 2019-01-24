@@ -4,21 +4,19 @@
     height: 1080px;
 }
 
-.Ventana {
+.VentanaRegister {
+    margin-top: 20%;
     padding-top: 3%;
+    background: rgba(53, 56, 49, 0.85);
 }
 
 .BarraBotones{
     text-align: center;
 }
 
-
-.rapido{
-    margin-top: 10px;
-}
-
 .LabelsRegister {
-    color: white;
+    text-align: center;
+    color: white !important;
     margin-top: 10px;
     font-family: 'Alfa Slab One', cursive;
 }
@@ -33,18 +31,8 @@
     background: red;
     font-family: 'Alfa Slab One', cursive;   
 }
-.CampoCorreo{
-    margin-top: 10px;
-}
 
-.CampoApellido{
-    margin-top: 10px;
-}
-
-.SinError {
-  
-}
-
-.ConError {
-    border:  red;
+.MiniLabelsRegister {
+    color: white !important;
+    text-align: right;
 }

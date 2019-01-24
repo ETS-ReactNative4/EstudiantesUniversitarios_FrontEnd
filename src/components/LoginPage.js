@@ -1,32 +1,38 @@
 import React, { Component } from 'react';
 import '../styles/LoginPage.css';
 import {Link} from 'react-router-dom';
-import {Button, ButtonGroup, Col, Form, FormGroup, Jumbotron, Row} from "react-bootstrap";
-import FacebookLogin from 'react-facebook-login';
+import {ControlLabel, FormControl, HelpBlock, Button, ButtonGroup, Col, Form, FormGroup, Jumbotron, Row} from "react-bootstrap";
 
 class LoginPage extends Component {
+    
+    constructor(props) {
 
-    //agregando estados para login con facebock
-    state={
-        isLoggedIn: false,
-        userID: '',
-        name: '',
-        email: '',
-        picture: '',
+        super(props);
+
+        this.state = {
+            role_id: "",
+            email: " ",
+            isValidEmail: false,
+            password: " "
+        };
+
+        this.validateEmail = this.validateEmail.bind(this);
+        this.validatePassword = this.validatePassword.bind(this);
     }
 
-    responseFacebook = response => {
-        //console.log(response);
-        this.setState({
-            isLoggedIn: true,
-            userID: response.userID,
-            name: response.name,
-            email: response.email,
-            picture: response.picture.data.url
-        });
+    validateEmail(event) {
+        const soloEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        const email = event.target.value;
+        const isValidEmail = soloEmail.test(email);
+        this.setState({ isValidEmail });
+        this.setState({ email });
     }
 
-    componentClicked = () => console.log('clicked');
+    validatePassword(event) {
+        const password = event.target.value;
+        this.setState({ password });
+    }
+
 
     handleSubmit = event => {
         event.preventDefault();
@@ -36,8 +42,8 @@ class LoginPage extends Component {
                 method: 'POST',
                 body: JSON.stringify({
                     auth: {
-                        email: this.inputNode1.value,
-                        password: this.inputNode2.value
+                        email: this.state.email,
+                        password: this.state.password
                     }
                 }),
                 headers: {
@@ -45,102 +51,89 @@ class LoginPage extends Component {
                     'Content-Type': 'application/json'
                 },
             },
-        ).then(res => res.json()).then(res => (console.log(res.jwt),
+        ).then(res => res.json()).then(res => ((console.log(res.jwt),console.log("holamundooooooooooooooooooooooooooooooooooooooooo"), console.log(res)),
                 window.localStorage.setItem('jwt', res.jwt)
         ))
             .then(() => this.props.history.push('/UserLoginSuccess'))
             //.then(() => this.props.history.push('/datosUsuario'))
-            .then(() => this.props.history.push('/listacomentarios'))
-            //.catch(function(error){console.log('Error: ', error.message)})
+           
+            .catch(function(error){console.log('Error: ', error.message)})
+
     }
 
     render() {
-
-        let fbContent;
-        if(this.state.isLoggedIn){
-            //fbContent=null;
-            fbContent = (
-
-                <div style={{
-                    width:'400px',
-                    margin: 'auto',
-                    background: '#f4f4f4',
-                    padding:'20px'
-                }}>
-
-                    <img src={this.state.picture} alt={this.state.name} />
-                    <h2>Bienvenido {this.state.name}</h2>
-                    correo: {this.state.email}
-
-                </div>
-            );
-
-        }else{
-            //agregando botom junto con appID de cuenta de facebook
-            fbContent = (
-                <FacebookLogin
-                    appId="588574214930002"
-                    autoLoad={true}
-                    fields="name,email,picture"
-                    onClick={this.componentClicked}
-                    callback={this.responseFacebook}
-                />
-            );
-        }
 
         return (
 
             <div className="LoginPage">
 
-                <div className={"container"}>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                <div className="container">
 
                     <Row>
 
-                        <Col xs={12} md={3}>
-                        </Col>
+                        <Col xs={12} md={3} />
 
                         <Col xs={12} md={6}>
 
-                            <Jumbotron className="Ventana">
+                            <Jumbotron className="VentanaLogin">
 
                                 <h1 className="LabelsLogin">
                                     INICIAR SESIÓN
                                 </h1>
 
-                                <br/>
-                                <br/>
-
+                                <br />
                                 
                                 <Form horizontal onSubmit={this.handleSubmit}>
-                                    <FormGroup controlId="formHorizontalEmail">
-                                        <Col className="LabelsLogin" sm={3}>
-                                            Correo:
-                                        </Col>
-
-                                        <Col sm={9}>
-                                            <input  className="container EstiloCampos" placeholder='ejemplo@prueba.com' type='email' id='email' name='email' ref={node => {this.inputNode1 = node}}/>
-                                        </Col>
-                                    </FormGroup>
-
-                                    <FormGroup controlId="formHorizontalPassword">
-
-                                        <Col className="LabelsLogin" sm={3}>
-                                            Contraseña:
-                                        </Col>
-
-                                        <Col sm={9} >
-                                            <input  className="container EstiloCampos" placeholder="contraseña" type='password' id='password' name='password' ref={node => {this.inputNode2 = node}}/>
-                                        </Col>
-                                    </FormGroup>
-
-                                    <br></br>
                                     
+                                    {/* ************************************************************************************ */}
+                                    {/* ************************************************************************************ */}
+
+                                    <FormGroup controlId="formValidationEmail" validationState={ this.state.email.length === 1 ? null : this.state.isValidEmail ? "success" : "error"}>
+                                        <Row>
+                                            <Col className="MiniLabelsLogin" xs={12} md={3}>
+                                                <ControlLabel >CORREO ELECTRÓNICO:</ControlLabel>
+                                            </Col>
+                                            <Col xs={12} md={9}>
+                                                <FormControl type="text" onChange={ this.validateEmail } />
+                                                
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col xs={12} md={3}>
+                                                    
+                                            </Col>
+                                            <Col xs={12} md={9}>
+                                                <HelpBlock>{ this.state.email.length === 0  & !this.state.isValidEmail ? "Por favor ingrese un corre electronico válido" : ""}</HelpBlock>    
+                                            </Col>
+                                        </Row>
+                                        <FormControl.Feedback />
+                                    </FormGroup>
+
+                                    <FormGroup controlId="formValidationPassword" validationState={ null}>
+                                        <Row>
+                                            <Col className="MiniLabelsLogin" xs={12} md={3}>
+                                                <ControlLabel >CONTRASEÑA:</ControlLabel>                                        
+                                            </Col>
+                                            <Col xs={12} md={9}>
+                                                <FormControl type="password" onChange={ this.validatePassword } />
+                                                
+                                            </Col>
+                                        </Row>
+                                        <Row>
+                                            <Col xs={12} md={3}>
+                                                    
+                                            </Col>
+                                            <Col xs={12} md={9}>                                                    
+
+                                            </Col>
+                                        </Row>
+                                        <FormControl.Feedback />
+                                    </FormGroup>
+
+                                    {/* ************************************************************************************ */}
+                                    {/* ************************************************************************************ */}
+
+                                    <br />
 
                                     <FormGroup className="BarraBotones">
 
@@ -152,24 +145,18 @@ class LoginPage extends Component {
 
                                             <Button className="LoginBotonCancelar"> 
                                                 <Link to='/'> Volver </Link>
-
                                             </Button>
+
                                         </ButtonGroup>
 
                                     </FormGroup>
-                                    {fbContent}
+
                                 </Form>
-                                
-
                             </Jumbotron>
-
                         </Col>
                     </Row>
 
-                    <Col xs={12} md={3}>
-                    </Col>
-
-
+                    <Col xs={12} md={3} />
                 </div>
 
 
@@ -183,27 +170,8 @@ class LoginPage extends Component {
                 <br></br>
                 <br></br>
                 <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+ 
+
          
             </div>
 
