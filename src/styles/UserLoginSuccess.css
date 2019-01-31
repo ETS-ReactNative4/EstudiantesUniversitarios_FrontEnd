@@ -103,6 +103,14 @@
 .Letra {
     color: darkseagreen;
 }
+.centrarNombre{
+    text-align: center;
+}
+.centrarEmail{
+    text-align: center;
+}
+.centrarIdnumber{
+    text-align: center;
 
 .CentrarTexto {
     text-align: center;

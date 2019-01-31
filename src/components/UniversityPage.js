@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/UniversityPage.css';
 import { Col, ControlLabel, Form, FormControl, FormGroup, Panel, PanelGroup, Row, Thumbnail } from "react-bootstrap";
-import * as axios from "axios";
+import axios from "axios";
 
 
 class UniversityPage extends Component {

@@ -58,8 +58,13 @@ class UserLoginSuccess extends Component {
         console.log(this.state.buscarFiltros);
     }
 
-    handleClose() {
-        this.setState({ show: false });
+
+    state = {
+        name: '',
+        idnumber: '',
+        email: '',
+        role_id: ''
+
     }
 
     handleShow() {
@@ -94,12 +99,11 @@ class UserLoginSuccess extends Component {
                 headers: {
                     'Authorization': 'Bearer ' + jwt,
                 },
-            }
+            },
         ).then(res => res.json())
-            //.then(res => (console.log(res.name), this.setState({name: res.name})
-            //))
-            .then(res => { 
-                
+        //.then(res => (console.log(res.name), this.setState({name: res.name})
+        //))
+            .then(res => {
                 console.log( res.role_id + " -- " + res.name + " -- " + res.idnumber + " -- " + res.email );
 
                 const id_rol = res.role_id;
@@ -113,6 +117,7 @@ class UserLoginSuccess extends Component {
 
                 const email = res.email;
                 this.setState({ email });
+                
             })
     }
 
@@ -145,6 +150,7 @@ class UserLoginSuccess extends Component {
                 console.log(res.data);
             })
     }
+
 
     componentWillMount(){
         

@@ -16,9 +16,21 @@ import NewBarHome from './components/NewBarHome';
 import UserLoginSuccess from './components/UserLoginSuccess';
 import UserAdminSuccess from './components/UserAdminSuccess';
 import ListEventos from './services/ListEventos';
+<<<<<<< HEAD
+import List_estado_documento from './services/List_estado_documento';
+import UsuarioLogueado from './services/UsuarioLogueado';
+import UsuarioRegistrado from './services/UsuarioRegistrado';
+
+//import { Provider } from 'react-redux';
+//import store from './store/index';
+=======
 import Redireccionar from './components/Redireccionar'
+>>>>>>> 92f218ea1f160b6d3b687611403c56f6b162a180
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+import ListComentarios from './services/ListComentarios';
+
+
 
 
 
@@ -41,7 +53,14 @@ ReactDOM.render(
             <Route exact path='/UserAdminSuccess' component={UserAdminSuccess} />
             <Route exact path='/welcome' component={Welcome} />
             <Route exact path='/publicaciones' component={ListEventos} />
+<<<<<<< HEAD
+            <Route exact path='/estadosdocumento' component={List_estado_documento} />
+            <Route exact path='/datosUsuario' component={UsuarioLogueado} />
+            <Route exact path='/registroUsuario' component={UsuarioRegistrado} />
+            <Route exact path='/listacomentarios' component={ListComentarios} />      
+=======
             <Route exact path='/Redireccionar' component={Redireccionar} />
+>>>>>>> 92f218ea1f160b6d3b687611403c56f6b162a180
 
         </div>
     </BrowserRouter>
