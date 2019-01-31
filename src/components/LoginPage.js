@@ -56,8 +56,7 @@ class LoginPage extends Component {
         ))
             .then(() => this.props.history.push('/UserLoginSuccess'))
             //.then(() => this.props.history.push('/datosUsuario'))
-            .then(() => this.props.history.push('/listacomentarios'))
-            //.catch(function(error){console.log('Error: ', error.message)})
+            .catch(function(error){console.log('Error: ', error.message)})
     }
 
     render() {
