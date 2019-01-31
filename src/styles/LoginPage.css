@@ -11,13 +11,14 @@
     text-align: center;
 }
 
-.Ventana {
-    background: rgba(53, 56, 49, 0.75);
+.VentanaLogin {
+    background: rgba(53, 56, 49, 0.85);
     text-align: center;
+    margin-top: 20%;
 }
 
 .LabelsLogin {
-    color: white;
+    color: white !important;
     margin-top: 0px;
     font-size: 150%;
 }
@@ -30,14 +31,13 @@
 
 .LoginBotonCancelar {
     background: red;
-    
-}
-
-a {
-    color: white;
 }
 
 .EstiloCampos {
     border-radius: 10px;
     color: black;
+}
+
+.MiniLabelsLogin {
+    color: white;
 }

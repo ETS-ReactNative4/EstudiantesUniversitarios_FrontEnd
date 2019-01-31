@@ -111,4 +111,90 @@
 }
 .centrarIdnumber{
     text-align: center;
+
+.CentrarTexto {
+    text-align: center;
+}
+
+.AgrandarLetra {
+    font-size: 150%;
+}
+
+.BotonesFiltros {
+    text-align: center;
+}
+
+.GeneralActivades {
+
+}
+
+.EsUnEvento {
+    background: rgba(150, 2, 0, 0.80) !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.EsUnEvento2 {
+    background: rgba(150, 2, 0, 0.60) !important;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+}
+
+.EsUnaPublicacion {
+    background: rgb(235, 141, 59, 0.80) !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.EsUnaPublicacion2 {
+    background: rgb(235, 141, 59, 0.60) !important;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+}
+
+.EsUnaAsesoria {
+    background: rgba(14, 140, 24, 0.80) !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.EsUnaAsesoria2 {
+    background: rgba(14, 140, 24, 0.60) !important;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+}
+
+.holamundo {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    background: red;
+}
+
+.ListaActividades {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    background-color:rgba(255, 255, 255, 0.30);
+}
+
+.ListaAsesorias {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    background-color: rgba(14, 140, 24, 0.80) !important;
+}
+
+.ListaPublicaciones {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    background: rgb(235, 141, 59, 0.80) !important;
+}
+
+.ListaEventos {
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    background: rgba(150, 2, 0, 0.80) !important;
+}
+
+.ArregloActividades {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 15px !important;
 }
