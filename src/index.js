@@ -27,6 +27,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import ListComentarios from './services/ListComentarios';
 import CrearComentario from './services/CrearComentario';
+import CrearProyecto from './services/CrearProyecto';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -55,6 +56,8 @@ ReactDOM.render(
             <Route exact path='/registroUsuario' component={UsuarioRegistrado} />
             <Route exact path='/listacomentarios' component={ListComentarios} /> 
             <Route exact path='/crearcomentarios' component={CrearComentario} /> 
+            <Route exact path='/crearproyecto' component={CrearProyecto} />
+
 
 
 

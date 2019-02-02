@@ -54,8 +54,8 @@ class LoginPage extends Component {
         ).then(res => res.json()).then(res => ((console.log(res.jwt),console.log("holamundooooooooooooooooooooooooooooooooooooooooo"), console.log(res)),
                 window.localStorage.setItem('jwt', res.jwt)
         ))
-            .then(() => this.props.history.push('/UserLoginSuccess'))
-            //.then(() => this.props.history.push('/crearcomentarios'))
+            //.then(() => this.props.history.push('/UserLoginSuccess'))
+            .then(() => this.props.history.push('/crearproyecto'))
            
             .catch(function(error){console.log('Error: ', error.message)})
 
