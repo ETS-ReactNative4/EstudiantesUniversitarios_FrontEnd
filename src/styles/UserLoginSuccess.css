@@ -103,6 +103,10 @@
 .Letra {
     color: darkseagreen;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f714dc741ec769def85d875fd1e3c203c9135c99
 .centrarNombre{
     text-align: center;
 }
@@ -112,6 +116,10 @@
 .centrarIdnumber{
     text-align: center;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f714dc741ec769def85d875fd1e3c203c9135c99
 .CentrarTexto {
     text-align: center;
 }
@@ -197,4 +205,8 @@
 .ArregloActividades {
     border-top-left-radius: 0px !important;
     border-top-right-radius: 15px !important;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f714dc741ec769def85d875fd1e3c203c9135c99
 }

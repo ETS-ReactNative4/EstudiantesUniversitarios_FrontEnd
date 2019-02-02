@@ -26,11 +26,7 @@ import Redireccionar from './components/Redireccionar'
 import {BrowserRouter, Route} from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import ListComentarios from './services/ListComentarios';
-
-
-
-
-
+import CrearComentario from './services/CrearComentario';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -48,13 +44,19 @@ ReactDOM.render(
             <Route exact path='/NewBarHome' component={NewBarHome} />
             <Route exact path='/UserLoginSuccess' component={UserLoginSuccess} />
             <Route exact path='/UserAdminSuccess' component={UserAdminSuccess} />
+
+            {/**endpoints**/}            
+            
             <Route exact path='/welcome' component={Welcome} />
             <Route exact path='/publicaciones' component={ListEventos} />
+            <Route exact path='/Redireccionar' component={Redireccionar} />
             <Route exact path='/estadosdocumento' component={List_estado_documento} />
             <Route exact path='/datosUsuario' component={UsuarioLogueado} />
             <Route exact path='/registroUsuario' component={UsuarioRegistrado} />
-            <Route exact path='/listacomentarios' component={ListComentarios} />      
-            <Route exact path='/Redireccionar' component={Redireccionar} />
+            <Route exact path='/listacomentarios' component={ListComentarios} /> 
+            <Route exact path='/crearcomentarios' component={CrearComentario} /> 
+
+
 
         </div>
     </BrowserRouter>

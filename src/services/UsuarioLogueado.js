@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
+
+import React, { Component } from 'react';
 import axios from 'axios';
 
-class UsuarioLogueado extends Component{
+class UsuarioLogueado extends Component {
+
 
     constructor(props){
         super(props);
         this.state = {
+
           actividades : [], /*almacenar los datos a consumir en api rails*/
           eventos : [],
           accesorias: [],
@@ -25,12 +28,16 @@ class UsuarioLogueado extends Component{
         let jwt = window.localStorage.getItem('jwt');
 
         fetch("https://unipastas-back.herokuapp.com/auth",
+
+        
+
             {
                 method: 'GET',
                 headers: {
                     'Authorization': 'Bearer ' + jwt,
                 },
             },
+
 
            
 
@@ -258,3 +265,4 @@ class UsuarioLogueado extends Component{
     }
  }
 export default UsuarioLogueado;
+

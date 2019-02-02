@@ -52,11 +52,21 @@ class UserLoginSuccess extends Component {
         console.log(this.state.buscarFiltros);
     }
 
+
     colocarTodosLosEventos() {
         this.setState({ buscarFiltros: "publications" });
         this.forceUpdate();
         console.log(this.state.buscarFiltros);
     }
+
+    handleClose() {
+        this.setState({ show: false });
+    }
+
+    handleShow() {
+        this.setState({ show: true });
+    }
+
 
 
     state = {
@@ -64,15 +74,11 @@ class UserLoginSuccess extends Component {
         idnumber: '',
         email: '',
         role_id: ''
-
-    }
-
-    handleShow() {
-        this.setState({ show: true });
     }
 
     handleHide() {
         this.setState({ show: false });
+
     }
 
     handleChangeId = event => {
@@ -99,11 +105,13 @@ class UserLoginSuccess extends Component {
                 headers: {
                     'Authorization': 'Bearer ' + jwt,
                 },
-            },
+
+            }
         ).then(res => res.json())
-        //.then(res => (console.log(res.name), this.setState({name: res.name})
-        //))
-            .then(res => {
+            //.then(res => (console.log(res.name), this.setState({name: res.name})
+            //))
+            .then(res => { 
+                
                 console.log( res.role_id + " -- " + res.name + " -- " + res.idnumber + " -- " + res.email );
 
                 const id_rol = res.role_id;
@@ -117,7 +125,6 @@ class UserLoginSuccess extends Component {
 
                 const email = res.email;
                 this.setState({ email });
-                
             })
     }
 
@@ -944,7 +951,9 @@ class UserLoginSuccess extends Component {
                             </div>
                               
                             <div>
+                             
                                 { this.state.id_rol == 1 ? "Administrador": this.state.id_rol == 2 ? "Usuario Estandar" : "Autoridad" }
+
                             </div>
                         </h3>
 
@@ -959,6 +968,8 @@ class UserLoginSuccess extends Component {
                             
                         </h3>
                     </Col>
+                 
+
                     
                 </Row>
             </Jumbotron>
@@ -1030,6 +1041,8 @@ class UserLoginSuccess extends Component {
                                             <Col xs={12} md={6}>
                                                 
                                                 <br></br>
+                                               
+
                                                 <ControlLabel>NOMBRE:</ControlLabel>
                                                 <FormControl className="CentrarTexto" disabled type="text" value={ this.state.name }/>
 
@@ -1042,7 +1055,10 @@ class UserLoginSuccess extends Component {
                                             <Col xs={12} md={6}>
                                                 <br></br>
                                                 <ControlLabel>E-MAIL:</ControlLabel>
+
+
                                                 <FormControl className="CentrarTexto" disabled type="text" value={ this.state.email }/>
+
 
                                                 <br></br>
 
@@ -1070,7 +1086,9 @@ class UserLoginSuccess extends Component {
 
                         <Tab.Pane eventKey="second">
                         {/*===================================================================================== */} 
+                       
                         {/* PESTANA DE SUBIR DOCUMENTOS Y ESTADO DE LOS DOCUMENTOS */}
+
                         {/*===================================================================================== */}
 
                             <Jumbotron className="Ventana">
@@ -1155,7 +1173,10 @@ class UserLoginSuccess extends Component {
 
                         <Tab.Pane eventKey="third">
                         {/*===================================================================================== */} 
+
+
                         {/* PESTANA DE LA LISTA DE LAS ACTIVIDADES */}
+
                         {/*===================================================================================== */}
                         
 
@@ -1226,6 +1247,7 @@ class UserLoginSuccess extends Component {
                                     </Row>
                                     </Tab.Container>
                                 </Row>
+
 
                             </Jumbotron>
 
