@@ -936,7 +936,7 @@ class UserAdminSuccess extends Component {
                             <div className="LabelRol">
                                 <Label> ROL :</Label> 
                             </div>
-                              
+
                             <div>
                                 { this.state.id_rol == 1 ? "Administrador": this.state.id_rol == 2 ? "Usuario Estandar" : "Autoridad" }
                             </div>
@@ -1038,10 +1038,6 @@ class UserAdminSuccess extends Component {
                                                 <ControlLabel>E-MAIL:</ControlLabel>
                                                 <FormControl className="CentrarTexto" disabled type="text" value={ this.state.email }/>
 
-                                                <br></br>
-
-                                                <ControlLabel>UNIVERSIDAD:</ControlLabel>
-                                                <FormControl className="CentrarTexto" disabled type="text" value={ "###########" }/>
                                             </Col>
                                         </Row>
 

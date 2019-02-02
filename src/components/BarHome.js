@@ -13,8 +13,8 @@ class BarHome extends Component {
           {/* BARRA PARA EL INICIO O REGISTRO DE USUARIO */}
           <div>
               <Breadcrumb className="BarraHome">
-                  <Breadcrumb.Item className="LetraColor">
-                      <Link to='/LoginPage'>Inicar Sesión</Link>
+                  <Breadcrumb.Item className="LetraColor" href="/LoginPage">
+                        Inicar SesiónXXXXXX
                   </Breadcrumb.Item>
                   <Breadcrumb.Item href="#">
                       <Link to='/RegisterPage'>Resgistrarse</Link>

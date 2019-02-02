@@ -201,8 +201,8 @@ class RegisterPage extends Component {
                                                 Crear Usuario 
                                             </Button>
                                             
-                                            <Button className="RegisterBotonCancelar">
-                                                <Link to='/'>Volver</Link>
+                                            <Button className="RegisterBotonCancelar" href="/">
+                                                Volver
                                             </Button>
                                         </ButtonGroup>
                                     </FormGroup>

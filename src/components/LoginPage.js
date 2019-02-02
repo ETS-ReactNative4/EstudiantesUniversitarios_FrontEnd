@@ -141,8 +141,8 @@ class LoginPage extends Component {
                                                 Entrar
                                             </Button>
 
-                                            <Button className="LoginBotonCancelar"> 
-                                                <Link to='/'> Volver </Link>
+                                            <Button className="LoginBotonCancelar" href="/UserAdminSuccess"> 
+                                                Volver
                                             </Button>
 
                                         </ButtonGroup>

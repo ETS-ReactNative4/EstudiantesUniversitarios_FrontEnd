@@ -23,12 +23,12 @@ class NewBarHome extends Component {
             <div className="Cabezera">
                 <Panel.Heading >
                     <Row className="AlinearBotones">
-                            <Button className="BotonInicarSesion" type="submit">
-                                <Link to='/LoginPage'>Inicar Sesión</Link>
+                            <Button className="BotonInicarSesion" type="submit" href="/LoginPage">
+                                Inicar Sesión
                             </Button>
                             {' '}
-                            <Button className="BotonRegistarse" type="submit">
-                                <Link to='/RegisterPage'>Resgistrarse</Link>
+                            <Button className="BotonRegistarse" type="submit" href="/RegisterPage">
+                                Resgistrarse
                             </Button>
                     </Row>
                 </Panel.Heading>

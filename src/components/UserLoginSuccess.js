@@ -917,8 +917,8 @@ class UserLoginSuccess extends Component {
                 <Row>
                     <Col xs={12} md={3} className="BotonCerrarSesion">
                         <div >
-                            <Button bsStyle ="danger">
-                                <Link to='/'>CERRAR SESIÓN</Link>
+                            <Button bsStyle ="danger" href="/">
+                                CERRAR SESIÓN
                             </Button>
                         </div>
                     </Col>
