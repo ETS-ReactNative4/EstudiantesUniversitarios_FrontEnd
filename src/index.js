@@ -28,6 +28,7 @@ import registerServiceWorker from './registerServiceWorker';
 import ListComentarios from './services/ListComentarios';
 import CrearComentario from './services/CrearComentario';
 import CrearProyecto from './services/CrearProyecto';
+import ListaUsuariosAdministrador from './services/ListaUsuariosAdministrador';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -57,6 +58,9 @@ ReactDOM.render(
             <Route exact path='/listacomentarios' component={ListComentarios} /> 
             <Route exact path='/crearcomentarios' component={CrearComentario} /> 
             <Route exact path='/crearproyecto' component={CrearProyecto} />
+            <Route exact path='/listausuarios' component={ListaUsuariosAdministrador} />
+            
+
 
 
 
