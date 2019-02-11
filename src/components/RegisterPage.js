@@ -211,7 +211,7 @@ class RegisterPage extends Component {
                             </Jumbotron>
                         </Col>
                     </Row>
-<p>{JSON.stringify(this.state)}</p>
+{/** <p>{JSON.stringify(this.state)}</p>*/}
                     <Col xs={12} md={2} />
                 </div>
             </div>

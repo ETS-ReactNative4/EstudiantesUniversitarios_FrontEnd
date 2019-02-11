@@ -28,8 +28,8 @@ class NewBarHome extends Component {
                             </Button>
                             {' '}
                             <Button className="BotonRegistarse" type="submit">
-                                {/**<Link to='/RegisterPage'>Resgistrarse</Link>**/}
-                                <Link to='/registroUsuario'>Resgistrarse</Link>
+                                <Link to='/RegisterPage'>Registrarse</Link>
+                                
                             </Button>
                     </Row>
                 </Panel.Heading>
